@@ -1,9 +1,11 @@
+import { displayRules, savedRouter } from "./router";
+import copper from "./video-player-copper.json";
 import { Processor, Cap, Res, signal } from "./processor";
 import { DisplayMounts } from "../new-devices/mounts";
 import { TF_01A } from "../imports/C91145";
 import { AFC07_S50ECC_00 } from "../imports/C11098";
 import { AO3400A } from "../imports/C20917";
-import { boardRules, Wiring } from "../common";
+import { Wiring } from "../common";
 
 const dataGpios = Array.from({ length: 16 }, (_, i) => i + 1);
 const usedGpio = [...dataGpios, 17, 18, 19, 20, 39, 40, 41, 42, 43, 44];
@@ -19,20 +21,32 @@ const sdSignals = [
 export default function VideoPlayer() {
   return (
     <board
-      {...boardRules}
+      {...displayRules}
+      autorouter={{ local: true, algorithmFn: savedRouter(copper) }}
       width={48}
       height={48}
-      layers={4}
+      schStyle={{ defaultPassiveSize: "xs" }}
+      schMaxTraceDistance={1.2}
       name="video_player"
       routeRemaining
-      minTraceWidth={0.15}
     >
       <schematicsheet
         name="player_sheet"
         sheetSize="ANSI_B"
         displayName="Local video player, 320 × 480"
       >
-        <DisplayMounts spanX={40} spanY={30} />
+        <copperpour
+          name="GROUND"
+          layer="inner1"
+          connectsTo="net.GND"
+          clearance={0.2}
+          boardEdgeMargin={0.5}
+        />
+        <DisplayMounts
+          layers={["top", "inner1", "inner2", "bottom"]}
+          spanX={40}
+          spanY={30}
+        />
         <Processor usedGpio={usedGpio} />
         <AFC07_S50ECC_00
           name="J2"

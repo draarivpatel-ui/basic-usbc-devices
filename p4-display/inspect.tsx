@@ -1,3 +1,4 @@
+import { convertCircuitJsonToPcbSvg } from "circuit-to-svg";
 import { Circuit } from "tscircuit";
 import { mkdir, writeFile } from "node:fs/promises";
 import { runAllChecks } from "@tscircuit/checks";
@@ -18,14 +19,30 @@ for (const name of process.argv.slice(2).length
     "dist/p4-display/" + name + ".circuit.json",
     JSON.stringify(data),
   );
-  const issues = [
+  await writeFile(
+    "dist/p4-display/" + name + ".svg",
+    convertCircuitJsonToPcbSvg(data),
+  );
+  const findings = [
+    ...data.filter((e) => /_error$|_warning$/.test(e.type)),
+    ...(await runAllChecks(data)),
+  ];
+  const messages = [
     ...new Set(
-      [
-        ...data.filter((e) => /_error$|_warning$/.test(e.type)),
-        ...(await runAllChecks(data)),
-      ].map((e) => ("message" in e ? String(e.message) : e.type)),
+      findings.map((e) => ("message" in e ? String(e.message) : e.type)),
     ),
   ];
-  console.log(name, issues.length, issues.slice(0, 15));
-  if (issues.length) process.exitCode = 1;
+  console.log(name, messages);
+  // The 104-pin processor and panel connector use the larger ANSI B drawing sheet.
+  if (
+    findings.some(
+      (e) =>
+        !(
+          e.type === "schematic_sheet_styling_warning" &&
+          "message" in e &&
+          String(e.message).includes("uses a non-default size")
+        ),
+    )
+  )
+    process.exitCode = 1;
 }

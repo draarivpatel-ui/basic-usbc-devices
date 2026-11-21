@@ -1,6 +1,8 @@
+import { displayRules, savedRouter } from "./router";
+import copper from "./large-rgb-copper.json";
 import { Processor, Cap, Res, signal } from "./processor";
 import { DisplayMounts } from "../new-devices/mounts";
-import { Wiring, boardRules } from "../common";
+import { Wiring } from "../common";
 import { TPS65150RGER } from "../imports/C468258";
 import { TPS61165DBVR } from "../imports/C58756";
 import { TPS22919DCKR } from "../imports/C2149796";
@@ -62,11 +64,13 @@ const biasRes = [
 export default function LargeRgb() {
   return (
     <board
-      {...boardRules}
+      {...displayRules}
+      routeRemaining
+      autorouter={{ local: true, algorithmFn: savedRouter(copper) }}
       width={54}
       height={54}
-      layers={4}
-      minTraceWidth={0.15}
+      schStyle={{ defaultPassiveSize: "xs" }}
+      schMaxTraceDistance={1.2}
       name="large_rgb"
     >
       <schematicsheet
@@ -74,7 +78,18 @@ export default function LargeRgb() {
         displayName="7 inch bare RGB panel"
         sheetSize="ANSI_B"
       >
-        <DisplayMounts spanX={40} spanY={40} />
+        <copperpour
+          name="GROUND"
+          layer="inner1"
+          connectsTo="net.GND"
+          clearance={0.2}
+          boardEdgeMargin={0.5}
+        />
+        <DisplayMounts
+          layers={["top", "inner1", "inner2", "bottom"]}
+          spanX={40}
+          spanY={40}
+        />
         <Processor
           usedGpio={[...Array.from({ length: 22 }, (_, i) => i + 1), 23]}
           usbY={-21}
@@ -94,18 +109,7 @@ export default function LargeRgb() {
         />
         <TPS65150RGER name="U5" pcbX={-16} pcbY={10} noConnect={["pin2"]} />
         <TPS61165DBVR name="U6" pcbX={15} pcbY={12} />
-        <TPS22919DCKR
-          name="U7"
-          pinAttributes={{
-            pin1: { requiresPower: true },
-            pin2: { requiresGround: true },
-            pin4: { doNotConnect: true },
-            pin6: { providesPower: true },
-          }}
-          pcbX={-18}
-          pcbY={-5}
-          noConnect={["pin4"]}
-        />
+        <TPS22919DCKR name="U7" pcbX={-18} pcbY={-5} noConnect={["pin4"]} />
         <SWPA4030S4R7MT
           name="L3"
           pcbX={-13}
