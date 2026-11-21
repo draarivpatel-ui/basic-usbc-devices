@@ -130,7 +130,7 @@ export default function Ereader() {
           connections={{ anode: "net.SW", cathode: "net.VGH" }}
         />
         <BiasCap name="CF" net="SW" other="FLY" x={-11} y={12.6} />
-        <BiasCap name="CH" bulk net="VGH" x={1} y={8.2} />
+        <BiasCap name="CH" bulk net="VGH" x={0.8} y={8.2} />
         <BiasCap name="CL" bulk net="VGL" x={6.5} y={8.2} />
         <C name="C6" value="4.7uF" a="net.LOGIC" x={-15.4} y={1.4} />
         <C name="C7" value="1uF" a="net.LOGIC" x={6.6} y={11.3} />
