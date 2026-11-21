@@ -17,7 +17,7 @@
     "frontLogo": true,
     "backLogo": true,
     "topClearanceBeyondExclusionMm": 0.0929,
-    "bottomClearanceBeyondExclusionMm": 0.041
+    "bottomClearanceBeyondExclusionMm": 0.0723
   },
   {
     "backTextAlignment": "left",
