@@ -19,6 +19,8 @@ The 177 × 46 mm panel has side breakaway tabs, 0.5 mm mouse-bite holes, 3 mm ro
 
 ## Enclosure interface
 
+Version 0.0.8 corrects the pushbutton wiring. Pads 1 and 3 share ground, and pads 2 and 4 share the contact input. Earlier layouts grounded the input even with the button released.
+
 The button uses JLCPCB [C2930544](https://jlcpcb.com/partdetail/3267880-K2_1102SP_Q4SC04/C2930544), a 6 × 6 mm switch with a projecting plastic stem and **12 mm nominal total height** above PCB top, centered at (0, 8) mm. A lid outer face 10 mm above PCB top gives 2 mm nominal projection. Allow actual travel and tolerances; do not preload the stem. The vendor's linked model was 8 mm tall; `mechanical/button-12mm.obj` corrects the stem height while preserving the body and pads. It is a visual model, not a tolerance drawing.
 
 The maintained toggle uses [C496154](https://jlcpcb.com/partdetail/C496154), a projecting metal lever, centered at (0, 8) mm. Its model is an approximate nominal envelope; confirm the bushing, nut and lever sweep against the Dailywell drawing/sample before designing a tight enclosure. The toggle and encoder require through-hole assembly; JLCPCB lists them as Economic/Standard with wave soldering, which is an extra assembly operation.

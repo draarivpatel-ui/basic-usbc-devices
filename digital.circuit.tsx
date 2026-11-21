@@ -16,8 +16,8 @@ export function DigitalBoard({kind='limit',pcbX=0,pcbY=0,pcbRotation=0}:{kind?:'
  <R name="R4" value="220" x={8} y={3} a="net.SENSE" b="net.CONTACT"/>
  <C name="C4" value="100nF" x={-8} y={3} a="net.SENSE"/>
  {kind==='limit'? <JL010 name="SW1" pcbX={-0.3} pcbY={7.3} noConnect={["pin2"]}/>:
- kind==='toggle'?<A_1MS1T1B1M1QES_5 cadModel={toggleModel} name="SW1" pcbX={0} pcbY={8} pcbRotation={90} noConnect={["pin1"]}/>:<K2_1102SP_Q4SC_04 cadModel={buttonModel} name="SW1" pcbX={0} pcbY={8} internallyConnectedPins={[["pin1","pin2"],["pin3","pin4"]]}/>}
- <Wiring nets={{GND:['.U1 > .pin1','.U1 > .pin15',kind==='toggle'?'.SW1 > .pin2':'.SW1 > .pin1',...(kind==='button'?['.SW1 > .pin2']:[])],V3:['.U1 > .pin4'],VBUS:['.U1 > .pin16'],DP:['.U1 > .pin5'],DM:['.U1 > .pin6'],SENSE:['.U1 > .pin9'],CONTACT:['.SW1 > .pin3',...(kind==='button'?['.SW1 > .pin4']:[])]}}/>
+ kind==='toggle'?<A_1MS1T1B1M1QES_5 cadModel={toggleModel} name="SW1" pcbX={0} pcbY={8} pcbRotation={90} noConnect={["pin1"]}/>:<K2_1102SP_Q4SC_04 cadModel={buttonModel} name="SW1" pcbX={0} pcbY={8} internallyConnectedPins={[["pin1","pin3"],["pin2","pin4"]]}/>}
+ <Wiring nets={{GND:['.U1 > .pin1','.U1 > .pin15',kind==='toggle'?'.SW1 > .pin2':'.SW1 > .pin1',...(kind==='button'?['.SW1 > .pin3']:[])],V3:['.U1 > .pin4'],VBUS:['.U1 > .pin16'],DP:['.U1 > .pin5'],DM:['.U1 > .pin6'],SENSE:['.U1 > .pin9'],CONTACT:[kind==='button'?'.SW1 > .pin2':'.SW1 > .pin3',...(kind==='button'?['.SW1 > .pin4']:[])]}}/>
  <silkscreentext text={kind==='limit'?'USB LIMIT / NC':kind==='toggle'?'USB TOGGLE':'BUTTON / 12mm'} pcbX={0} pcbY={13.5} fontSize={0.8}/>
  <silkscreentext text="CH340C / CTS" pcbX={0} pcbY={-7} fontSize={0.6}/>
  <StatusLed rx={kind==='limit'?-10.8:-11} ry={kind==='limit'?-6.4:-6.2} sink=".U1 > .pin13"/></schematicsheet></board>

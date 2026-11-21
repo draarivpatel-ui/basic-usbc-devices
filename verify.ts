@@ -80,8 +80,8 @@ for(const name of ['limit','button','toggle','dial','position','distance',panelN
    }
   }else{
    eq('J1',8,'U1',5);eq('J1',7,'U1',6);eq('J1',15,'U1',16)
-   eq('U1',9,'R4',1);eq('SW1',3,'R4',2);eq('SW1',name==='toggle'?2:1,'J1',13)
-   if(name==='button'){eq('SW1',1,'SW1',2);eq('SW1',3,'SW1',4)}
+   eq('U1',9,'R4',1);eq('SW1',name==='button'?2:3,'R4',2);eq('SW1',name==='toggle'?2:1,'J1',13)
+   if(name==='button'){eq('SW1',1,'SW1',3);eq('SW1',2,'SW1',4)}
   }
  }
  report.boards.push({name,components:parts.length,traces:traces.length,vias:vias.length,errors:0,warnings:0,layers:2,viaDrillMm:0.3,viaPadMm:0.6,...(name!==panelName?{schematicSheets:1,allComponentsAssignedToSheet:true}:{})})

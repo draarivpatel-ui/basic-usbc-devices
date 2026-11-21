@@ -1045,7 +1045,7 @@
     ],
     "source_component_id": "source_component_11",
     "subcircuit_id": "subcircuit_source_group_0",
-    "subcircuit_connectivity_map_key": "button_connectivity_net1"
+    "subcircuit_connectivity_map_key": "button_connectivity_net8"
   },
   {
     "type": "source_port",
@@ -1058,7 +1058,7 @@
     ],
     "source_component_id": "source_component_11",
     "subcircuit_id": "subcircuit_source_group_0",
-    "subcircuit_connectivity_map_key": "button_connectivity_net8"
+    "subcircuit_connectivity_map_key": "button_connectivity_net1"
   },
   {
     "type": "source_port",
@@ -1089,10 +1089,10 @@
     "internally_connected_source_port_ids": [
       [
         "source_port_54",
-        "source_port_55"
+        "source_port_56"
       ],
       [
-        "source_port_56",
+        "source_port_55",
         "source_port_57"
       ]
     ]
@@ -1321,7 +1321,7 @@
     "subcircuit_id": "subcircuit_source_group_0",
     "source_port_ids": [
       "source_port_54",
-      "source_port_55"
+      "source_port_56"
     ]
   },
   {
@@ -1330,7 +1330,7 @@
     "source_component_id": "source_component_11",
     "subcircuit_id": "subcircuit_source_group_0",
     "source_port_ids": [
-      "source_port_56",
+      "source_port_55",
       "source_port_57"
     ]
   },
@@ -1868,14 +1868,14 @@
     "type": "source_trace",
     "source_trace_id": "source_trace_39",
     "connected_source_port_ids": [
-      "source_port_55"
+      "source_port_56"
     ],
     "connected_source_net_ids": [
       "source_net_1"
     ],
     "subcircuit_id": "subcircuit_source_group_0",
-    "name": "GND_SW1pin2",
-    "display_name": ".SW1 > .pin2 to net.GND",
+    "name": "GND_SW1pin3",
+    "display_name": ".SW1 > .pin3 to net.GND",
     "subcircuit_connectivity_map_key": "button_connectivity_net1"
   },
   {
@@ -1952,14 +1952,14 @@
     "type": "source_trace",
     "source_trace_id": "source_trace_45",
     "connected_source_port_ids": [
-      "source_port_56"
+      "source_port_55"
     ],
     "connected_source_net_ids": [
       "source_net_8"
     ],
     "subcircuit_id": "subcircuit_source_group_0",
-    "name": "CONTACT_SW1pin3",
-    "display_name": ".SW1 > .pin3 to net.CONTACT",
+    "name": "CONTACT_SW1pin2",
+    "display_name": ".SW1 > .pin2 to net.CONTACT",
     "subcircuit_connectivity_map_key": "button_connectivity_net8"
   },
   {
@@ -3450,11 +3450,11 @@
     "schematic_port_id": "schematic_port_55",
     "schematic_component_id": "schematic_component_11",
     "center": {
-      "x": 5.8999999999999995,
+      "x": 6.839999999999999,
       "y": -0.6644553499999999
     },
     "source_port_id": "source_port_55",
-    "facing_direction": "left",
+    "facing_direction": "right",
     "distance_from_component_edge": 0.4,
     "pin_number": 2,
     "is_connected": true,
@@ -3465,11 +3465,11 @@
     "schematic_port_id": "schematic_port_56",
     "schematic_component_id": "schematic_component_11",
     "center": {
-      "x": 6.839999999999999,
+      "x": 5.8999999999999995,
       "y": -0.6644553499999999
     },
     "source_port_id": "source_port_56",
-    "facing_direction": "right",
+    "facing_direction": "left",
     "distance_from_component_edge": 0.4,
     "pin_number": 3,
     "is_connected": true,
@@ -4895,7 +4895,7 @@
   {
     "type": "schematic_trace",
     "schematic_trace_id": "schematic_trace_16",
-    "source_trace_id": "schematic_port_51-schematic_port_56",
+    "source_trace_id": "schematic_port_51-schematic_port_55",
     "edges": [
       {
         "from": {
@@ -10951,8 +10951,8 @@
         "y": 10.250186
       },
       {
-        "x": -4.19989,
-        "y": 5.749814000000001
+        "x": 4.19989,
+        "y": 10.250186
       }
     ],
     "stroke_width": 0.05
@@ -10965,11 +10965,11 @@
     "font": "tscircuit2024",
     "font_size": 0.12,
     "text": "MARKED INTERNALLY CONNECTED",
-    "ccw_rotation": 270,
+    "ccw_rotation": 0,
     "layer": "top",
     "anchor_position": {
-      "x": -4.07989,
-      "y": 8
+      "x": 0,
+      "y": 10.370185999999999
     },
     "anchor_alignment": "center"
   },
@@ -10981,8 +10981,8 @@
     "layer": "top",
     "route": [
       {
-        "x": 4.19989,
-        "y": 10.250186
+        "x": -4.19989,
+        "y": 5.749814000000001
       },
       {
         "x": 4.19989,
@@ -10999,11 +10999,11 @@
     "font": "tscircuit2024",
     "font_size": 0.12,
     "text": "MARKED INTERNALLY CONNECTED",
-    "ccw_rotation": 270,
+    "ccw_rotation": 0,
     "layer": "top",
     "anchor_position": {
-      "x": 4.31989,
-      "y": 8
+      "x": 0,
+      "y": 5.869814000000001
     },
     "anchor_alignment": "center"
   },
@@ -11387,14 +11387,14 @@
       },
       {
         "route_type": "wire",
-        "x": -10.707628482038427,
+        "x": -10.708780473180218,
         "y": -7.925000000000001,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "via",
-        "x": -10.707628482038427,
+        "x": -10.708780473180218,
         "y": -7.925000000000001,
         "from_layer": "top",
         "to_layer": "bottom",
@@ -11403,7 +11403,7 @@
       },
       {
         "route_type": "wire",
-        "x": -10.707628482038427,
+        "x": -10.708780473180218,
         "y": -7.925000000000001,
         "width": 0.2,
         "layer": "bottom"
@@ -11411,49 +11411,35 @@
       {
         "route_type": "wire",
         "x": -10.724830158139639,
-        "y": -5.623172027072851,
+        "y": -5.599445447447034,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "wire",
-        "x": -4.197648613101846,
-        "y": 0.9040095179649423,
+        "x": -0.6469338016475925,
+        "y": 4.478450909045013,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "wire",
-        "x": -3.3388932919787875,
-        "y": 0.9040095179649423,
+        "x": -0.6469338016475925,
+        "y": 4.533066198352407,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "wire",
-        "x": -2.8870303107732216,
-        "y": 1.3558724991705082,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -2.884127500829492,
-        "y": 1.3558724991705082,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -2.882,
-        "y": 1.358,
+        "x": -0.6350000000000001,
+        "y": 4.389266547521274,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "via",
-        "x": -2.882,
-        "y": 1.358,
+        "x": -0.6350000000000001,
+        "y": 4.389266547521274,
         "from_layer": "bottom",
         "to_layer": "top",
         "via_diameter": 0.6,
@@ -11461,29 +11447,15 @@
       },
       {
         "route_type": "wire",
-        "x": -2.882,
-        "y": 1.358,
+        "x": -0.6350000000000001,
+        "y": 4.389266547521274,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -1.9850778861787068,
-        "y": 1.3283462179966148,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -1.1911197496482129,
-        "y": 2.059781309293649,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -1.2511713443725103,
-        "y": 2.2558286556274894,
+        "x": -0.635,
+        "y": 2.872,
         "width": 0.2,
         "layer": "top"
       },
@@ -11547,42 +11519,6 @@
     "pcb_trace_id": "source_net_8_mst0_0",
     "connection_name": "source_net_8",
     "connectsTo": [
-      "pcb_port_56",
-      "pcb_port_57"
-    ],
-    "route": [
-      {
-        "route_type": "wire",
-        "x": 4.19989,
-        "y": 10.250186,
-        "width": 0.2,
-        "layer": "top",
-        "start_pcb_port_id": "pcb_port_56"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.19989,
-        "y": 5.75011,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.19989,
-        "y": 5.749814000000001,
-        "width": 0.2,
-        "layer": "top",
-        "end_pcb_port_id": "pcb_port_57"
-      }
-    ],
-    "subcircuit_id": "subcircuit_source_group_0",
-    "source_trace_id": "source_trace_45"
-  },
-  {
-    "type": "pcb_trace",
-    "pcb_trace_id": "source_net_8_mst1_0",
-    "connection_name": "source_net_8",
-    "connectsTo": [
       "pcb_port_57",
       "pcb_port_51"
     ],
@@ -11613,6 +11549,130 @@
     ],
     "subcircuit_id": "subcircuit_source_group_0",
     "source_trace_id": "source_trace_33"
+  },
+  {
+    "type": "pcb_trace",
+    "pcb_trace_id": "source_net_8_mst1_0",
+    "connection_name": "source_net_8",
+    "connectsTo": [
+      "pcb_port_55",
+      "pcb_port_57"
+    ],
+    "route": [
+      {
+        "route_type": "wire",
+        "x": -4.19989,
+        "y": 5.749814000000001,
+        "width": 0.2,
+        "layer": "top",
+        "start_pcb_port_id": "pcb_port_55"
+      },
+      {
+        "route_type": "wire",
+        "x": -4.19989,
+        "y": 6.547670720827205,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": -3.703457498797701,
+        "y": 7.044103222029504,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": -3.703457498797701,
+        "y": 7.096542501202299,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": -3.6,
+        "y": 7.2,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "via",
+        "x": -3.6,
+        "y": 7.2,
+        "from_layer": "top",
+        "to_layer": "bottom",
+        "via_diameter": 0.6,
+        "via_hole_diameter": 0.3
+      },
+      {
+        "route_type": "wire",
+        "x": -3.6,
+        "y": 7.2,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": -2.4180350671186623,
+        "y": 7.2,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": -1.3100291244459952,
+        "y": 6.091994057327333,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": -1.1900059426726675,
+        "y": 6.091994057327333,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": -1.175,
+        "y": 6.107,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "via",
+        "x": -1.175,
+        "y": 6.107,
+        "from_layer": "bottom",
+        "to_layer": "top",
+        "via_diameter": 0.6,
+        "via_hole_diameter": 0.3
+      },
+      {
+        "route_type": "wire",
+        "x": -1.175,
+        "y": 6.107,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 3.843,
+        "y": 6.107,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 4.19989,
+        "y": 5.749814000000001,
+        "width": 0.2,
+        "layer": "top",
+        "end_pcb_port_id": "pcb_port_57"
+      }
+    ],
+    "subcircuit_id": "subcircuit_source_group_0",
+    "source_trace_id": "source_trace_45"
   },
   {
     "type": "pcb_trace",
@@ -11669,8 +11729,8 @@
       },
       {
         "route_type": "wire",
-        "x": 7.247480850801265,
-        "y": 1.7195616025863953,
+        "x": 7.290689361067211,
+        "y": 1.7636648557808314,
         "width": 0.2,
         "layer": "top"
       },
@@ -11705,50 +11765,110 @@
       },
       {
         "route_type": "wire",
-        "x": -7.6735885335621585,
-        "y": 4.151411466437841,
+        "x": -8,
+        "y": 3.8249999999999993,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -7.634910005524025,
-        "y": 4.163910693923326,
+        "x": -8,
+        "y": 5.075,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "via",
+        "x": -8,
+        "y": 5.075,
+        "from_layer": "bottom",
+        "to_layer": "top",
+        "via_diameter": 0.6,
+        "via_hole_diameter": 0.3
+      },
+      {
+        "route_type": "wire",
+        "x": -8,
+        "y": 5.075,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": -7.963839501080814,
+        "y": 5.0388395010808145,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": -7.963839501080814,
+        "y": 4.900795056500624,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": -7.742447298749362,
+        "y": 5.122187258832076,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": -1.0569951045236354,
+        "y": 5.122187258832076,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "via",
+        "x": -1.0569951045236354,
+        "y": 5.122187258832076,
+        "from_layer": "top",
+        "to_layer": "bottom",
+        "via_diameter": 0.6,
+        "via_hole_diameter": 0.3
+      },
+      {
+        "route_type": "wire",
+        "x": -1.0569951045236354,
+        "y": 5.122187258832076,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -5.697593416079357,
-        "y": 4.158770427011882,
+        "x": -1.055241313573333,
+        "y": 5.1239410497823785,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -5.650867441863067,
-        "y": 4.099587484575828,
+        "x": -1.0205086910671084,
+        "y": 5.1239410497823785,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.9871976860496643,
-        "y": 4.116341984117465,
+        "x": -0.9403495790155297,
+        "y": 5.185895555445164,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 3.2427747060080803,
-        "y": 4.372222754975252,
+        "x": 2.4697464263730753,
+        "y": 5.08178326255642,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 4.445,
-        "y": 3.169997460983332,
+        "x": 4.477365082618542,
+        "y": 3.0776362781945843,
         "width": 0.2,
         "layer": "top"
       },
@@ -11783,22 +11903,22 @@
       },
       {
         "route_type": "wire",
-        "x": -2.4550158155223403,
-        "y": -4.650239647855232,
+        "x": -2.4600154338074876,
+        "y": -4.653837238872183,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -1.2353452703253835,
-        "y": -3.7725974866375744,
+        "x": -1.2331441093583244,
+        "y": -3.7710135903338347,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -1.264632176466964,
-        "y": -3.5016321764669636,
+        "x": -1.2671915131313,
+        "y": -3.5041915131312997,
         "width": 0.2,
         "layer": "top"
       },
@@ -11833,78 +11953,85 @@
       },
       {
         "route_type": "wire",
-        "x": -0.750062,
-        "y": -7.274350806751843,
+        "x": -0.7568930626635704,
+        "y": -7.225889792057357,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.750062,
-        "y": -7.522744813503686,
+        "x": -0.7637241253271407,
+        "y": -7.4258227841147155,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.750062,
-        "y": -7.77113882025553,
+        "x": -0.7705551879907111,
+        "y": -7.625755776172073,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.5648982704224441,
-        "y": -7.912054884220522,
+        "x": -0.6390866133143597,
+        "y": -7.788879558817159,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.37699260305930415,
-        "y": -7.9290513719678355,
+        "x": -0.498511157284479,
+        "y": -7.932844193219916,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.18214336825527633,
-        "y": -7.928557616860957,
+        "x": -0.3155145743184873,
+        "y": -7.936135808814618,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.011735826497691955,
-        "y": -7.924959342992373,
+        "x": -0.1311539933407899,
+        "y": -7.928871178959714,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.14990723868218317,
-        "y": -7.8325683143801434,
+        "x": 0.05231242523720242,
+        "y": -7.915583912117496,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.15013597734369394,
-        "y": -7.603790885199688,
+        "x": 0.19942948104813818,
+        "y": -7.75566170696479,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.15036471600520473,
-        "y": -7.375013456019233,
+        "x": 0.19942948104813818,
+        "y": -7.529297977627147,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.1505934546667155,
-        "y": -7.1462360268387775,
+        "x": 0.19942948104813818,
+        "y": -7.302934248289504,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 0.19942948104813818,
+        "y": -7.076570518951861,
         "width": 0.2,
         "layer": "top"
       },
@@ -11975,369 +12102,246 @@
       },
       {
         "route_type": "wire",
-        "x": 0.25961181621448876,
-        "y": -7.221194836050396,
+        "x": 0.25934416573961994,
+        "y": -7.221031121200354,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.2692876324289775,
-        "y": -7.416432872100792,
+        "x": 0.2687523314792398,
+        "y": -7.416105442400708,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.2789634486434663,
-        "y": -7.611670908151188,
+        "x": 0.27816049721885977,
+        "y": -7.611179763601062,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.14488195627059547,
-        "y": -7.781131762486855,
+        "x": 0.14621978681027334,
+        "y": -7.782728759061112,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.008082277161811187,
-        "y": -7.925341848608739,
+        "x": 0.0053271578246678886,
+        "y": -7.924895982595428,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.17941525081159676,
-        "y": -7.926414114402292,
+        "x": -0.1667266919481,
+        "y": -7.94425324045762,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.3658330435381863,
-        "y": -7.930861385169191,
+        "x": -0.33657713458632565,
+        "y": -7.9448554922528745,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.5462559895643561,
-        "y": -7.912064779204229,
+        "x": -0.5042639825547951,
+        "y": -7.927812254528248,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.6991607341518951,
-        "y": -7.744575371262609,
+        "x": -0.624896347771149,
+        "y": -7.80288943996063,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.6991607341518951,
-        "y": -7.501053340722749,
+        "x": -0.7354383852630499,
+        "y": -7.652622331209224,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.6991607341518951,
-        "y": -7.25753131018289,
+        "x": -0.8499343000000001,
+        "y": -7.506093565823894,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.6991607341518951,
-        "y": -7.01400927964303,
+        "x": -0.8487746231127721,
+        "y": -7.272165495971338,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.6991607341518951,
-        "y": -6.770487249103171,
+        "x": -0.8476149462255439,
+        "y": -7.038237426118783,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.6991607341518951,
-        "y": -6.526965218563311,
+        "x": -0.8464552693383158,
+        "y": -6.804309356266226,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.6991607341518951,
-        "y": -6.283443188023451,
+        "x": -0.8452955924510877,
+        "y": -6.57038128641367,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.6991607341518951,
-        "y": -6.039921157483592,
+        "x": -0.8441359155638596,
+        "y": -6.3364532165611145,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.803333148204908,
-        "y": -5.93574874343058,
+        "x": -0.8429762386766314,
+        "y": -6.102525146708558,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.9075055622579209,
-        "y": -5.831576329377566,
+        "x": -0.8418165617894033,
+        "y": -5.868597076856002,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.9075055622579209,
-        "y": -5.777816892823202,
+        "x": -0.6701405266775656,
+        "y": -5.696921041744164,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.9437464612811368,
-        "y": -5.7749999999999995,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "via",
-        "x": -0.9437464612811368,
-        "y": -5.7749999999999995,
-        "from_layer": "top",
-        "to_layer": "bottom",
-        "via_diameter": 0.6,
-        "via_hole_diameter": 0.3
-      },
-      {
-        "route_type": "wire",
-        "x": -0.9437464612811368,
-        "y": -5.7749999999999995,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.9532201902447276,
-        "y": -5.537544110466623,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.9626939192083184,
-        "y": -5.300088220933247,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.9721676481719091,
-        "y": -5.062632331399871,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.9816413771355,
-        "y": -4.825176441866494,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.9911151060990908,
-        "y": -4.587720552333119,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -1.0005888350626815,
-        "y": -4.350264662799742,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -1.0100625640262724,
-        "y": -4.112808773266366,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.8348526730541305,
-        "y": -3.937598882294224,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.6596427820819886,
-        "y": -3.7623889913220823,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.4844328911098468,
-        "y": -3.5871791003499403,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.3092230001377049,
-        "y": -3.4119692093777987,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.13401310916556297,
-        "y": -3.2367593184056567,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.04119678180657882,
-        "y": -3.0615494274335147,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.2164066727787206,
-        "y": -2.8863395364613726,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.3916165637508626,
-        "y": -2.711129645489231,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.5668264547230046,
-        "y": -2.535919754517089,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.7420363456951464,
-        "y": -2.3607098635449475,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.9172462366672882,
-        "y": -2.1854999725728055,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.09245612763943,
-        "y": -2.0102900816006635,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.267666018611572,
-        "y": -1.835080190628522,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.267666018611572,
-        "y": -1.6326660186115722,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.265373319586579,
-        "y": -1.6303531592104583,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "via",
-        "x": 1.265373319586579,
-        "y": -1.6303531592104583,
-        "from_layer": "bottom",
-        "to_layer": "top",
-        "via_diameter": 0.6,
-        "via_hole_diameter": 0.3
-      },
-      {
-        "route_type": "wire",
-        "x": 1.265373319586579,
-        "y": -1.6303531592104583,
+        "x": -0.4984644915657279,
+        "y": -5.525245006632327,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 1.2619155463910527,
-        "y": -1.827568772806972,
+        "x": -0.3267884564538902,
+        "y": -5.353568971520489,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 1.2584577731955262,
-        "y": -2.0247843864034856,
+        "x": -0.1551124213420525,
+        "y": -5.1818929364086515,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 1.255,
-        "y": -2.2219999999999995,
+        "x": 0.016563613769785213,
+        "y": -5.010216901296813,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 1.4175,
-        "y": -2.3846214999999997,
+        "x": 0.18823964888162292,
+        "y": -4.838540866184975,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 1.58,
-        "y": -2.547243,
+        "x": 0.35991568399346074,
+        "y": -4.666864831073138,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 1.7425,
-        "y": -2.7098644999999997,
+        "x": 0.5315917191052983,
+        "y": -4.4951887959613,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 0.7032677542171359,
+        "y": -4.323512760849463,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 0.8749437893289738,
+        "y": -4.151836725737625,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 1.0466198244408116,
+        "y": -3.980160690625787,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 1.2182958595526492,
+        "y": -3.8084846555139493,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 1.3899718946644868,
+        "y": -3.6368086204021117,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 1.5616479297763248,
+        "y": -3.4651325852902737,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 1.7333239648881624,
+        "y": -3.293456550178436,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 1.905,
+        "y": -3.1217805150665985,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 1.905,
+        "y": -2.872,
         "width": 0.2,
         "layer": "top"
       },
@@ -12372,152 +12376,50 @@
       },
       {
         "route_type": "wire",
-        "x": 10.151983488262374,
-        "y": -2.6493451907084946,
+        "x": 8.926573002013502,
+        "y": -1.30656856187448,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 10.151751159142623,
-        "y": -2.098791050314353,
+        "x": 8.078084875774382,
+        "y": -0.48761501765553805,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 8.870619513163689,
-        "y": -0.817659404335418,
+        "x": 8.129706535673675,
+        "y": 0.2659735186111816,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 8.43470570242086,
-        "y": -0.8553929883286634,
+        "x": 6.867406413739915,
+        "y": 1.5546345924546932,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 7.905942062785623,
-        "y": -0.2790185886777619,
+        "x": 5.945941280011653,
+        "y": 1.55878741976378,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 7.927867124512345,
-        "y": 0.46017349953973585,
+        "x": 1.9567093827220188,
+        "y": -2.3490119462155703,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 7.575516171631084,
-        "y": 0.8442507194689478,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.701703710226976,
-        "y": 0.821234241252095,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.641854654613676,
-        "y": 0.821234241252095,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.4475996069033172,
-        "y": -0.3730208064582639,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.4469106920008854,
-        "y": -0.3730208064582639,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.3929256750942534,
-        "y": -0.4078823042804308,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "via",
-        "x": 3.3929256750942534,
-        "y": -0.4078823042804308,
-        "from_layer": "top",
-        "to_layer": "bottom",
-        "via_diameter": 0.6,
-        "via_hole_diameter": 0.3
-      },
-      {
-        "route_type": "wire",
-        "x": 3.3929256750942534,
-        "y": -0.4078823042804308,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.387093956763383,
-        "y": -1.0577444790090913,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.1233441525767534,
-        "y": -1.3214942831957208,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.1233441525767534,
-        "y": -1.375622564826565,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.0287291527285793,
-        "y": -1.4930430577216298,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "via",
-        "x": 3.0287291527285793,
-        "y": -1.4930430577216298,
-        "from_layer": "bottom",
-        "to_layer": "top",
-        "via_diameter": 0.6,
-        "via_hole_diameter": 0.3
-      },
-      {
-        "route_type": "wire",
-        "x": 3.0287291527285793,
-        "y": -1.4930430577216298,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.905,
-        "y": -2.593966717403318,
+        "x": 2.0335186433319556,
+        "y": -2.7434813566680445,
         "width": 0.2,
         "layer": "top"
       },
@@ -12560,42 +12462,14 @@
       {
         "route_type": "wire",
         "x": -0.21805209244624063,
-        "y": -6.765689589765417,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.21805209244624063,
-        "y": -6.537327087084592,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.21805209244624063,
         "y": -6.3089645844037685,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.09406389764498455,
-        "y": -6.184976389602513,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.029924297156271526,
-        "y": -6.060988194801256,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.15989342107293034,
-        "y": -5.952391207691524,
+        "x": 0.1539124919575276,
+        "y": -5.937,
         "width": 0.2,
         "layer": "top"
       },
@@ -12608,36 +12482,8 @@
       },
       {
         "route_type": "wire",
-        "x": 0.4912589034350228,
-        "y": -6.066401548282489,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.6206604517175114,
-        "y": -6.195803096564978,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
         "x": 0.750062,
         "y": -6.325204644847466,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.750062,
-        "y": -6.558788696564977,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.750062,
-        "y": -6.792372748282489,
         "width": 0.2,
         "layer": "top"
       },
@@ -12708,57 +12554,68 @@
       },
       {
         "route_type": "wire",
-        "x": 0.8666602828159711,
-        "y": -5.95512877464599,
+        "x": 0.8072294172228807,
+        "y": -6.315364025697988,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.7666602828159714,
-        "y": -4.95512877464599,
+        "x": 1.207229417222881,
+        "y": -5.815364025697988,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "via",
+        "x": 1.207229417222881,
+        "y": -5.815364025697988,
+        "from_layer": "top",
+        "to_layer": "bottom",
+        "via_diameter": 0.6,
+        "via_hole_diameter": 0.3
+      },
+      {
+        "route_type": "wire",
+        "x": 1.207229417222881,
+        "y": -5.815364025697988,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": 2.031364025697988,
+        "y": -0.9653640256979881,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": 1.988,
+        "y": -0.922,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "via",
+        "x": 1.988,
+        "y": -0.922,
+        "from_layer": "bottom",
+        "to_layer": "top",
+        "via_diameter": 0.6,
+        "via_hole_diameter": 0.3
+      },
+      {
+        "route_type": "wire",
+        "x": 1.988,
+        "y": -0.922,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.866660282815971,
-        "y": -4.655128774645991,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.866660282815971,
-        "y": -4.355128774645991,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.4666602828159716,
-        "y": -3.95512877464599,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.866660282815971,
-        "y": -4.05512877464599,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.5666602828159713,
-        "y": -4.05512877464599,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.6666602828159709,
-        "y": -3.1551287746459913,
+        "x": 0.635,
+        "y": -2.275,
         "width": 0.2,
         "layer": "top"
       },
@@ -12793,211 +12650,36 @@
       },
       {
         "route_type": "wire",
-        "x": 0.7555947609386572,
-        "y": -6.80234745821533,
+        "x": 0.750062,
+        "y": -6.291102893173552,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.7611275218773143,
-        "y": -6.57873811643066,
+        "x": 2.5283288739862884,
+        "y": -4.512836019187264,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.7666602828159714,
-        "y": -6.355128774645991,
+        "x": 2.5502846394182037,
+        "y": -4.479024242919063,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.9166602828159713,
-        "y": -6.205128774645991,
+        "x": 5.987800924129904,
+        "y": -4.412996193445563,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 1.0666602828159713,
-        "y": -6.055128774645992,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.2809459971016854,
-        "y": -5.926557346074563,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.4952317113873999,
-        "y": -5.7979859175031345,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.709517425673114,
-        "y": -5.6694144889317055,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.9238031399588285,
-        "y": -5.540843060360277,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.1380888542445424,
-        "y": -5.412271631788848,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.3472140542371904,
-        "y": -5.2764297148312105,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.55804950306037,
-        "y": -5.136406682792163,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.795582688223984,
-        "y": -5.118824029445049,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.032796623929699,
-        "y": -5.1211082964155485,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.2669660589407328,
-        "y": -5.152729200559055,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.503121515139973,
-        "y": -5.217251726230617,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.739582747463975,
-        "y": -5.279374677815243,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.9760439797879767,
-        "y": -5.341497629399868,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.212505212111979,
-        "y": -5.4036205809844935,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.44896644443598,
-        "y": -5.465743532569119,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.685427676759982,
-        "y": -5.527866484153744,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.921888909083984,
-        "y": -5.58998943573837,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 5.158350141407986,
-        "y": -5.652112387322996,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 5.394811373731987,
-        "y": -5.7142353389076215,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 5.6312726060559894,
-        "y": -5.776358290492247,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 5.867733838379991,
-        "y": -5.838481242076872,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 6.104195070703993,
-        "y": -5.900604193661498,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 6.340656303027995,
-        "y": -5.962727145246124,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 6.577117535351997,
-        "y": -6.024850096830749,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 6.813578767675999,
-        "y": -6.086973048415374,
+        "x": 7.05,
+        "y": -5.521899848619571,
         "width": 0.2,
         "layer": "top"
       },
@@ -13032,267 +12714,257 @@
       },
       {
         "route_type": "wire",
-        "x": 7.005127714062767,
-        "y": -8.342702213434308,
+        "x": 6.99435245143524,
+        "y": -8.334613668808165,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 6.835255428125534,
-        "y": -8.185404426868613,
+        "x": 6.81370490287048,
+        "y": -8.16922733761633,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 6.6653831421883005,
-        "y": -8.028106640302921,
+        "x": 6.63305735430572,
+        "y": -8.003841006424498,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 6.495510856251068,
-        "y": -7.870808853737228,
+        "x": 6.4524098057409605,
+        "y": -7.838454675232663,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 6.325638570313835,
-        "y": -7.713511067171535,
+        "x": 6.271762257176201,
+        "y": -7.6730683440408285,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 6.155766284376602,
-        "y": -7.556213280605841,
+        "x": 6.091114708611441,
+        "y": -7.507682012848995,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 5.985893998439369,
-        "y": -7.398915494040148,
+        "x": 5.9104671600466805,
+        "y": -7.342295681657161,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 5.8160217125021365,
-        "y": -7.241617707474456,
+        "x": 5.729819611481921,
+        "y": -7.176909350465326,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 5.646149426564904,
-        "y": -7.084319920908762,
+        "x": 5.549172062917162,
+        "y": -7.0115230192734925,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 5.476277140627671,
-        "y": -6.927022134343069,
+        "x": 5.368524514352401,
+        "y": -6.846136688081658,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 5.306404854690437,
-        "y": -6.769724347777377,
+        "x": 5.187876965787641,
+        "y": -6.680750356889823,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 5.136532568753204,
-        "y": -6.6124265612116835,
+        "x": 5.007229417222882,
+        "y": -6.5153640256979894,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 4.966660282815972,
-        "y": -6.45512877464599,
+        "x": 4.8072294172228816,
+        "y": -6.455364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 4.75554917170486,
-        "y": -6.3440176635348795,
+        "x": 4.607229417222881,
+        "y": -6.395364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 4.544438060593749,
-        "y": -6.232906552423768,
+        "x": 4.40722941722288,
+        "y": -6.335364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 4.333326949482638,
-        "y": -6.121795441312657,
+        "x": 4.20722941722288,
+        "y": -6.275364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 4.1222158383715275,
-        "y": -6.010684330201546,
+        "x": 4.00722941722288,
+        "y": -6.215364025697989,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "via",
+        "x": 4.00722941722288,
+        "y": -6.215364025697989,
+        "from_layer": "top",
+        "to_layer": "bottom",
+        "via_diameter": 0.6,
+        "via_hole_diameter": 0.3
+      },
+      {
+        "route_type": "wire",
+        "x": 4.00722941722288,
+        "y": -6.215364025697989,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": 3.80722941722288,
+        "y": -6.129649739983703,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": 3.60722941722288,
+        "y": -6.043935454269417,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": 3.4072294172228803,
+        "y": -5.958221168555132,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": 3.20722941722288,
+        "y": -5.872506882840846,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": 3.0072294172228804,
+        "y": -5.786792597126561,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": 2.8072294172228807,
+        "y": -5.7010783114122745,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "wire",
+        "x": 2.5851685983295405,
+        "y": -5.594362275418637,
+        "width": 0.2,
+        "layer": "bottom"
+      },
+      {
+        "route_type": "via",
+        "x": 2.5851685983295405,
+        "y": -5.594362275418637,
+        "from_layer": "bottom",
+        "to_layer": "top",
+        "via_diameter": 0.6,
+        "via_hole_diameter": 0.3
+      },
+      {
+        "route_type": "wire",
+        "x": 2.5851685983295405,
+        "y": -5.594362275418637,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 3.911104727260416,
-        "y": -5.899573219090435,
+        "x": 2.4322294172228807,
+        "y": -5.740364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 3.699993616149305,
-        "y": -5.788462107979323,
+        "x": 2.2572294172228804,
+        "y": -5.865364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 3.4888825050381937,
-        "y": -5.6773509968682125,
+        "x": 2.08222941722288,
+        "y": -5.990364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 3.2777713939270825,
-        "y": -5.566239885757101,
+        "x": 1.9072294172228803,
+        "y": -6.115364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 3.067616214039956,
-        "y": -5.478986715482068,
+        "x": 1.8572294172228805,
+        "y": -6.315364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.9669369769246114,
-        "y": -5.472105560294776,
+        "x": 1.8072294172228807,
+        "y": -6.5153640256979894,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.8697194391596548,
-        "y": -5.4703169619078915,
+        "x": 1.7881729448152537,
+        "y": -6.6855616171319925,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.7669732543199754,
-        "y": -5.473086976932842,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.6790079337471218,
-        "y": -5.478410669080029,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.568114650106672,
-        "y": -5.5565831419366924,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.4666602828159716,
-        "y": -5.655128774645991,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.366660282815971,
-        "y": -5.755128774645991,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.2666602828159714,
-        "y": -5.855128774645991,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.166660282815971,
-        "y": -5.95512877464599,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.0666602828159713,
-        "y": -6.055128774645992,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.9666602828159716,
-        "y": -6.155128774645991,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.866660282815971,
-        "y": -6.255128774645991,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.8333269494826379,
-        "y": -6.421795441312658,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.7999936161493046,
-        "y": -6.588462107979324,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.7666602828159714,
-        "y": -6.755128774645991,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.7583601414079857,
-        "y": -6.890542787322995,
+        "x": 1.769116472407627,
+        "y": -6.855759208565996,
         "width": 0.2,
         "layer": "top"
       },
@@ -13328,28 +13000,28 @@
       {
         "route_type": "wire",
         "x": -9.47752069526656,
-        "y": -6.64747930473344,
+        "y": -6.591719483698434,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -9.477576834676139,
-        "y": -4.577756275922854,
+        "x": -9.47752069526656,
+        "y": -4.545,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -8.975624218394445,
-        "y": -4.572248750279007,
+        "x": -8.975568595637231,
+        "y": -4.545,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
         "x": -7.739831862383744,
-        "y": -3.3650230877815184,
+        "y": -3.3092632667465125,
         "width": 0.2,
         "layer": "top"
       },
@@ -13406,14 +13078,14 @@
       },
       {
         "route_type": "wire",
-        "x": -1.6869304641662837,
+        "x": -1.6218530124575967,
         "y": -5.875958099999999,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "via",
-        "x": -1.6869304641662837,
+        "x": -1.6218530124575967,
         "y": -5.875958099999999,
         "from_layer": "bottom",
         "to_layer": "top",
@@ -13422,15 +13094,15 @@
       },
       {
         "route_type": "wire",
-        "x": -1.6869304641662837,
+        "x": -1.6218530124575967,
         "y": -5.875958099999999,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -1.2397478603648637,
-        "y": -6.409612600947465,
+        "x": -1.2418560109277252,
+        "y": -6.411750836906041,
         "width": 0.2,
         "layer": "top"
       },
@@ -13638,15 +13310,15 @@
       },
       {
         "route_type": "wire",
-        "x": -7.135996800390836,
-        "y": 0.02086237244115954,
+        "x": -7.16898944804463,
+        "y": 0.021102484027701384,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -7.144182548636996,
-        "y": 2.758981798347631,
+        "x": -7.190053268416389,
+        "y": 2.7591732894086864,
         "width": 0.2,
         "layer": "top"
       },
@@ -13674,8 +13346,8 @@
     "pcb_trace_id": "source_net_1_mst6_0",
     "connection_name": "source_net_1",
     "connectsTo": [
-      "pcb_port_12",
-      "pcb_port_47"
+      "pcb_port_47",
+      "pcb_port_12"
     ],
     "route": [
       {
@@ -13688,22 +13360,22 @@
       },
       {
         "route_type": "wire",
-        "x": -3.251481594985231,
-        "y": -6.556706418953193,
+        "x": -3.2534903029765,
+        "y": -6.557933746251279,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -1.7443541000159075,
-        "y": -5.118767085672762,
+        "x": -1.7643051559300178,
+        "y": -5.139806370264884,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -1.5110748483773897,
-        "y": -5.1360748483773895,
+        "x": -1.5332210048299502,
+        "y": -5.15822100482995,
         "width": 0.2,
         "layer": "top"
       },
@@ -13722,140 +13394,6 @@
   {
     "type": "pcb_trace",
     "pcb_trace_id": "source_net_1_mst7_0",
-    "connection_name": "source_net_1",
-    "connectsTo": [
-      "pcb_port_55",
-      "pcb_port_42"
-    ],
-    "route": [
-      {
-        "route_type": "wire",
-        "x": -3.175,
-        "y": 2.872486,
-        "width": 0.2,
-        "layer": "top",
-        "start_pcb_port_id": "pcb_port_42"
-      },
-      {
-        "route_type": "wire",
-        "x": -3.175,
-        "y": 2.487706940855384,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -4.092522688414355,
-        "y": 1.5052646022167289,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "via",
-        "x": -4.092522688414355,
-        "y": 1.5052646022167289,
-        "from_layer": "bottom",
-        "to_layer": "top",
-        "via_diameter": 0.6,
-        "via_hole_diameter": 0.3
-      },
-      {
-        "route_type": "wire",
-        "x": -4.092522688414355,
-        "y": 1.5052646022167289,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": -4.169866883584153,
-        "y": 1.630936732671472,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": -4.169866883584153,
-        "y": 1.6709735672530843,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": -5.499889000000001,
-        "y": 3.0009956836689327,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": -5.487720097845013,
-        "y": 4.667153344007827,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "via",
-        "x": -5.487720097845013,
-        "y": 4.667153344007827,
-        "from_layer": "top",
-        "to_layer": "bottom",
-        "via_diameter": 0.6,
-        "via_hole_diameter": 0.3
-      },
-      {
-        "route_type": "wire",
-        "x": -5.487720097845013,
-        "y": 4.667153344007827,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -5.496013255181553,
-        "y": 4.615124007857691,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -5.4796829981496655,
-        "y": 4.615124007857691,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -4.344993006007356,
-        "y": 5.749814000000001,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -4.19989,
-        "y": 5.749814000000001,
-        "width": 0.2,
-        "layer": "top",
-        "end_pcb_port_id": "pcb_port_55"
-      }
-    ],
-    "subcircuit_id": "subcircuit_source_group_0",
-    "source_trace_id": "source_trace_37"
-  },
-  {
-    "type": "pcb_trace",
-    "pcb_trace_id": "source_net_1_mst8_0",
     "connection_name": "source_net_1",
     "connectsTo": [
       "pcb_port_27",
@@ -13891,7 +13429,7 @@
   },
   {
     "type": "pcb_trace",
-    "pcb_trace_id": "source_net_1_mst9_0",
+    "pcb_trace_id": "source_net_1_mst8_0",
     "connection_name": "source_net_1",
     "connectsTo": [
       "pcb_port_45",
@@ -13927,7 +13465,7 @@
   },
   {
     "type": "pcb_trace",
-    "pcb_trace_id": "source_net_1_mst10_0",
+    "pcb_trace_id": "source_net_1_mst9_0",
     "connection_name": "source_net_1",
     "connectsTo": [
       "pcb_port_53",
@@ -13944,97 +13482,22 @@
       },
       {
         "route_type": "wire",
-        "x": -6.514315364621099,
-        "y": 3.660684635378901,
+        "x": -6.13471220478942,
+        "y": 4.040287795210579,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -6.174864304201312,
-        "y": 3.6100348301304743,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "via",
-        "x": -6.174864304201312,
-        "y": 3.6100348301304743,
-        "from_layer": "bottom",
-        "to_layer": "top",
-        "via_diameter": 0.6,
-        "via_hole_diameter": 0.3
-      },
-      {
-        "route_type": "wire",
-        "x": -6.174864304201312,
-        "y": 3.6100348301304743,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": -6.172391152273792,
-        "y": 3.658490547397743,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": -4.1008185458840325,
-        "y": 1.5869179410079837,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": -4.092522688414355,
-        "y": 1.5052646022167289,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "via",
-        "x": -4.092522688414355,
-        "y": 1.5052646022167289,
-        "from_layer": "top",
-        "to_layer": "bottom",
-        "via_diameter": 0.6,
-        "via_hole_diameter": 0.3
-      },
-      {
-        "route_type": "wire",
-        "x": -4.092522688414355,
-        "y": 1.5052646022167289,
+        "x": -4.064322397746112,
+        "y": 4.040287795210579,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -3.9711093353347,
-        "y": 1.691597605520684,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -3.9451855215241918,
-        "y": 1.691597605520684,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -3.175,
-        "y": 2.461783127044876,
+        "x": -3.11308162201988,
+        "y": 3.089047019484347,
         "width": 0.2,
         "layer": "top"
       },
@@ -14052,7 +13515,7 @@
   },
   {
     "type": "pcb_trace",
-    "pcb_trace_id": "source_net_1_mst11_0",
+    "pcb_trace_id": "source_net_1_mst10_0",
     "connection_name": "source_net_1",
     "connectsTo": [
       "pcb_port_0",
@@ -14069,36 +13532,22 @@
       },
       {
         "route_type": "wire",
-        "x": 5.904017267489852,
-        "y": -9.373017267489852,
+        "x": 5.919000658107816,
+        "y": -9.408366860196791,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 5.920450315530478,
-        "y": -9.387505730698853,
+        "x": 7.4702267297140725,
+        "y": -9.439224552424054,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 7.485288135983277,
-        "y": -9.378885624658855,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 7.645405280806982,
-        "y": -9.267696181542027,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 8.01163110742103,
-        "y": -8.869694687523616,
+        "x": 8.040622066655501,
+        "y": -8.856919240353072,
         "width": 0.2,
         "layer": "top"
       },
@@ -14116,7 +13565,7 @@
   },
   {
     "type": "pcb_trace",
-    "pcb_trace_id": "source_net_1_mst12_0",
+    "pcb_trace_id": "source_net_1_mst11_0",
     "connection_name": "source_net_1",
     "connectsTo": [
       "pcb_port_2",
@@ -14158,7 +13607,7 @@
   },
   {
     "type": "pcb_trace",
-    "pcb_trace_id": "source_net_1_mst13_0",
+    "pcb_trace_id": "source_net_1_mst12_0",
     "connection_name": "source_net_1",
     "connectsTo": [
       "pcb_port_0",
@@ -14194,43 +13643,7 @@
   },
   {
     "type": "pcb_trace",
-    "pcb_trace_id": "source_net_1_mst14_0",
-    "connection_name": "source_net_1",
-    "connectsTo": [
-      "pcb_port_54",
-      "pcb_port_55"
-    ],
-    "route": [
-      {
-        "route_type": "wire",
-        "x": -4.19989,
-        "y": 10.250186,
-        "width": 0.2,
-        "layer": "top",
-        "start_pcb_port_id": "pcb_port_54"
-      },
-      {
-        "route_type": "wire",
-        "x": -4.19989,
-        "y": 5.75011,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -4.19989,
-        "y": 5.749814000000001,
-        "width": 0.2,
-        "layer": "top",
-        "end_pcb_port_id": "pcb_port_55"
-      }
-    ],
-    "subcircuit_id": "subcircuit_source_group_0",
-    "source_trace_id": "source_trace_38"
-  },
-  {
-    "type": "pcb_trace",
-    "pcb_trace_id": "source_net_1_mst15_0",
+    "pcb_trace_id": "source_net_1_mst13_0",
     "connection_name": "source_net_1",
     "connectsTo": [
       "pcb_port_47",
@@ -14247,141 +13660,36 @@
       },
       {
         "route_type": "wire",
-        "x": 3.2733370965631945,
-        "y": -7.251709914929197,
+        "x": 3.4967002799430165,
+        "y": -7.2833891913633195,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 3.3466678931263885,
-        "y": -7.477564629858396,
+        "x": 3.5033902597139406,
+        "y": -8.760588253400378,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 3.4201174118325994,
-        "y": -7.703380696204728,
+        "x": 1.7577306654792668,
+        "y": -10.460008882124715,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 3.4941875303524768,
-        "y": -7.928994749077236,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.5666602828159713,
-        "y": -8.155128774645991,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.533326949482638,
-        "y": -8.321795441312657,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.5031137482266144,
-        "y": -8.488710681772947,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.4990850971331384,
-        "y": -8.672774189094493,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.4087086882671875,
-        "y": -8.838149892659255,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.207253187578447,
-        "y": -8.910608803540342,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.0666602828159713,
-        "y": -8.955128774645992,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.8466602828159715,
-        "y": -8.915128774645991,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.619996688444502,
-        "y": -8.908659137144648,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.4027542802275184,
-        "y": -8.854408245330927,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 2.1865735499614036,
-        "y": -8.795797042078275,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.9622909967243425,
-        "y": -8.771168288143938,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.7608875900517094,
-        "y": -8.698922195697305,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.5666602828159713,
-        "y": -8.621795441312656,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": 1.3737340639475946,
-        "y": -8.585138130379308,
+        "x": -3.3130361172655287,
+        "y": -10.479873797226066,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "via",
-        "x": 1.3737340639475946,
-        "y": -8.585138130379308,
+        "x": -3.3130361172655287,
+        "y": -10.479873797226066,
         "from_layer": "bottom",
         "to_layer": "top",
         "via_diameter": 0.6,
@@ -14389,8 +13697,8 @@
       },
       {
         "route_type": "wire",
-        "x": 1.3737340639475946,
-        "y": -8.585138130379308,
+        "x": -3.3130361172655287,
+        "y": -10.479873797226066,
         "width": 0.2,
         "layer": "bottom",
         "is_inside_copper_pour": true,
@@ -14398,8 +13706,8 @@
       },
       {
         "route_type": "wire",
-        "x": 1.266660282815971,
-        "y": -8.333700203217418,
+        "x": -3.414043004915396,
+        "y": -10.360956995084605,
         "width": 0.2,
         "layer": "bottom",
         "is_inside_copper_pour": true,
@@ -14407,8 +13715,8 @@
       },
       {
         "route_type": "wire",
-        "x": 1.1666602828159711,
-        "y": -8.112271631788847,
+        "x": -3.4336403072667543,
+        "y": -10.360956995084605,
         "width": 0.2,
         "layer": "bottom",
         "is_inside_copper_pour": true,
@@ -14416,8 +13724,8 @@
       },
       {
         "route_type": "wire",
-        "x": 1.066660282815971,
-        "y": -7.890843060360275,
+        "x": -3.5394206460437223,
+        "y": -10.255176656307636,
         "width": 0.2,
         "layer": "bottom",
         "is_inside_copper_pour": true,
@@ -14425,98 +13733,8 @@
       },
       {
         "route_type": "wire",
-        "x": 0.9666602828159709,
-        "y": -7.669414488931704,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.866660282815971,
-        "y": -7.447985917503133,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.7666602828159709,
-        "y": -7.226557346074562,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.6666602828159709,
-        "y": -7.00512877464599,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.5666602828159709,
-        "y": -6.7837002032174185,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.46666028281597083,
-        "y": -6.562271631788847,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.3666602828159708,
-        "y": -6.3408430603602755,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.2666602828159708,
-        "y": -6.119414488931705,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.16666028281597076,
-        "y": -5.897985917503133,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": 0.06666028281597074,
-        "y": -5.676557346074562,
-        "width": 0.2,
-        "layer": "bottom",
-        "is_inside_copper_pour": true,
-        "copper_pour_id": "pcb_copper_pour_3"
-      },
-      {
-        "route_type": "wire",
-        "x": -0.03932064629943184,
-        "y": -5.4397375669544665,
+        "x": -3.5658170933807893,
+        "y": -9.36963339425657,
         "width": 0.2,
         "layer": "bottom",
         "is_inside_copper_pour": true,
@@ -14524,8 +13742,8 @@
       },
       {
         "route_type": "via",
-        "x": -0.03932064629943184,
-        "y": -5.4397375669544665,
+        "x": -3.5658170933807893,
+        "y": -9.36963339425657,
         "from_layer": "top",
         "to_layer": "bottom",
         "via_diameter": 0.6,
@@ -14533,43 +13751,43 @@
       },
       {
         "route_type": "wire",
-        "x": -0.03932064629943184,
-        "y": -5.4397375669544665,
+        "x": -3.5658170933807893,
+        "y": -9.36963339425657,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.22361643098669115,
-        "y": -5.345940645538326,
+        "x": -3.5025518368950155,
+        "y": -9.373339264694126,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.4138931447893529,
-        "y": -5.23675251643066,
+        "x": -3.5025518368950155,
+        "y": -9.196460844325877,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.6041698585920147,
-        "y": -5.127564387322995,
+        "x": -3.5564895907015996,
+        "y": -6.836587593237133,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.7944465723946765,
-        "y": -5.01837625821533,
+        "x": -3.4195448861011277,
+        "y": -6.699642888636661,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.9847232861973383,
-        "y": -4.909188129107665,
+        "x": -1.4659642436578826,
+        "y": -4.746062246193416,
         "width": 0.2,
         "layer": "top"
       },
@@ -14584,6 +13802,92 @@
     ],
     "subcircuit_id": "subcircuit_source_group_0",
     "source_trace_id": "source_trace_13"
+  },
+  {
+    "type": "pcb_trace",
+    "pcb_trace_id": "source_net_1_mst14_0",
+    "connection_name": "source_net_1",
+    "connectsTo": [
+      "pcb_port_54",
+      "pcb_port_42"
+    ],
+    "route": [
+      {
+        "route_type": "wire",
+        "x": -3.175,
+        "y": 2.872486,
+        "width": 0.2,
+        "layer": "top",
+        "start_pcb_port_id": "pcb_port_42"
+      },
+      {
+        "route_type": "wire",
+        "x": -2.9695079365132457,
+        "y": 3.077492063486754,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": -2.9304868627723772,
+        "y": 3.077492063486754,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": -2.9304868627723772,
+        "y": 8.980782862772376,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": -4.19989,
+        "y": 10.250186,
+        "width": 0.2,
+        "layer": "top",
+        "end_pcb_port_id": "pcb_port_54"
+      }
+    ],
+    "subcircuit_id": "subcircuit_source_group_0",
+    "source_trace_id": "source_trace_37"
+  },
+  {
+    "type": "pcb_trace",
+    "pcb_trace_id": "source_net_1_mst15_0",
+    "connection_name": "source_net_1",
+    "connectsTo": [
+      "pcb_port_54",
+      "pcb_port_56"
+    ],
+    "route": [
+      {
+        "route_type": "wire",
+        "x": -4.19989,
+        "y": 10.250186,
+        "width": 0.2,
+        "layer": "top",
+        "start_pcb_port_id": "pcb_port_54"
+      },
+      {
+        "route_type": "wire",
+        "x": 4.199814000000001,
+        "y": 10.250186,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 4.19989,
+        "y": 10.250186,
+        "width": 0.2,
+        "layer": "top",
+        "end_pcb_port_id": "pcb_port_56"
+      }
+    ],
+    "subcircuit_id": "subcircuit_source_group_0",
+    "source_trace_id": "source_trace_38"
   },
   {
     "type": "pcb_trace",
@@ -14625,71 +13929,71 @@
       },
       {
         "route_type": "wire",
-        "x": -10.65,
+        "x": -10.8460612,
         "y": -9.8,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -10.820436057789774,
-        "y": -9.624849645471611,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -10.928879910174741,
-        "y": -9.394867489887421,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
         "x": -10.9000612,
+        "y": -9.554,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": -10.918061199999999,
+        "y": -9.346,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": -10.9200612,
         "y": -9.133,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -10.9000612,
+        "x": -10.921061199999999,
         "y": -8.921,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -10.900219900911027,
-        "y": -8.713908248058416,
+        "x": -10.930061199999999,
+        "y": -8.714,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -10.89996396927488,
-        "y": -8.529933100626966,
+        "x": -11.060665612817132,
+        "y": -8.53733055236643,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -11.241165519893562,
-        "y": -8.161523816020393,
+        "x": -11.436737290611262,
+        "y": -8.161258874572301,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -11.259493668176665,
-        "y": -7.925465770141769,
+        "x": -11.2589855446119,
+        "y": -7.925365073605943,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -11.241411357724703,
-        "y": -7.265674182495175,
+        "x": -11.241419666713973,
+        "y": -7.265673965770748,
         "width": 0.2,
         "layer": "top"
       },
@@ -14724,8 +14028,8 @@
       },
       {
         "route_type": "wire",
-        "x": 7.963579992756635,
-        "y": -0.8595850495789992,
+        "x": 7.951250024563506,
+        "y": -0.871423322889726,
         "width": 0.2,
         "layer": "top"
       },
@@ -14760,183 +14064,176 @@
       },
       {
         "route_type": "wire",
-        "x": 2.3417852957039926,
-        "y": -7.233173593661497,
+        "x": 2.3269275793057203,
+        "y": -7.2482324064244965,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.2834102914079857,
-        "y": -7.440491987322995,
+        "x": 2.25369485861144,
+        "y": -7.470609612848994,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.2250352871119783,
-        "y": -7.647810380984493,
+        "x": 2.1804621379171603,
+        "y": -7.692986819273491,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.166660282815971,
-        "y": -7.855128774645991,
+        "x": 2.1072294172228805,
+        "y": -7.915364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.016660282815971,
-        "y": -7.905128774645991,
+        "x": 1.8672294172228803,
+        "y": -7.955364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 1.866660282815971,
-        "y": -7.955128774645991,
+        "x": 1.6272294172228805,
+        "y": -7.995364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 1.6238031399588282,
-        "y": -7.997985917503134,
+        "x": 1.3872294172228807,
+        "y": -8.035364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 1.378938592491676,
-        "y": -8.026356300508889,
+        "x": 1.1472294172228807,
+        "y": -8.075364025697988,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 1.1330224777229265,
-        "y": -8.06817760733549,
+        "x": 0.9072294172228808,
+        "y": -8.115364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.8952317113873995,
-        "y": -8.126557346074563,
+        "x": 0.6672294172228808,
+        "y": -8.155364025697988,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.6523745685302567,
-        "y": -8.169414488931706,
+        "x": 0.4272294172228809,
+        "y": -8.19536402569799,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.4095174256731138,
-        "y": -8.212271631788848,
+        "x": 0.18943607760179643,
+        "y": -8.247285744065156,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 0.16715968061429534,
-        "y": -8.262877128705473,
+        "x": -0.05155289710226189,
+        "y": -8.290852313483402,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.0685639398475632,
-        "y": -8.283288212260517,
+        "x": -0.292770582777119,
+        "y": -8.315364025697988,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.30156537442236053,
-        "y": -8.281373631611077,
+        "x": -0.5238119793361942,
+        "y": -8.29048587196893,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.5377426423897469,
-        "y": -8.279530349843002,
+        "x": -0.7451225763367573,
+        "y": -8.2246209835128,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.7718424863720232,
-        "y": -8.22171086625909,
+        "x": -0.9677705827771192,
+        "y": -8.165364025697988,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -1.0000063838506956,
-        "y": -8.155128774645991,
+        "x": -1.1927705827771193,
+        "y": -8.115364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -1.233339717184029,
-        "y": -8.10512877464599,
+        "x": -1.4177705827771194,
+        "y": -8.065364025697988,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -1.4666730505173624,
-        "y": -8.055128774645992,
+        "x": -1.6427705827771195,
+        "y": -8.01536402569799,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -1.7000063838506958,
-        "y": -8.005128774645991,
+        "x": -1.8677705827771196,
+        "y": -7.965364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -1.9333397171840292,
-        "y": -7.955128774645991,
+        "x": -2.0927705827771197,
+        "y": -7.915364025697989,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -2.133339717184029,
-        "y": -7.855128774645991,
+        "x": -2.16956721208284,
+        "y": -7.693028094273491,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -2.1999940628880217,
-        "y": -7.647851655984493,
+        "x": -2.24636384138856,
+        "y": -7.470692162848994,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -2.2666484085920144,
-        "y": -7.440574537322995,
-        "width": 0.2,
-        "layer": "top"
-      },
-      {
-        "route_type": "wire",
-        "x": -2.333302754296007,
-        "y": -7.233297418661497,
+        "x": -2.3231604706942797,
+        "y": -7.248356231424497,
         "width": 0.2,
         "layer": "top"
       },
@@ -14978,15 +14275,15 @@
       },
       {
         "route_type": "wire",
-        "x": -7.689550156393268,
-        "y": 1.2086320300022735,
+        "x": -7.728138301195281,
+        "y": 1.2082397732589925,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "via",
-        "x": -7.689550156393268,
-        "y": 1.2086320300022735,
+        "x": -7.728138301195281,
+        "y": 1.2082397732589925,
         "from_layer": "bottom",
         "to_layer": "top",
         "via_diameter": 0.6,
@@ -14994,8 +14291,8 @@
       },
       {
         "route_type": "wire",
-        "x": -7.689550156393268,
-        "y": 1.2086320300022735,
+        "x": -7.728138301195281,
+        "y": 1.2082397732589925,
         "width": 0.2,
         "layer": "bottom"
       },
@@ -15022,15 +14319,15 @@
       },
       {
         "route_type": "wire",
-        "x": -6.590361785943985,
-        "y": 1.4817650393032151,
+        "x": -6.472910273708793,
+        "y": 1.4817256933988971,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "via",
-        "x": -6.590361785943985,
-        "y": 1.4817650393032151,
+        "x": -6.472910273708793,
+        "y": 1.4817256933988971,
         "from_layer": "top",
         "to_layer": "bottom",
         "via_diameter": 0.6,
@@ -15038,8 +14335,8 @@
       },
       {
         "route_type": "wire",
-        "x": -6.590361785943985,
-        "y": 1.4817650393032151,
+        "x": -6.472910273708793,
+        "y": 1.4817256933988971,
         "width": 0.2,
         "layer": "top"
       },
@@ -15145,50 +14442,155 @@
       },
       {
         "route_type": "wire",
-        "x": 2.3445769638026617,
-        "y": -7.230734129107664,
+        "x": 2.5089251724798496,
+        "y": -6.91708257752015,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.2889936276053238,
-        "y": -7.4356130582153295,
+        "x": 2.617690044959699,
+        "y": -6.808309955040301,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.233410291407986,
-        "y": -7.640491987322995,
+        "x": 2.5942537935409407,
+        "y": -6.575468650603894,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.1778269552106475,
-        "y": -7.84537091643066,
+        "x": 2.570817542122182,
+        "y": -6.342627346167488,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.122243619013309,
-        "y": -8.050249845538325,
+        "x": 2.73235460768763,
+        "y": -6.189969939905177,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 2.0768889945264295,
-        "y": -8.227960905997776,
+        "x": 2.904645941470527,
+        "y": -6.049788849432648,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 3.067559655965379,
+        "y": -5.89418068019966,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 3.2176323261754645,
+        "y": -5.732806356008087,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 3.379336022188785,
+        "y": -5.5803511084682365,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 3.5410397182021054,
+        "y": -5.427895860928387,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 3.7027434142154263,
+        "y": -5.275440613388536,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 3.8644471102287468,
+        "y": -5.122985365848686,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 4.026150806242067,
+        "y": -4.970530118308836,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 4.245334866057999,
+        "y": -4.9924399116527045,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 4.464518925873931,
+        "y": -5.014349704996572,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 4.683702985689862,
+        "y": -5.036259498340441,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 4.9028870455057945,
+        "y": -5.05816929168431,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 5.1220711053217265,
+        "y": -5.080079085028178,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 5.3412551651376585,
+        "y": -5.101988878372047,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 5.5604392249535906,
+        "y": -5.1238986717159145,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 5.779623284769523,
+        "y": -5.145808465059783,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "via",
-        "x": 2.0768889945264295,
-        "y": -8.227960905997776,
+        "x": 5.779623284769523,
+        "y": -5.145808465059783,
         "from_layer": "bottom",
         "to_layer": "top",
         "via_diameter": 0.6,
@@ -15196,162 +14598,71 @@
       },
       {
         "route_type": "wire",
-        "x": 2.0768889945264295,
-        "y": -8.227960905997776,
+        "x": 5.779623284769523,
+        "y": -5.145808465059783,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "wire",
-        "x": 2.230121888489759,
-        "y": -8.073216677722176,
+        "x": 5.820037362925156,
+        "y": -5.0205626484695625,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "wire",
-        "x": 2.3239676658331265,
-        "y": -7.82657289033611,
+        "x": 5.86045144108079,
+        "y": -4.895316831879341,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "wire",
-        "x": 2.5293607041853803,
-        "y": -7.672150188860895,
+        "x": 5.86045144108079,
+        "y": -4.856429481871428,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "wire",
-        "x": 2.7212057373614256,
-        "y": -7.527856047373263,
+        "x": 6.005959987437312,
+        "y": -4.710920935514906,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "wire",
-        "x": 2.8848421009977896,
-        "y": -7.346037865555082,
+        "x": 6.151468533793834,
+        "y": -4.565412389158384,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "wire",
-        "x": 3.0484784646341527,
-        "y": -7.1642196837369,
+        "x": 6.16151766986757,
+        "y": -4.343033961483805,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "wire",
-        "x": 3.2121148282705168,
-        "y": -6.9824015019187184,
+        "x": 6.171566805941305,
+        "y": -4.1206555338092254,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "wire",
-        "x": 3.3757511919068803,
-        "y": -6.800583320100536,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.539387555543244,
-        "y": -6.618765138282354,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.7030239191796075,
-        "y": -6.436946956464173,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 3.866660282815971,
-        "y": -6.255128774645991,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.026660282815971,
-        "y": -6.095128774645991,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.186660282815971,
-        "y": -5.935128774645991,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.3466602828159715,
-        "y": -5.7751287746459905,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.506660282815972,
-        "y": -5.615128774645991,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.666660282815971,
-        "y": -5.455128774645991,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.826660282815971,
-        "y": -5.295128774645991,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 4.986660282815971,
-        "y": -5.135128774645991,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 5.146660282815971,
-        "y": -4.975128774645992,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 5.3066602828159715,
-        "y": -4.815128774645991,
-        "width": 0.2,
-        "layer": "bottom"
-      },
-      {
-        "route_type": "wire",
-        "x": 5.466660282815972,
-        "y": -4.655128774645991,
+        "x": 6.181615942015041,
+        "y": -3.898277106134646,
         "width": 0.2,
         "layer": "bottom"
       },
       {
         "route_type": "via",
-        "x": 5.466660282815972,
-        "y": -4.655128774645991,
+        "x": 6.181615942015041,
+        "y": -3.898277106134646,
         "from_layer": "top",
         "to_layer": "bottom",
         "via_diameter": 0.6,
@@ -15359,120 +14670,141 @@
       },
       {
         "route_type": "wire",
-        "x": 5.466660282815972,
-        "y": -4.655128774645991,
+        "x": 6.181615942015041,
+        "y": -3.898277106134646,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 5.604160282815972,
-        "y": -4.467628774645991,
+        "x": 6.261937261325628,
+        "y": -3.8678715574717133,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 5.741660282815971,
-        "y": -4.280128774645991,
+        "x": 6.261937261325628,
+        "y": -3.829732809416847,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 5.879160282815971,
-        "y": -4.092628774645991,
+        "x": 6.39646252211711,
+        "y": -3.6857253235228917,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 6.016660282815971,
-        "y": -3.9051287746459913,
+        "x": 6.530987782908593,
+        "y": -3.541717837628936,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 6.154160282815972,
-        "y": -3.7176287746459913,
+        "x": 6.533975387080982,
+        "y": -3.317958491262835,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 6.291660282815972,
-        "y": -3.5301287746459913,
+        "x": 6.536962991253372,
+        "y": -3.094199144896733,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 6.429160282815971,
-        "y": -3.3426287746459913,
+        "x": 6.539950595425761,
+        "y": -2.870439798530631,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 6.566660282815971,
-        "y": -3.1551287746459913,
+        "x": 6.542938199598151,
+        "y": -2.6466804521645297,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 6.666660282815971,
-        "y": -3.05512877464599,
+        "x": 6.54592580377054,
+        "y": -2.4229211057984283,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 6.866660282815971,
-        "y": -3.05512877464599,
+        "x": 6.54891340794293,
+        "y": -2.1991617594323265,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 7.066660282815971,
-        "y": -3.05512877464599,
+        "x": 6.710652616139131,
+        "y": -2.3600538145955334,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 7.266660282815971,
-        "y": -3.05512877464599,
+        "x": 6.872391824335334,
+        "y": -2.520945869758741,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 7.466660282815972,
-        "y": -3.05512877464599,
+        "x": 7.034131032531535,
+        "y": -2.6818379249219477,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 7.5999952121119785,
-        "y": -3.2540725809844924,
+        "x": 7.195870240727737,
+        "y": -2.842729980085154,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 7.733330141407986,
-        "y": -3.453016387322995,
+        "x": 7.357609448923939,
+        "y": -3.0036220352483616,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": 7.866665070703993,
-        "y": -3.6519601936614974,
+        "x": 7.5193486571201404,
+        "y": -3.1645140904115685,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 7.681087865316342,
+        "y": -3.3254061455747754,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 7.842827073512544,
+        "y": -3.4862982007379824,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": 8.004566281708746,
+        "y": -3.6471902559011893,
         "width": 0.2,
         "layer": "top"
       },
@@ -15507,36 +14839,50 @@
       },
       {
         "route_type": "wire",
-        "x": -7.824829182829264,
-        "y": -6.3425299248380576,
+        "x": -7.824980987470306,
+        "y": -6.342531570791304,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -7.825374677483211,
-        "y": -7.88312857769043,
+        "x": -7.82504166677871,
+        "y": -7.882334647052827,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -6.596184814899705,
-        "y": -9.05611764204986,
+        "x": -5.727991661248507,
+        "y": -9.924364855713184,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -0.8664349588809349,
-        "y": -9.056741114551572,
+        "x": -3.3970643075657216,
+        "y": -9.929613762597953,
         "width": 0.2,
         "layer": "top"
       },
       {
         "route_type": "wire",
-        "x": -2.405578370554034,
-        "y": -7.525727983793907,
+        "x": -3.34575480587864,
+        "y": -9.93084785301629,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": -2.4981473998156347,
+        "y": -9.066073070338664,
+        "width": 0.2,
+        "layer": "top"
+      },
+      {
+        "route_type": "wire",
+        "x": -2.197901079343369,
+        "y": -8.950278452312576,
         "width": 0.2,
         "layer": "top"
       },
@@ -15556,7 +14902,7 @@
     "type": "pcb_via",
     "pcb_via_id": "pcb_via_0",
     "pcb_trace_id": "source_net_10_0",
-    "x": -10.707628482038427,
+    "x": -10.708780473180218,
     "y": -7.925000000000001,
     "hole_diameter": 0.3,
     "outer_diameter": 0.6,
@@ -15573,8 +14919,8 @@
     "type": "pcb_via",
     "pcb_via_id": "pcb_via_1",
     "pcb_trace_id": "source_net_10_0",
-    "x": -2.882,
-    "y": 1.358,
+    "x": -0.6350000000000001,
+    "y": 4.389266547521274,
     "hole_diameter": 0.3,
     "outer_diameter": 0.6,
     "layers": [
@@ -15589,9 +14935,9 @@
   {
     "type": "pcb_via",
     "pcb_via_id": "pcb_via_2",
-    "pcb_trace_id": "source_net_5_mst2_0",
-    "x": -0.9437464612811368,
-    "y": -5.7749999999999995,
+    "pcb_trace_id": "source_net_8_mst1_0",
+    "x": -3.6,
+    "y": 7.2,
     "hole_diameter": 0.3,
     "outer_diameter": 0.6,
     "layers": [
@@ -15601,14 +14947,14 @@
     "from_layer": "top",
     "to_layer": "bottom",
     "subcircuit_id": "subcircuit_source_group_0",
-    "subcircuit_connectivity_map_key": "button_connectivity_net5"
+    "subcircuit_connectivity_map_key": "button_connectivity_net8"
   },
   {
     "type": "pcb_via",
     "pcb_via_id": "pcb_via_3",
-    "pcb_trace_id": "source_net_5_mst2_0",
-    "x": 1.265373319586579,
-    "y": -1.6303531592104583,
+    "pcb_trace_id": "source_net_8_mst1_0",
+    "x": -1.175,
+    "y": 6.107,
     "hole_diameter": 0.3,
     "outer_diameter": 0.6,
     "layers": [
@@ -15618,14 +14964,31 @@
     "from_layer": "bottom",
     "to_layer": "top",
     "subcircuit_id": "subcircuit_source_group_0",
-    "subcircuit_connectivity_map_key": "button_connectivity_net5"
+    "subcircuit_connectivity_map_key": "button_connectivity_net8"
   },
   {
     "type": "pcb_via",
     "pcb_via_id": "pcb_via_4",
-    "pcb_trace_id": "source_net_5_mst3_0",
-    "x": 3.3929256750942534,
-    "y": -0.4078823042804308,
+    "pcb_trace_id": "source_net_7_mst2_0",
+    "x": -8,
+    "y": 5.075,
+    "hole_diameter": 0.3,
+    "outer_diameter": 0.6,
+    "layers": [
+      "top",
+      "bottom"
+    ],
+    "from_layer": "bottom",
+    "to_layer": "top",
+    "subcircuit_id": "subcircuit_source_group_0",
+    "subcircuit_connectivity_map_key": "button_connectivity_net7"
+  },
+  {
+    "type": "pcb_via",
+    "pcb_via_id": "pcb_via_5",
+    "pcb_trace_id": "source_net_7_mst2_0",
+    "x": -1.0569951045236354,
+    "y": 5.122187258832076,
     "hole_diameter": 0.3,
     "outer_diameter": 0.6,
     "layers": [
@@ -15635,14 +14998,31 @@
     "from_layer": "top",
     "to_layer": "bottom",
     "subcircuit_id": "subcircuit_source_group_0",
-    "subcircuit_connectivity_map_key": "button_connectivity_net5"
+    "subcircuit_connectivity_map_key": "button_connectivity_net7"
   },
   {
     "type": "pcb_via",
-    "pcb_via_id": "pcb_via_5",
-    "pcb_trace_id": "source_net_5_mst3_0",
-    "x": 3.0287291527285793,
-    "y": -1.4930430577216298,
+    "pcb_via_id": "pcb_via_6",
+    "pcb_trace_id": "source_net_4_mst2_0",
+    "x": 1.207229417222881,
+    "y": -5.815364025697988,
+    "hole_diameter": 0.3,
+    "outer_diameter": 0.6,
+    "layers": [
+      "top",
+      "bottom"
+    ],
+    "from_layer": "top",
+    "to_layer": "bottom",
+    "subcircuit_id": "subcircuit_source_group_0",
+    "subcircuit_connectivity_map_key": "button_connectivity_net4"
+  },
+  {
+    "type": "pcb_via",
+    "pcb_via_id": "pcb_via_7",
+    "pcb_trace_id": "source_net_4_mst2_0",
+    "x": 1.988,
+    "y": -0.922,
     "hole_diameter": 0.3,
     "outer_diameter": 0.6,
     "layers": [
@@ -15652,11 +15032,45 @@
     "from_layer": "bottom",
     "to_layer": "top",
     "subcircuit_id": "subcircuit_source_group_0",
-    "subcircuit_connectivity_map_key": "button_connectivity_net5"
+    "subcircuit_connectivity_map_key": "button_connectivity_net4"
   },
   {
     "type": "pcb_via",
-    "pcb_via_id": "pcb_via_6",
+    "pcb_via_id": "pcb_via_8",
+    "pcb_trace_id": "source_net_3_0",
+    "x": 4.00722941722288,
+    "y": -6.215364025697989,
+    "hole_diameter": 0.3,
+    "outer_diameter": 0.6,
+    "layers": [
+      "top",
+      "bottom"
+    ],
+    "from_layer": "top",
+    "to_layer": "bottom",
+    "subcircuit_id": "subcircuit_source_group_0",
+    "subcircuit_connectivity_map_key": "button_connectivity_net2"
+  },
+  {
+    "type": "pcb_via",
+    "pcb_via_id": "pcb_via_9",
+    "pcb_trace_id": "source_net_3_0",
+    "x": 2.5851685983295405,
+    "y": -5.594362275418637,
+    "hole_diameter": 0.3,
+    "outer_diameter": 0.6,
+    "layers": [
+      "top",
+      "bottom"
+    ],
+    "from_layer": "bottom",
+    "to_layer": "top",
+    "subcircuit_id": "subcircuit_source_group_0",
+    "subcircuit_connectivity_map_key": "button_connectivity_net2"
+  },
+  {
+    "type": "pcb_via",
+    "pcb_via_id": "pcb_via_10",
     "pcb_trace_id": "source_net_2_0",
     "x": -7.608582397123899,
     "y": -3.3233463842310016,
@@ -15673,9 +15087,9 @@
   },
   {
     "type": "pcb_via",
-    "pcb_via_id": "pcb_via_7",
+    "pcb_via_id": "pcb_via_11",
     "pcb_trace_id": "source_net_2_0",
-    "x": -1.6869304641662837,
+    "x": -1.6218530124575967,
     "y": -5.875958099999999,
     "hole_diameter": 0.3,
     "outer_diameter": 0.6,
@@ -15690,112 +15104,27 @@
   },
   {
     "type": "pcb_via",
-    "pcb_via_id": "pcb_via_8",
-    "pcb_trace_id": "source_net_1_mst7_0",
-    "x": -4.092522688414355,
-    "y": 1.5052646022167289,
-    "hole_diameter": 0.3,
-    "outer_diameter": 0.6,
-    "layers": [
-      "top",
-      "bottom"
-    ],
-    "from_layer": "bottom",
-    "to_layer": "top",
-    "subcircuit_id": "subcircuit_source_group_0",
-    "subcircuit_connectivity_map_key": "button_connectivity_net1"
-  },
-  {
-    "type": "pcb_via",
-    "pcb_via_id": "pcb_via_9",
-    "pcb_trace_id": "source_net_1_mst7_0",
-    "x": -5.487720097845013,
-    "y": 4.667153344007827,
-    "hole_diameter": 0.3,
-    "outer_diameter": 0.6,
-    "layers": [
-      "top",
-      "bottom"
-    ],
-    "from_layer": "top",
-    "to_layer": "bottom",
-    "subcircuit_id": "subcircuit_source_group_0",
-    "subcircuit_connectivity_map_key": "button_connectivity_net1"
-  },
-  {
-    "type": "pcb_via",
-    "pcb_via_id": "pcb_via_10",
-    "pcb_trace_id": "source_net_1_mst10_0",
-    "x": -6.174864304201312,
-    "y": 3.6100348301304743,
-    "hole_diameter": 0.3,
-    "outer_diameter": 0.6,
-    "layers": [
-      "top",
-      "bottom"
-    ],
-    "from_layer": "bottom",
-    "to_layer": "top",
-    "subcircuit_id": "subcircuit_source_group_0",
-    "subcircuit_connectivity_map_key": "button_connectivity_net1"
-  },
-  {
-    "type": "pcb_via",
-    "pcb_via_id": "pcb_via_11",
-    "pcb_trace_id": "source_net_1_mst15_0",
-    "x": 1.3737340639475946,
-    "y": -8.585138130379308,
-    "hole_diameter": 0.3,
-    "outer_diameter": 0.6,
-    "layers": [
-      "top",
-      "bottom"
-    ],
-    "from_layer": "bottom",
-    "to_layer": "top",
-    "subcircuit_id": "subcircuit_source_group_0",
-    "subcircuit_connectivity_map_key": "button_connectivity_net1"
-  },
-  {
-    "type": "pcb_via",
     "pcb_via_id": "pcb_via_12",
-    "pcb_trace_id": "source_net_1_mst15_0",
-    "x": -0.03932064629943184,
-    "y": -5.4397375669544665,
+    "pcb_trace_id": "source_net_1_mst13_0",
+    "x": -3.3130361172655287,
+    "y": -10.479873797226066,
     "hole_diameter": 0.3,
     "outer_diameter": 0.6,
     "layers": [
       "top",
       "bottom"
     ],
-    "from_layer": "top",
-    "to_layer": "bottom",
+    "from_layer": "bottom",
+    "to_layer": "top",
     "subcircuit_id": "subcircuit_source_group_0",
     "subcircuit_connectivity_map_key": "button_connectivity_net1"
   },
   {
     "type": "pcb_via",
     "pcb_via_id": "pcb_via_13",
-    "pcb_trace_id": "source_net_0_mst3_0",
-    "x": -7.689550156393268,
-    "y": 1.2086320300022735,
-    "hole_diameter": 0.3,
-    "outer_diameter": 0.6,
-    "layers": [
-      "top",
-      "bottom"
-    ],
-    "from_layer": "bottom",
-    "to_layer": "top",
-    "subcircuit_id": "subcircuit_source_group_0",
-    "subcircuit_connectivity_map_key": "button_connectivity_net3"
-  },
-  {
-    "type": "pcb_via",
-    "pcb_via_id": "pcb_via_14",
-    "pcb_trace_id": "source_net_0_mst3_0",
-    "x": -6.590361785943985,
-    "y": 1.4817650393032151,
+    "pcb_trace_id": "source_net_1_mst13_0",
+    "x": -3.5658170933807893,
+    "y": -9.36963339425657,
     "hole_diameter": 0.3,
     "outer_diameter": 0.6,
     "layers": [
@@ -15805,14 +15134,14 @@
     "from_layer": "top",
     "to_layer": "bottom",
     "subcircuit_id": "subcircuit_source_group_0",
-    "subcircuit_connectivity_map_key": "button_connectivity_net3"
+    "subcircuit_connectivity_map_key": "button_connectivity_net1"
   },
   {
     "type": "pcb_via",
-    "pcb_via_id": "pcb_via_15",
-    "pcb_trace_id": "source_net_0_mst5_0",
-    "x": 2.0768889945264295,
-    "y": -8.227960905997776,
+    "pcb_via_id": "pcb_via_14",
+    "pcb_trace_id": "source_net_0_mst3_0",
+    "x": -7.728138301195281,
+    "y": 1.2082397732589925,
     "hole_diameter": 0.3,
     "outer_diameter": 0.6,
     "layers": [
@@ -15821,6 +15150,23 @@
     ],
     "from_layer": "bottom",
     "to_layer": "top",
+    "subcircuit_id": "subcircuit_source_group_0",
+    "subcircuit_connectivity_map_key": "button_connectivity_net3"
+  },
+  {
+    "type": "pcb_via",
+    "pcb_via_id": "pcb_via_15",
+    "pcb_trace_id": "source_net_0_mst3_0",
+    "x": -6.472910273708793,
+    "y": 1.4817256933988971,
+    "hole_diameter": 0.3,
+    "outer_diameter": 0.6,
+    "layers": [
+      "top",
+      "bottom"
+    ],
+    "from_layer": "top",
+    "to_layer": "bottom",
     "subcircuit_id": "subcircuit_source_group_0",
     "subcircuit_connectivity_map_key": "button_connectivity_net3"
   },
@@ -15828,8 +15174,25 @@
     "type": "pcb_via",
     "pcb_via_id": "pcb_via_16",
     "pcb_trace_id": "source_net_0_mst5_0",
-    "x": 5.466660282815972,
-    "y": -4.655128774645991,
+    "x": 5.779623284769523,
+    "y": -5.145808465059783,
+    "hole_diameter": 0.3,
+    "outer_diameter": 0.6,
+    "layers": [
+      "top",
+      "bottom"
+    ],
+    "from_layer": "bottom",
+    "to_layer": "top",
+    "subcircuit_id": "subcircuit_source_group_0",
+    "subcircuit_connectivity_map_key": "button_connectivity_net3"
+  },
+  {
+    "type": "pcb_via",
+    "pcb_via_id": "pcb_via_17",
+    "pcb_trace_id": "source_net_0_mst5_0",
+    "x": 6.181615942015041,
+    "y": -3.898277106134646,
     "hole_diameter": 0.3,
     "outer_diameter": 0.6,
     "layers": [
@@ -16159,312 +15522,72 @@
         {
           "vertices": [
             {
-              "x": -7.68955,
-              "y": 0.708632
-            },
-            {
-              "x": -7.592005,
-              "y": 0.718239
-            },
-            {
-              "x": -7.498208,
-              "y": 0.746692
-            },
-            {
-              "x": -7.411765,
-              "y": 0.792897
-            },
-            {
-              "x": -7.335997,
-              "y": 0.855079
-            },
-            {
-              "x": -7.273815,
-              "y": 0.930847
-            },
-            {
-              "x": -7.22761,
-              "y": 1.01729
-            },
-            {
-              "x": -7.199158,
-              "y": 1.111087
-            },
-            {
-              "x": -7.192199,
-              "y": 1.181734
-            },
-            {
-              "x": -6.987849,
-              "y": 1.181745
-            },
-            {
-              "x": -6.943915,
-              "y": 1.128212
-            },
-            {
-              "x": -6.868147,
-              "y": 1.06603
-            },
-            {
-              "x": -6.781704,
-              "y": 1.019825
-            },
-            {
-              "x": -6.687907,
-              "y": 0.991372
-            },
-            {
-              "x": -6.590362,
-              "y": 0.981765
-            },
-            {
-              "x": -6.492817,
-              "y": 0.991372
-            },
-            {
-              "x": -6.39902,
-              "y": 1.019825
-            },
-            {
-              "x": -6.312577,
-              "y": 1.06603
-            },
-            {
-              "x": -6.236808,
-              "y": 1.128212
-            },
-            {
-              "x": -6.174627,
-              "y": 1.20398
-            },
-            {
-              "x": -6.128422,
-              "y": 1.290423
-            },
-            {
-              "x": -6.099969,
-              "y": 1.38422
-            },
-            {
-              "x": -6.090362,
-              "y": 1.481765
-            },
-            {
-              "x": -6.099969,
-              "y": 1.57931
-            },
-            {
-              "x": -6.128422,
-              "y": 1.673107
-            },
-            {
-              "x": -6.174627,
-              "y": 1.75955
-            },
-            {
-              "x": -6.236808,
-              "y": 1.835318
-            },
-            {
-              "x": -6.312577,
-              "y": 1.8975
-            },
-            {
-              "x": -6.39902,
-              "y": 1.943705
-            },
-            {
-              "x": -6.492817,
-              "y": 1.972158
-            },
-            {
-              "x": -6.590362,
-              "y": 1.981765
-            },
-            {
-              "x": -6.687907,
-              "y": 1.972158
-            },
-            {
-              "x": -6.781704,
-              "y": 1.943705
-            },
-            {
-              "x": -6.868147,
-              "y": 1.8975
-            },
-            {
-              "x": -6.943915,
-              "y": 1.835318
-            },
-            {
-              "x": -6.987882,
-              "y": 1.781745
-            },
-            {
-              "x": -7.353077,
-              "y": 1.781726
-            },
-            {
-              "x": -7.353077,
-              "y": 1.781724
-            },
-            {
-              "x": -7.411588,
-              "y": 1.775961
-            },
-            {
-              "x": -7.467866,
-              "y": 1.75889
-            },
-            {
-              "x": -7.519732,
-              "y": 1.731167
-            },
-            {
-              "x": -7.565193,
-              "y": 1.693858
-            },
-            {
-              "x": -7.567469,
-              "y": 1.691582
-            },
-            {
-              "x": -7.592005,
-              "y": 1.699025
-            },
-            {
-              "x": -7.68955,
-              "y": 1.708632
-            },
-            {
-              "x": -7.787095,
-              "y": 1.699025
-            },
-            {
-              "x": -7.880892,
-              "y": 1.670572
-            },
-            {
-              "x": -7.967335,
-              "y": 1.624367
-            },
-            {
-              "x": -8.043104,
-              "y": 1.562185
-            },
-            {
-              "x": -8.105285,
-              "y": 1.486417
-            },
-            {
-              "x": -8.15149,
-              "y": 1.399974
-            },
-            {
-              "x": -8.179943,
-              "y": 1.306177
-            },
-            {
-              "x": -8.18955,
-              "y": 1.208632
-            },
-            {
-              "x": -8.179943,
-              "y": 1.111087
-            },
-            {
-              "x": -8.15149,
-              "y": 1.01729
-            },
-            {
-              "x": -8.105285,
-              "y": 0.930847
-            },
-            {
-              "x": -8.043104,
-              "y": 0.855079
-            },
-            {
-              "x": -7.967335,
-              "y": 0.792897
-            },
-            {
-              "x": -7.880892,
-              "y": 0.746692
-            },
-            {
-              "x": -7.787095,
-              "y": 0.718239
-            }
-          ]
-        },
-        {
-          "vertices": [
-            {
-              "x": -10.707628,
+              "x": -10.70878,
               "y": -8.425
             },
             {
-              "x": -10.610083,
+              "x": -10.611235,
               "y": -8.415393
             },
             {
-              "x": -10.516287,
+              "x": -10.517439,
               "y": -8.38694
             },
             {
-              "x": -10.429843,
+              "x": -10.430995,
               "y": -8.340735
             },
             {
-              "x": -10.354075,
+              "x": -10.355227,
               "y": -8.278553
             },
             {
-              "x": -10.291894,
+              "x": -10.293046,
               "y": -8.202785
             },
             {
-              "x": -10.245689,
+              "x": -10.246841,
               "y": -8.116342
             },
             {
-              "x": -10.217236,
+              "x": -10.218388,
               "y": -8.022545
             },
             {
-              "x": -10.207628,
+              "x": -10.20878,
               "y": -7.925
             },
             {
-              "x": -10.217236,
+              "x": -10.218388,
               "y": -7.827455
             },
             {
-              "x": -10.245689,
+              "x": -10.246841,
               "y": -7.733658
             },
             {
-              "x": -10.291894,
+              "x": -10.293046,
               "y": -7.647215
             },
             {
-              "x": -10.354075,
+              "x": -10.355227,
               "y": -7.571447
             },
             {
-              "x": -10.410609,
-              "y": -7.52505
+              "x": -10.411533,
+              "y": -7.525238
             },
             {
-              "x": -10.423901,
-              "y": -5.746507
+              "x": -10.423971,
+              "y": -5.72285
             },
             {
-              "x": -8.098815,
-              "y": -3.421421
+              "x": -8.101041,
+              "y": -3.39992
+            },
+            {
+              "x": -8.098975,
+              "y": -3.420892
             },
             {
               "x": -8.070522,
@@ -16519,444 +15642,112 @@
               "y": -3.633607
             },
             {
-              "x": -2.181211,
-              "y": -5.817887
+              "x": -2.121712,
+              "y": -5.877386
             },
             {
-              "x": -2.18693,
-              "y": -5.875958
-            },
-            {
-              "x": -2.177323,
+              "x": -2.112246,
               "y": -5.973503
             },
             {
-              "x": -2.14887,
+              "x": -2.083793,
               "y": -6.0673
             },
             {
-              "x": -2.102665,
+              "x": -2.037588,
               "y": -6.153743
             },
             {
-              "x": -2.040484,
+              "x": -1.975406,
               "y": -6.229511
             },
             {
-              "x": -1.964716,
+              "x": -1.899638,
               "y": -6.291693
             },
             {
-              "x": -1.878272,
+              "x": -1.813195,
               "y": -6.337898
             },
             {
-              "x": -1.784476,
+              "x": -1.719398,
               "y": -6.366351
             },
             {
-              "x": -1.68693,
+              "x": -1.621853,
               "y": -6.375958
             },
             {
-              "x": -1.589385,
+              "x": -1.524308,
               "y": -6.366351
             },
             {
-              "x": -1.495589,
+              "x": -1.430511,
               "y": -6.337898
             },
             {
-              "x": -1.409145,
+              "x": -1.344068,
               "y": -6.291693
             },
             {
-              "x": -1.333377,
+              "x": -1.2683,
               "y": -6.229511
             },
             {
-              "x": -1.271196,
+              "x": -1.206118,
               "y": -6.153743
             },
             {
-              "x": -1.269797,
-              "y": -6.151125
+              "x": -1.159913,
+              "y": -6.0673
             },
             {
-              "x": -1.221532,
-              "y": -6.190735
+              "x": -1.13146,
+              "y": -5.973503
             },
             {
-              "x": -1.135088,
-              "y": -6.23694
+              "x": -1.121853,
+              "y": -5.875958
             },
             {
-              "x": -1.041292,
-              "y": -6.265393
+              "x": -1.13146,
+              "y": -5.778413
             },
             {
-              "x": -0.943746,
-              "y": -6.275
+              "x": -1.159913,
+              "y": -5.684616
             },
             {
-              "x": -0.846201,
-              "y": -6.265393
+              "x": -1.206118,
+              "y": -5.598173
             },
             {
-              "x": -0.752405,
-              "y": -6.23694
+              "x": -1.2683,
+              "y": -5.522405
             },
             {
-              "x": -0.665961,
-              "y": -6.190735
-            },
-            {
-              "x": -0.590193,
-              "y": -6.128553
-            },
-            {
-              "x": -0.528012,
-              "y": -6.052785
-            },
-            {
-              "x": -0.481807,
-              "y": -5.966342
-            },
-            {
-              "x": -0.453354,
-              "y": -5.872545
-            },
-            {
-              "x": -0.443746,
-              "y": -5.775
-            },
-            {
-              "x": -0.453354,
-              "y": -5.677455
-            },
-            {
-              "x": -0.481807,
-              "y": -5.583658
-            },
-            {
-              "x": -0.528012,
-              "y": -5.497215
-            },
-            {
-              "x": -0.590193,
-              "y": -5.421447
-            },
-            {
-              "x": -0.659896,
-              "y": -5.364243
-            },
-            {
-              "x": -0.662932,
-              "y": -5.288129
-            },
-            {
-              "x": -0.672406,
-              "y": -5.050673
-            },
-            {
-              "x": -0.68188,
-              "y": -4.813217
-            },
-            {
-              "x": -0.691354,
-              "y": -4.575761
-            },
-            {
-              "x": -0.700827,
-              "y": -4.338305
-            },
-            {
-              "x": -0.705065,
-              "y": -4.232075
-            },
-            {
-              "x": -0.622721,
-              "y": -4.149731
-            },
-            {
-              "x": -0.447511,
-              "y": -3.974521
-            },
-            {
-              "x": -0.272301,
-              "y": -3.799311
-            },
-            {
-              "x": -0.097091,
-              "y": -3.624101
-            },
-            {
-              "x": 0.078119,
-              "y": -3.448891
-            },
-            {
-              "x": 0.253329,
-              "y": -3.273681
-            },
-            {
-              "x": 0.428539,
-              "y": -3.098472
-            },
-            {
-              "x": 0.603749,
-              "y": -2.923262
-            },
-            {
-              "x": 0.778958,
-              "y": -2.748052
-            },
-            {
-              "x": 0.954168,
-              "y": -2.572842
-            },
-            {
-              "x": 1.129378,
-              "y": -2.397632
-            },
-            {
-              "x": 1.304588,
-              "y": -2.222422
-            },
-            {
-              "x": 1.425138,
-              "y": -2.101872
-            },
-            {
-              "x": 1.456715,
-              "y": -2.092293
-            },
-            {
-              "x": 1.543158,
-              "y": -2.046088
-            },
-            {
-              "x": 1.618927,
-              "y": -1.983907
-            },
-            {
-              "x": 1.681108,
-              "y": -1.908138
-            },
-            {
-              "x": 1.727313,
-              "y": -1.821695
-            },
-            {
-              "x": 1.755766,
-              "y": -1.727898
-            },
-            {
-              "x": 1.765373,
-              "y": -1.630353
-            },
-            {
-              "x": 1.755766,
-              "y": -1.532808
-            },
-            {
-              "x": 1.727313,
-              "y": -1.439011
-            },
-            {
-              "x": 1.681108,
-              "y": -1.352568
-            },
-            {
-              "x": 1.618927,
-              "y": -1.2768
-            },
-            {
-              "x": 1.543158,
-              "y": -1.214618
-            },
-            {
-              "x": 1.456715,
-              "y": -1.168413
-            },
-            {
-              "x": 1.362918,
-              "y": -1.139961
-            },
-            {
-              "x": 1.265373,
-              "y": -1.130353
-            },
-            {
-              "x": 1.167828,
-              "y": -1.139961
-            },
-            {
-              "x": 1.074032,
-              "y": -1.168413
-            },
-            {
-              "x": 0.987588,
-              "y": -1.214618
-            },
-            {
-              "x": 0.91182,
-              "y": -1.2768
-            },
-            {
-              "x": 0.849639,
-              "y": -1.352568
-            },
-            {
-              "x": 0.803434,
-              "y": -1.439011
-            },
-            {
-              "x": 0.774981,
-              "y": -1.532808
-            },
-            {
-              "x": 0.765373,
-              "y": -1.630353
-            },
-            {
-              "x": 0.774981,
-              "y": -1.727898
-            },
-            {
-              "x": 0.803434,
-              "y": -1.821695
-            },
-            {
-              "x": 0.822018,
-              "y": -1.856464
-            },
-            {
-              "x": 0.705114,
-              "y": -1.973368
-            },
-            {
-              "x": 0.529904,
-              "y": -2.148578
-            },
-            {
-              "x": 0.354694,
-              "y": -2.323788
-            },
-            {
-              "x": 0.179485,
-              "y": -2.498998
-            },
-            {
-              "x": 0.004275,
-              "y": -2.674208
-            },
-            {
-              "x": -0.170935,
-              "y": -2.849417
-            },
-            {
-              "x": -0.346145,
-              "y": -3.024627
-            },
-            {
-              "x": -0.521355,
-              "y": -3.199837
-            },
-            {
-              "x": -0.696565,
-              "y": -3.375047
-            },
-            {
-              "x": -0.871775,
-              "y": -3.550257
-            },
-            {
-              "x": -1.046985,
-              "y": -3.725467
-            },
-            {
-              "x": -1.222195,
-              "y": -3.900677
-            },
-            {
-              "x": -1.259503,
-              "y": -3.946138
-            },
-            {
-              "x": -1.287226,
-              "y": -3.998004
-            },
-            {
-              "x": -1.304298,
-              "y": -4.054282
-            },
-            {
-              "x": -1.310063,
-              "y": -4.112809
-            },
-            {
-              "x": -1.308889,
-              "y": -4.124731
-            },
-            {
-              "x": -1.309824,
-              "y": -4.124768
-            },
-            {
-              "x": -1.30035,
-              "y": -4.362224
-            },
-            {
-              "x": -1.290877,
-              "y": -4.59968
-            },
-            {
-              "x": -1.281403,
-              "y": -4.837136
-            },
-            {
-              "x": -1.271929,
-              "y": -5.074592
-            },
-            {
-              "x": -1.262455,
-              "y": -5.312048
-            },
-            {
-              "x": -1.259334,
-              "y": -5.390288
-            },
-            {
-              "x": -1.2973,
-              "y": -5.421447
-            },
-            {
-              "x": -1.359481,
-              "y": -5.497215
-            },
-            {
-              "x": -1.36088,
-              "y": -5.499833
-            },
-            {
-              "x": -1.409145,
+              "x": -1.344068,
               "y": -5.460223
             },
             {
-              "x": -1.495589,
+              "x": -1.430511,
               "y": -5.414018
             },
             {
-              "x": -1.589385,
+              "x": -1.524308,
               "y": -5.385565
             },
             {
-              "x": -1.68693,
+              "x": -1.621853,
               "y": -5.375958
             },
             {
-              "x": -1.766751,
-              "y": -5.383819
+              "x": -1.719398,
+              "y": -5.385565
+            },
+            {
+              "x": -1.75439,
+              "y": -5.39618
             },
             {
               "x": -4.028702,
@@ -16999,243 +15790,619 @@
               "y": -2.861407
             },
             {
-              "x": -7.510508,
-              "y": -2.833114
+              "x": -7.511037,
+              "y": -2.832954
             },
             {
-              "x": -4.073384,
-              "y": 0.60401
+              "x": -7.532009,
+              "y": -2.830888
             },
             {
-              "x": -3.338893,
-              "y": 0.60401
+              "x": -0.786024,
+              "y": 3.915097
             },
             {
-              "x": -3.280366,
-              "y": 0.609774
+              "x": -0.732545,
+              "y": 3.898874
             },
             {
-              "x": -3.224088,
-              "y": 0.626846
+              "x": -0.635,
+              "y": 3.889267
             },
             {
-              "x": -3.172222,
-              "y": 0.654569
+              "x": -0.537455,
+              "y": 3.898874
             },
             {
-              "x": -3.126761,
-              "y": 0.691877
+              "x": -0.443658,
+              "y": 3.927327
             },
             {
-              "x": -2.953587,
-              "y": 0.865051
+              "x": -0.357215,
+              "y": 3.973532
             },
             {
-              "x": -2.882,
-              "y": 0.858
+              "x": -0.281447,
+              "y": 4.035713
             },
             {
-              "x": -2.784455,
-              "y": 0.867607
+              "x": -0.219265,
+              "y": 4.111481
             },
             {
-              "x": -2.690658,
-              "y": 0.89606
+              "x": -0.17306,
+              "y": 4.197925
             },
             {
-              "x": -2.604215,
-              "y": 0.942265
+              "x": -0.144607,
+              "y": 4.291721
             },
             {
-              "x": -2.528447,
-              "y": 1.004447
+              "x": -0.135,
+              "y": 4.389267
             },
             {
-              "x": -2.466265,
-              "y": 1.080215
+              "x": -0.144607,
+              "y": 4.486812
             },
             {
-              "x": -2.42006,
-              "y": 1.166658
+              "x": -0.17306,
+              "y": 4.580608
             },
             {
-              "x": -2.391607,
-              "y": 1.260455
+              "x": -0.219265,
+              "y": 4.667052
             },
             {
-              "x": -2.382,
-              "y": 1.358
+              "x": -0.281447,
+              "y": 4.74282
             },
             {
-              "x": -2.391607,
-              "y": 1.455545
+              "x": -0.357215,
+              "y": 4.805001
             },
             {
-              "x": -2.42006,
-              "y": 1.549342
+              "x": -0.443658,
+              "y": 4.851206
             },
             {
-              "x": -2.466265,
-              "y": 1.635785
+              "x": -0.537455,
+              "y": 4.879659
             },
             {
-              "x": -2.528447,
-              "y": 1.711553
+              "x": -0.618166,
+              "y": 4.887609
             },
             {
-              "x": -2.604215,
-              "y": 1.773735
+              "x": -0.595055,
+              "y": 4.930846
             },
             {
-              "x": -2.690658,
-              "y": 1.81994
+              "x": -0.566602,
+              "y": 5.024642
             },
             {
-              "x": -2.784455,
-              "y": 1.848393
+              "x": -0.556995,
+              "y": 5.122187
             },
             {
-              "x": -2.882,
-              "y": 1.858
+              "x": -0.566602,
+              "y": 5.219732
             },
             {
-              "x": -2.979545,
-              "y": 1.848393
+              "x": -0.595055,
+              "y": 5.313529
             },
             {
-              "x": -3.073342,
-              "y": 1.81994
+              "x": -0.64126,
+              "y": 5.399972
             },
             {
-              "x": -3.159785,
-              "y": 1.773735
+              "x": -0.703442,
+              "y": 5.475741
             },
             {
-              "x": -3.235553,
-              "y": 1.711553
+              "x": -0.77921,
+              "y": 5.537922
             },
             {
-              "x": -3.297735,
-              "y": 1.635785
+              "x": -0.865653,
+              "y": 5.584127
             },
             {
-              "x": -3.34394,
-              "y": 1.549342
+              "x": -0.95945,
+              "y": 5.61258
             },
             {
-              "x": -3.372393,
-              "y": 1.455545
+              "x": -1.056995,
+              "y": 5.622187
             },
             {
-              "x": -3.382,
-              "y": 1.358
+              "x": -1.060053,
+              "y": 5.621886
             },
             {
-              "x": -3.37547,
-              "y": 1.291697
+              "x": -0.983658,
+              "y": 5.64506
             },
             {
-              "x": -3.463157,
-              "y": 1.20401
+              "x": -0.897215,
+              "y": 5.691265
             },
             {
-              "x": -4.197649,
-              "y": 1.20401
+              "x": -0.821447,
+              "y": 5.753447
             },
             {
-              "x": -4.256176,
-              "y": 1.198245
+              "x": -0.759265,
+              "y": 5.829215
             },
             {
-              "x": -4.312454,
-              "y": 1.181173
+              "x": -0.71306,
+              "y": 5.915658
             },
             {
-              "x": -4.36432,
-              "y": 1.15345
+              "x": -0.684607,
+              "y": 6.009455
             },
             {
-              "x": -4.409781,
-              "y": 1.116142
+              "x": -0.675,
+              "y": 6.107
+            },
+            {
+              "x": -0.684607,
+              "y": 6.204545
+            },
+            {
+              "x": -0.71306,
+              "y": 6.298342
+            },
+            {
+              "x": -0.759265,
+              "y": 6.384785
+            },
+            {
+              "x": -0.821447,
+              "y": 6.460553
+            },
+            {
+              "x": -0.897215,
+              "y": 6.522735
+            },
+            {
+              "x": -0.983658,
+              "y": 6.56894
+            },
+            {
+              "x": -1.077455,
+              "y": 6.597393
+            },
+            {
+              "x": -1.175,
+              "y": 6.607
+            },
+            {
+              "x": -1.272545,
+              "y": 6.597393
+            },
+            {
+              "x": -1.363556,
+              "y": 6.569785
+            },
+            {
+              "x": -2.205903,
+              "y": 7.412132
+            },
+            {
+              "x": -2.251364,
+              "y": 7.449441
+            },
+            {
+              "x": -2.30323,
+              "y": 7.477164
+            },
+            {
+              "x": -2.359508,
+              "y": 7.494236
+            },
+            {
+              "x": -2.418035,
+              "y": 7.5
+            },
+            {
+              "x": -3.202497,
+              "y": 7.5
+            },
+            {
+              "x": -3.246447,
+              "y": 7.553553
+            },
+            {
+              "x": -3.322215,
+              "y": 7.615735
+            },
+            {
+              "x": -3.408658,
+              "y": 7.66194
+            },
+            {
+              "x": -3.502455,
+              "y": 7.690393
+            },
+            {
+              "x": -3.6,
+              "y": 7.7
+            },
+            {
+              "x": -3.697545,
+              "y": 7.690393
+            },
+            {
+              "x": -3.791342,
+              "y": 7.66194
+            },
+            {
+              "x": -3.877785,
+              "y": 7.615735
+            },
+            {
+              "x": -3.953553,
+              "y": 7.553553
+            },
+            {
+              "x": -4.015735,
+              "y": 7.477785
+            },
+            {
+              "x": -4.06194,
+              "y": 7.391342
+            },
+            {
+              "x": -4.090393,
+              "y": 7.297545
+            },
+            {
+              "x": -4.1,
+              "y": 7.2
+            },
+            {
+              "x": -4.090393,
+              "y": 7.102455
+            },
+            {
+              "x": -4.06194,
+              "y": 7.008658
+            },
+            {
+              "x": -4.015735,
+              "y": 6.922215
+            },
+            {
+              "x": -3.953553,
+              "y": 6.846447
+            },
+            {
+              "x": -3.877785,
+              "y": 6.784265
+            },
+            {
+              "x": -3.791342,
+              "y": 6.73806
+            },
+            {
+              "x": -3.697545,
+              "y": 6.709607
+            },
+            {
+              "x": -3.6,
+              "y": 6.7
+            },
+            {
+              "x": -3.502455,
+              "y": 6.709607
+            },
+            {
+              "x": -3.408658,
+              "y": 6.73806
+            },
+            {
+              "x": -3.322215,
+              "y": 6.784265
+            },
+            {
+              "x": -3.246447,
+              "y": 6.846447
+            },
+            {
+              "x": -3.202497,
+              "y": 6.9
+            },
+            {
+              "x": -2.542299,
+              "y": 6.9
+            },
+            {
+              "x": -1.666883,
+              "y": 6.024584
+            },
+            {
+              "x": -1.665393,
+              "y": 6.009455
+            },
+            {
+              "x": -1.63694,
+              "y": 5.915658
+            },
+            {
+              "x": -1.590735,
+              "y": 5.829215
+            },
+            {
+              "x": -1.528553,
+              "y": 5.753447
+            },
+            {
+              "x": -1.452785,
+              "y": 5.691265
+            },
+            {
+              "x": -1.366342,
+              "y": 5.64506
+            },
+            {
+              "x": -1.272545,
+              "y": 5.616607
+            },
+            {
+              "x": -1.175,
+              "y": 5.607
+            },
+            {
+              "x": -1.171942,
+              "y": 5.607301
+            },
+            {
+              "x": -1.248337,
+              "y": 5.584127
+            },
+            {
+              "x": -1.33478,
+              "y": 5.537922
+            },
+            {
+              "x": -1.410548,
+              "y": 5.475741
+            },
+            {
+              "x": -1.454499,
+              "y": 5.422187
+            },
+            {
+              "x": -7.641222,
+              "y": 5.422187
+            },
+            {
+              "x": -7.646447,
+              "y": 5.428553
+            },
+            {
+              "x": -7.722215,
+              "y": 5.490735
+            },
+            {
+              "x": -7.808658,
+              "y": 5.53694
+            },
+            {
+              "x": -7.902455,
+              "y": 5.565393
+            },
+            {
+              "x": -8,
+              "y": 5.575
+            },
+            {
+              "x": -8.097545,
+              "y": 5.565393
+            },
+            {
+              "x": -8.191342,
+              "y": 5.53694
+            },
+            {
+              "x": -8.277785,
+              "y": 5.490735
+            },
+            {
+              "x": -8.353553,
+              "y": 5.428553
+            },
+            {
+              "x": -8.415735,
+              "y": 5.352785
+            },
+            {
+              "x": -8.46194,
+              "y": 5.266342
+            },
+            {
+              "x": -8.490393,
+              "y": 5.172545
+            },
+            {
+              "x": -8.5,
+              "y": 5.075
+            },
+            {
+              "x": -8.490393,
+              "y": 4.977455
+            },
+            {
+              "x": -8.46194,
+              "y": 4.883658
+            },
+            {
+              "x": -8.415735,
+              "y": 4.797215
+            },
+            {
+              "x": -8.353553,
+              "y": 4.721447
+            },
+            {
+              "x": -8.277785,
+              "y": 4.659265
+            },
+            {
+              "x": -8.191342,
+              "y": 4.61306
+            },
+            {
+              "x": -8.097545,
+              "y": 4.584607
+            },
+            {
+              "x": -8,
+              "y": 4.575
+            },
+            {
+              "x": -7.902455,
+              "y": 4.584607
+            },
+            {
+              "x": -7.808658,
+              "y": 4.61306
+            },
+            {
+              "x": -7.722215,
+              "y": 4.659265
+            },
+            {
+              "x": -7.646447,
+              "y": 4.721447
+            },
+            {
+              "x": -7.584265,
+              "y": 4.797215
+            },
+            {
+              "x": -7.570917,
+              "y": 4.822187
+            },
+            {
+              "x": -1.454498,
+              "y": 4.822187
+            },
+            {
+              "x": -1.410548,
+              "y": 4.768634
+            },
+            {
+              "x": -1.33478,
+              "y": 4.706452
+            },
+            {
+              "x": -1.248337,
+              "y": 4.660247
+            },
+            {
+              "x": -1.15454,
+              "y": 4.631795
+            },
+            {
+              "x": -1.073829,
+              "y": 4.623845
+            },
+            {
+              "x": -1.09694,
+              "y": 4.580608
+            },
+            {
+              "x": -1.125393,
+              "y": 4.486812
+            },
+            {
+              "x": -1.132227,
+              "y": 4.417422
             },
             {
               "x": -10.936962,
-              "y": -5.41104
+              "y": -5.387313
             },
             {
               "x": -10.974271,
-              "y": -5.456501
+              "y": -5.432774
             },
             {
               "x": -11.001994,
-              "y": -5.508367
+              "y": -5.48464
             },
             {
               "x": -11.019066,
-              "y": -5.564645
+              "y": -5.540918
             },
             {
               "x": -11.02483,
-              "y": -5.623172
+              "y": -5.599445
             },
             {
-              "x": -11.024609,
-              "y": -5.625412
+              "x": -11.024626,
+              "y": -5.601515
             },
             {
-              "x": -11.024822,
-              "y": -5.625414
+              "x": -11.024823,
+              "y": -5.601516
             },
             {
-              "x": -11.010589,
-              "y": -7.529926
+              "x": -11.011515,
+              "y": -7.529741
             },
             {
-              "x": -11.061182,
+              "x": -11.062334,
               "y": -7.571447
             },
             {
-              "x": -11.123363,
+              "x": -11.124515,
               "y": -7.647215
             },
             {
-              "x": -11.169568,
+              "x": -11.17072,
               "y": -7.733658
             },
             {
-              "x": -11.198021,
+              "x": -11.199173,
               "y": -7.827455
             },
             {
-              "x": -11.207628,
+              "x": -11.20878,
               "y": -7.925
             },
             {
-              "x": -11.198021,
+              "x": -11.199173,
               "y": -8.022545
             },
             {
-              "x": -11.169568,
+              "x": -11.17072,
               "y": -8.116342
             },
             {
-              "x": -11.123363,
+              "x": -11.124515,
               "y": -8.202785
             },
             {
-              "x": -11.061182,
+              "x": -11.062334,
               "y": -8.278553
             },
             {
-              "x": -10.985414,
+              "x": -10.986566,
               "y": -8.340735
             },
             {
-              "x": -10.89897,
+              "x": -10.900122,
               "y": -8.38694
             },
             {
-              "x": -10.805174,
+              "x": -10.806326,
               "y": -8.415393
             }
           ]
@@ -17243,728 +16410,980 @@
         {
           "vertices": [
             {
-              "x": 3.028729,
-              "y": -1.993043
+              "x": -7.728138,
+              "y": 0.70824
             },
             {
-              "x": 3.126274,
-              "y": -1.983436
+              "x": -7.630593,
+              "y": 0.717847
             },
             {
-              "x": 3.220071,
-              "y": -1.954983
+              "x": -7.536797,
+              "y": 0.7463
             },
             {
-              "x": 3.306514,
-              "y": -1.908778
+              "x": -7.450353,
+              "y": 0.792505
             },
             {
-              "x": 3.382283,
-              "y": -1.846596
+              "x": -7.374585,
+              "y": 0.854686
             },
             {
-              "x": 3.444464,
-              "y": -1.770828
+              "x": -7.312403,
+              "y": 0.930455
             },
             {
-              "x": 3.490669,
-              "y": -1.684385
+              "x": -7.266199,
+              "y": 1.016898
             },
             {
-              "x": 3.519122,
-              "y": -1.590588
+              "x": -7.237746,
+              "y": 1.110695
             },
             {
-              "x": 3.528729,
-              "y": -1.493043
+              "x": -7.230963,
+              "y": 1.17956
             },
             {
-              "x": 3.519122,
-              "y": -1.395498
+              "x": -7.228797,
+              "y": 1.181726
             },
             {
-              "x": 3.508528,
-              "y": -1.360575
+              "x": -6.870414,
+              "y": 1.181726
             },
             {
-              "x": 3.599226,
-              "y": -1.269877
+              "x": -6.826464,
+              "y": 1.128172
             },
             {
-              "x": 3.636535,
-              "y": -1.224416
+              "x": -6.750695,
+              "y": 1.065991
             },
             {
-              "x": 3.664258,
-              "y": -1.17255
+              "x": -6.664252,
+              "y": 1.019786
             },
             {
-              "x": 3.68133,
-              "y": -1.116272
+              "x": -6.570455,
+              "y": 0.991333
             },
             {
-              "x": 3.686829,
-              "y": -1.060435
+              "x": -6.47291,
+              "y": 0.981726
             },
             {
-              "x": 3.687082,
-              "y": -1.060437
+              "x": -6.375365,
+              "y": 0.991333
             },
             {
-              "x": 3.689345,
-              "y": -0.808325
+              "x": -6.281569,
+              "y": 1.019786
             },
             {
-              "x": 3.746479,
-              "y": -0.761436
+              "x": -6.195125,
+              "y": 1.065991
             },
             {
-              "x": 3.80866,
-              "y": -0.685667
+              "x": -6.119357,
+              "y": 1.128172
             },
             {
-              "x": 3.854865,
-              "y": -0.599224
+              "x": -6.057175,
+              "y": 1.203941
             },
             {
-              "x": 3.883318,
-              "y": -0.505427
+              "x": -6.010971,
+              "y": 1.290384
             },
             {
-              "x": 3.892926,
-              "y": -0.407882
+              "x": -5.982518,
+              "y": 1.384181
             },
             {
-              "x": 3.883318,
-              "y": -0.310337
+              "x": -5.97291,
+              "y": 1.481726
             },
             {
-              "x": 3.854865,
-              "y": -0.216541
+              "x": -5.982518,
+              "y": 1.579271
             },
             {
-              "x": 3.80866,
-              "y": -0.130097
+              "x": -6.010971,
+              "y": 1.673067
             },
             {
-              "x": 3.746479,
-              "y": -0.054329
+              "x": -6.057175,
+              "y": 1.759511
             },
             {
-              "x": 3.670711,
-              "y": 0.007853
+              "x": -6.119357,
+              "y": 1.835279
             },
             {
-              "x": 3.584267,
-              "y": 0.054057
+              "x": -6.195125,
+              "y": 1.89746
             },
             {
-              "x": 3.490471,
-              "y": 0.08251
+              "x": -6.281569,
+              "y": 1.943665
             },
             {
-              "x": 3.392926,
-              "y": 0.092118
+              "x": -6.375365,
+              "y": 1.972118
             },
             {
-              "x": 3.295381,
-              "y": 0.08251
+              "x": -6.47291,
+              "y": 1.981726
             },
             {
-              "x": 3.201584,
-              "y": 0.054057
+              "x": -6.570455,
+              "y": 1.972118
             },
             {
-              "x": 3.115141,
-              "y": 0.007853
+              "x": -6.664252,
+              "y": 1.943665
             },
             {
-              "x": 3.039372,
-              "y": -0.054329
+              "x": -6.750695,
+              "y": 1.89746
             },
             {
-              "x": 2.977191,
-              "y": -0.130097
+              "x": -6.826464,
+              "y": 1.835279
             },
             {
-              "x": 2.930986,
-              "y": -0.216541
+              "x": -6.870414,
+              "y": 1.781726
             },
             {
-              "x": 2.902533,
-              "y": -0.310337
+              "x": -7.353061,
+              "y": 1.781726
             },
             {
-              "x": 2.892926,
-              "y": -0.407882
+              "x": -7.411588,
+              "y": 1.775961
             },
             {
-              "x": 2.902533,
-              "y": -0.505427
+              "x": -7.467866,
+              "y": 1.75889
             },
             {
-              "x": 2.930986,
-              "y": -0.599224
+              "x": -7.519732,
+              "y": 1.731167
             },
             {
-              "x": 2.977191,
-              "y": -0.685667
+              "x": -7.565193,
+              "y": 1.693858
             },
             {
-              "x": 3.039372,
-              "y": -0.761436
+              "x": -7.576751,
+              "y": 1.6823
             },
             {
-              "x": 3.089373,
-              "y": -0.80247
+              "x": -7.630593,
+              "y": 1.698632
             },
             {
-              "x": 3.088207,
-              "y": -0.932367
+              "x": -7.728138,
+              "y": 1.70824
             },
             {
-              "x": 3.0274,
-              "y": -0.993174
+              "x": -7.825683,
+              "y": 1.698632
             },
             {
-              "x": 2.931184,
-              "y": -1.00265
+              "x": -7.91948,
+              "y": 1.67018
             },
             {
-              "x": 2.837387,
-              "y": -1.031103
+              "x": -8.005923,
+              "y": 1.623975
             },
             {
-              "x": 2.750944,
-              "y": -1.077308
+              "x": -8.081692,
+              "y": 1.561793
             },
             {
-              "x": 2.675176,
-              "y": -1.13949
+              "x": -8.143873,
+              "y": 1.486025
             },
             {
-              "x": 2.612994,
-              "y": -1.215258
+              "x": -8.190078,
+              "y": 1.399581
             },
             {
-              "x": 2.566789,
-              "y": -1.301701
+              "x": -8.218531,
+              "y": 1.305785
             },
             {
-              "x": 2.538337,
-              "y": -1.395498
+              "x": -8.228138,
+              "y": 1.20824
             },
             {
-              "x": 2.528729,
-              "y": -1.493043
+              "x": -8.218531,
+              "y": 1.110695
             },
             {
-              "x": 2.538337,
-              "y": -1.590588
+              "x": -8.190078,
+              "y": 1.016898
             },
             {
-              "x": 2.566789,
-              "y": -1.684385
+              "x": -8.143873,
+              "y": 0.930455
             },
             {
-              "x": 2.612994,
-              "y": -1.770828
+              "x": -8.081692,
+              "y": 0.854686
             },
             {
-              "x": 2.675176,
-              "y": -1.846596
+              "x": -8.005923,
+              "y": 0.792505
             },
             {
-              "x": 2.750944,
-              "y": -1.908778
+              "x": -7.91948,
+              "y": 0.7463
             },
             {
-              "x": 2.837387,
-              "y": -1.954983
-            },
-            {
-              "x": 2.931184,
-              "y": -1.983436
+              "x": -7.825683,
+              "y": 0.717847
             }
           ]
         },
         {
           "vertices": [
             {
-              "x": 2.899918,
-              "y": -8.794432
+              "x": 1.207229,
+              "y": -6.315364
             },
             {
-              "x": 2.997463,
-              "y": -8.784825
+              "x": 1.304775,
+              "y": -6.305757
             },
             {
-              "x": 3.091259,
-              "y": -8.756372
+              "x": 1.398571,
+              "y": -6.277304
             },
             {
-              "x": 3.177703,
-              "y": -8.710167
+              "x": 1.485015,
+              "y": -6.231099
             },
             {
-              "x": 3.253471,
-              "y": -8.647986
+              "x": 1.560783,
+              "y": -6.168917
             },
             {
-              "x": 3.315652,
-              "y": -8.572218
+              "x": 1.622964,
+              "y": -6.093149
             },
             {
-              "x": 3.361857,
-              "y": -8.485774
+              "x": 1.669169,
+              "y": -6.006706
             },
             {
-              "x": 3.39031,
-              "y": -8.391978
+              "x": 1.697622,
+              "y": -5.912909
             },
             {
-              "x": 3.399917,
-              "y": -8.294433
+              "x": 1.707229,
+              "y": -5.815364
             },
             {
-              "x": 3.39031,
-              "y": -8.196888
+              "x": 1.697622,
+              "y": -5.717819
             },
             {
-              "x": 3.361857,
-              "y": -8.103091
+              "x": 1.669169,
+              "y": -5.624022
             },
             {
-              "x": 3.315652,
-              "y": -8.016648
+              "x": 1.622964,
+              "y": -5.537579
             },
             {
-              "x": 3.253471,
-              "y": -7.94088
+              "x": 1.56975,
+              "y": -5.472738
             },
             {
-              "x": 3.177703,
-              "y": -7.878698
+              "x": 2.273459,
+              "y": -1.331437
             },
             {
-              "x": 3.091259,
-              "y": -7.832494
+              "x": 2.341553,
+              "y": -1.275553
             },
             {
-              "x": 2.997463,
-              "y": -7.804041
+              "x": 2.403735,
+              "y": -1.199785
             },
             {
-              "x": 2.899918,
-              "y": -7.794433
+              "x": 2.44994,
+              "y": -1.113342
             },
             {
-              "x": 2.860741,
-              "y": -7.798292
+              "x": 2.478393,
+              "y": -1.019545
             },
             {
-              "x": 2.901534,
-              "y": -7.76761
+              "x": 2.488,
+              "y": -0.922
             },
             {
-              "x": 2.900827,
-              "y": -7.766669
+              "x": 2.478393,
+              "y": -0.824455
             },
             {
-              "x": 2.933338,
-              "y": -7.739988
+              "x": 2.44994,
+              "y": -0.730658
             },
             {
-              "x": 2.943351,
-              "y": -7.727787
+              "x": 2.403735,
+              "y": -0.644215
             },
             {
-              "x": 2.944194,
-              "y": -7.728545
+              "x": 2.341553,
+              "y": -0.568447
             },
             {
-              "x": 3.10783,
-              "y": -7.546727
+              "x": 2.265785,
+              "y": -0.506265
             },
             {
-              "x": 3.271467,
-              "y": -7.364909
+              "x": 2.179342,
+              "y": -0.46006
             },
             {
-              "x": 3.435103,
-              "y": -7.183091
+              "x": 2.085545,
+              "y": -0.431607
             },
             {
-              "x": 3.598739,
-              "y": -7.001273
+              "x": 1.988,
+              "y": -0.422
             },
             {
-              "x": 3.762376,
-              "y": -6.819455
+              "x": 1.890455,
+              "y": -0.431607
             },
             {
-              "x": 3.926012,
-              "y": -6.637636
+              "x": 1.796658,
+              "y": -0.46006
             },
             {
-              "x": 4.084375,
-              "y": -6.461678
+              "x": 1.710215,
+              "y": -0.506265
             },
             {
-              "x": 4.238792,
-              "y": -6.307261
+              "x": 1.634447,
+              "y": -0.568447
             },
             {
-              "x": 4.398792,
-              "y": -6.147261
+              "x": 1.572265,
+              "y": -0.644215
             },
             {
-              "x": 4.558792,
-              "y": -5.987261
+              "x": 1.52606,
+              "y": -0.730658
             },
             {
-              "x": 4.718792,
-              "y": -5.827261
+              "x": 1.497607,
+              "y": -0.824455
             },
             {
-              "x": 4.878792,
-              "y": -5.667261
+              "x": 1.488,
+              "y": -0.922
             },
             {
-              "x": 5.038792,
-              "y": -5.507261
+              "x": 1.497607,
+              "y": -1.019545
             },
             {
-              "x": 5.198792,
-              "y": -5.347261
+              "x": 1.52606,
+              "y": -1.113342
             },
             {
-              "x": 5.358792,
-              "y": -5.187261
+              "x": 1.572265,
+              "y": -1.199785
             },
             {
-              "x": 5.397715,
-              "y": -5.148338
+              "x": 1.634447,
+              "y": -1.275553
             },
             {
-              "x": 5.46666,
-              "y": -5.155129
+              "x": 1.669471,
+              "y": -1.304297
             },
             {
-              "x": 5.564205,
-              "y": -5.145521
+              "x": 0.977981,
+              "y": -5.373685
             },
             {
-              "x": 5.658002,
-              "y": -5.117069
+              "x": 0.929444,
+              "y": -5.399629
             },
             {
-              "x": 5.744445,
-              "y": -5.070864
+              "x": 0.853676,
+              "y": -5.461811
             },
             {
-              "x": 5.820214,
-              "y": -5.008682
+              "x": 0.791495,
+              "y": -5.537579
             },
             {
-              "x": 5.882395,
-              "y": -4.932914
+              "x": 0.74529,
+              "y": -5.624022
             },
             {
-              "x": 5.9286,
-              "y": -4.84647
+              "x": 0.716837,
+              "y": -5.717819
             },
             {
-              "x": 5.957053,
-              "y": -4.752674
+              "x": 0.707229,
+              "y": -5.815364
             },
             {
-              "x": 5.96666,
-              "y": -4.655129
+              "x": 0.716837,
+              "y": -5.912909
             },
             {
-              "x": 5.957053,
-              "y": -4.557584
+              "x": 0.74529,
+              "y": -6.006706
             },
             {
-              "x": 5.9286,
-              "y": -4.463787
+              "x": 0.791495,
+              "y": -6.093149
             },
             {
-              "x": 5.882395,
-              "y": -4.377344
+              "x": 0.853676,
+              "y": -6.168917
             },
             {
-              "x": 5.820214,
-              "y": -4.301575
+              "x": 0.929444,
+              "y": -6.231099
             },
             {
-              "x": 5.744445,
-              "y": -4.239394
+              "x": 1.015888,
+              "y": -6.277304
             },
             {
-              "x": 5.658002,
-              "y": -4.193189
+              "x": 1.109684,
+              "y": -6.305757
+            }
+          ]
+        },
+        {
+          "vertices": [
+            {
+              "x": 5.779623,
+              "y": -5.645808
+            },
+            {
+              "x": 5.877168,
+              "y": -5.636201
+            },
+            {
+              "x": 5.970965,
+              "y": -5.607748
+            },
+            {
+              "x": 6.057408,
+              "y": -5.561543
+            },
+            {
+              "x": 6.133177,
+              "y": -5.499362
+            },
+            {
+              "x": 6.195358,
+              "y": -5.423594
+            },
+            {
+              "x": 6.241563,
+              "y": -5.33715
+            },
+            {
+              "x": 6.270016,
+              "y": -5.243354
+            },
+            {
+              "x": 6.279623,
+              "y": -5.145808
+            },
+            {
+              "x": 6.270016,
+              "y": -5.048263
+            },
+            {
+              "x": 6.241563,
+              "y": -4.954467
+            },
+            {
+              "x": 6.222445,
+              "y": -4.9187
+            },
+            {
+              "x": 6.363601,
+              "y": -4.777544
+            },
+            {
+              "x": 6.400909,
+              "y": -4.732083
+            },
+            {
+              "x": 6.428632,
+              "y": -4.680217
+            },
+            {
+              "x": 6.445704,
+              "y": -4.623939
+            },
+            {
+              "x": 6.45014,
+              "y": -4.578909
+            },
+            {
+              "x": 6.451163,
+              "y": -4.578955
+            },
+            {
+              "x": 6.461212,
+              "y": -4.356577
+            },
+            {
+              "x": 6.463279,
+              "y": -4.310829
+            },
+            {
+              "x": 6.535169,
+              "y": -4.25183
+            },
+            {
+              "x": 6.597351,
+              "y": -4.176062
+            },
+            {
+              "x": 6.643556,
+              "y": -4.089619
+            },
+            {
+              "x": 6.672009,
+              "y": -3.995822
+            },
+            {
+              "x": 6.681616,
+              "y": -3.898277
+            },
+            {
+              "x": 6.672009,
+              "y": -3.800732
+            },
+            {
+              "x": 6.643556,
+              "y": -3.706935
+            },
+            {
+              "x": 6.597351,
+              "y": -3.620492
+            },
+            {
+              "x": 6.535169,
+              "y": -3.544724
+            },
+            {
+              "x": 6.459401,
+              "y": -3.482542
+            },
+            {
+              "x": 6.372958,
+              "y": -3.436337
             },
             {
-              "x": 5.564205,
-              "y": -4.164736
+              "x": 6.279161,
+              "y": -3.407884
             },
             {
-              "x": 5.46666,
-              "y": -4.155129
+              "x": 6.181616,
+              "y": -3.398277
             },
             {
-              "x": 5.369115,
-              "y": -4.164736
+              "x": 6.084071,
+              "y": -3.407884
             },
+            {
+              "x": 5.990274,
+              "y": -3.436337
+            },
+            {
+              "x": 5.903831,
+              "y": -3.482542
+            },
+            {
+              "x": 5.828063,
+              "y": -3.544724
+            },
+            {
+              "x": 5.765881,
+              "y": -3.620492
+            },
+            {
+              "x": 5.719676,
+              "y": -3.706935
+            },
+            {
+              "x": 5.691223,
+              "y": -3.800732
+            },
+            {
+              "x": 5.681616,
+              "y": -3.898277
+            },
+            {
+              "x": 5.691223,
+              "y": -3.995822
+            },
+            {
+              "x": 5.719676,
+              "y": -4.089619
+            },
+            {
+              "x": 5.765881,
+              "y": -4.176062
+            },
+            {
+              "x": 5.828063,
+              "y": -4.25183
+            },
+            {
+              "x": 5.864001,
+              "y": -4.281324
+            },
+            {
+              "x": 5.861824,
+              "y": -4.329491
+            },
+            {
+              "x": 5.857029,
+              "y": -4.435587
+            },
+            {
+              "x": 5.793828,
+              "y": -4.498789
+            },
+            {
+              "x": 5.648319,
+              "y": -4.644297
+            },
+            {
+              "x": 5.62498,
+              "y": -4.672737
+            },
+            {
+              "x": 5.588282,
+              "y": -4.683869
+            },
+            {
+              "x": 5.501838,
+              "y": -4.730074
+            },
+            {
+              "x": 5.42607,
+              "y": -4.792255
+            },
+            {
+              "x": 5.363888,
+              "y": -4.868023
+            },
+            {
+              "x": 5.317684,
+              "y": -4.954467
+            },
+            {
+              "x": 5.289231,
+              "y": -5.048263
+            },
+            {
+              "x": 5.279623,
+              "y": -5.145808
+            },
+            {
+              "x": 5.289231,
+              "y": -5.243354
+            },
+            {
+              "x": 5.317684,
+              "y": -5.33715
+            },
+            {
+              "x": 5.363888,
+              "y": -5.423594
+            },
+            {
+              "x": 5.42607,
+              "y": -5.499362
+            },
+            {
+              "x": 5.501838,
+              "y": -5.561543
+            },
+            {
+              "x": 5.588282,
+              "y": -5.607748
+            },
+            {
+              "x": 5.682078,
+              "y": -5.636201
+            }
+          ]
+        },
+        {
+          "vertices": [
             {
-              "x": 5.275319,
-              "y": -4.193189
+              "x": 4.007229,
+              "y": -6.715364
             },
             {
-              "x": 5.188875,
-              "y": -4.239394
+              "x": 4.104775,
+              "y": -6.705757
             },
             {
-              "x": 5.113107,
-              "y": -4.301575
+              "x": 4.198571,
+              "y": -6.677304
             },
             {
-              "x": 5.050925,
-              "y": -4.377344
+              "x": 4.285015,
+              "y": -6.631099
             },
             {
-              "x": 5.004721,
-              "y": -4.463787
+              "x": 4.360783,
+              "y": -6.568917
             },
             {
-              "x": 4.976268,
-              "y": -4.557584
+              "x": 4.422964,
+              "y": -6.493149
             },
             {
-              "x": 4.96666,
-              "y": -4.655129
+              "x": 4.469169,
+              "y": -6.406706
             },
             {
-              "x": 4.973451,
-              "y": -4.724074
+              "x": 4.497622,
+              "y": -6.312909
             },
             {
-              "x": 4.934528,
-              "y": -4.762997
+              "x": 4.507229,
+              "y": -6.215364
             },
             {
-              "x": 4.774528,
-              "y": -4.922997
+              "x": 4.497622,
+              "y": -6.117819
             },
             {
-              "x": 4.614528,
-              "y": -5.082997
+              "x": 4.469169,
+              "y": -6.024022
             },
             {
-              "x": 4.454528,
-              "y": -5.242997
+              "x": 4.422964,
+              "y": -5.937579
             },
             {
-              "x": 4.294528,
-              "y": -5.402997
+              "x": 4.360783,
+              "y": -5.861811
             },
             {
-              "x": 4.134528,
-              "y": -5.562997
+              "x": 4.285015,
+              "y": -5.799629
             },
             {
-              "x": 3.974528,
-              "y": -5.722997
+              "x": 4.198571,
+              "y": -5.753424
             },
             {
-              "x": 3.814528,
-              "y": -5.882997
+              "x": 4.104775,
+              "y": -5.724971
             },
             {
-              "x": 3.654528,
-              "y": -6.042997
+              "x": 4.007229,
+              "y": -5.715364
             },
             {
-              "x": 3.644515,
-              "y": -6.055198
+              "x": 3.909684,
+              "y": -5.724971
             },
             {
-              "x": 3.643672,
-              "y": -6.054439
+              "x": 3.815888,
+              "y": -5.753424
             },
             {
-              "x": 3.480036,
-              "y": -6.236258
+              "x": 3.760289,
+              "y": -5.783142
             },
             {
-              "x": 3.316399,
-              "y": -6.418076
+              "x": 3.725405,
+              "y": -5.768192
             },
             {
-              "x": 3.152763,
-              "y": -6.599894
+              "x": 3.525405,
+              "y": -5.682478
             },
             {
-              "x": 2.989127,
-              "y": -6.781712
+              "x": 3.325405,
+              "y": -5.596763
             },
             {
-              "x": 2.82549,
-              "y": -6.96353
+              "x": 3.125405,
+              "y": -5.511049
             },
             {
-              "x": 2.661854,
-              "y": -7.145348
+              "x": 3.073075,
+              "y": -5.488622
             },
             {
-              "x": 2.517655,
-              "y": -7.305569
+              "x": 3.047108,
+              "y": -5.403021
             },
             {
-              "x": 2.349079,
-              "y": -7.432363
+              "x": 3.000903,
+              "y": -5.316577
             },
             {
-              "x": 2.349078,
-              "y": -7.432362
+              "x": 2.938722,
+              "y": -5.240809
             },
             {
-              "x": 2.143685,
-              "y": -7.586785
+              "x": 2.862954,
+              "y": -5.178627
             },
             {
-              "x": 2.144391,
-              "y": -7.587724
+              "x": 2.77651,
+              "y": -5.132423
             },
             {
-              "x": 2.111836,
-              "y": -7.614441
+              "x": 2.682714,
+              "y": -5.10397
             },
             {
-              "x": 2.074527,
-              "y": -7.659902
+              "x": 2.585169,
+              "y": -5.094362
             },
             {
-              "x": 2.046804,
-              "y": -7.711768
+              "x": 2.487623,
+              "y": -5.10397
             },
             {
-              "x": 2.044262,
-              "y": -7.720147
+              "x": 2.393827,
+              "y": -5.132423
             },
             {
-              "x": 2.043578,
-              "y": -7.719887
+              "x": 2.307383,
+              "y": -5.178627
             },
             {
-              "x": 2.039089,
-              "y": -7.731684
+              "x": 2.231615,
+              "y": -5.240809
             },
             {
-              "x": 1.979344,
-              "y": -7.737568
+              "x": 2.169434,
+              "y": -5.316577
             },
             {
-              "x": 1.885547,
-              "y": -7.766021
+              "x": 2.123229,
+              "y": -5.403021
             },
             {
-              "x": 1.799104,
-              "y": -7.812226
+              "x": 2.094776,
+              "y": -5.496817
             },
             {
-              "x": 1.723336,
-              "y": -7.874408
+              "x": 2.085169,
+              "y": -5.594362
             },
             {
-              "x": 1.661154,
-              "y": -7.950176
+              "x": 2.094776,
+              "y": -5.691907
             },
             {
-              "x": 1.614949,
-              "y": -8.036619
+              "x": 2.123229,
+              "y": -5.785704
             },
             {
-              "x": 1.586496,
-              "y": -8.130416
+              "x": 2.169434,
+              "y": -5.872147
             },
             {
-              "x": 1.576889,
-              "y": -8.227961
+              "x": 2.231615,
+              "y": -5.947916
             },
             {
-              "x": 1.586496,
-              "y": -8.325506
+              "x": 2.307383,
+              "y": -6.010097
             },
             {
-              "x": 1.614949,
-              "y": -8.419303
+              "x": 2.393827,
+              "y": -6.056302
             },
             {
-              "x": 1.661154,
-              "y": -8.505746
+              "x": 2.487623,
+              "y": -6.084755
             },
             {
-              "x": 1.723336,
-              "y": -8.581514
+              "x": 2.585169,
+              "y": -6.094362
             },
             {
-              "x": 1.799104,
-              "y": -8.643696
+              "x": 2.682714,
+              "y": -6.084755
             },
             {
-              "x": 1.885547,
-              "y": -8.689901
+              "x": 2.77651,
+              "y": -6.056302
             },
             {
-              "x": 1.979344,
-              "y": -8.718354
+              "x": 2.820119,
+              "y": -6.032993
             },
             {
-              "x": 2.076889,
-              "y": -8.727961
+              "x": 2.889054,
+              "y": -6.062536
             },
             {
-              "x": 2.174434,
-              "y": -8.718354
+              "x": 3.089054,
+              "y": -6.14825
             },
             {
-              "x": 2.268231,
-              "y": -8.689901
+              "x": 3.289054,
+              "y": -6.233965
             },
             {
-              "x": 2.354674,
-              "y": -8.643696
+              "x": 3.489054,
+              "y": -6.319679
             },
             {
-              "x": 2.430442,
-              "y": -8.581514
+              "x": 3.523349,
+              "y": -6.334377
             },
             {
-              "x": 2.465996,
-              "y": -8.538191
+              "x": 3.54529,
+              "y": -6.406706
             },
             {
-              "x": 2.484184,
-              "y": -8.572218
+              "x": 3.591495,
+              "y": -6.493149
             },
             {
-              "x": 2.546365,
-              "y": -8.647986
+              "x": 3.653676,
+              "y": -6.568917
             },
             {
-              "x": 2.622133,
-              "y": -8.710167
+              "x": 3.729444,
+              "y": -6.631099
             },
             {
-              "x": 2.708577,
-              "y": -8.756372
+              "x": 3.815888,
+              "y": -6.677304
             },
             {
-              "x": 2.802373,
-              "y": -8.784825
+              "x": 3.909684,
+              "y": -6.705757
             }
           ]
         },
@@ -18096,6 +17515,138 @@
             },
             {
               "x": -2.997463,
+              "y": -8.784825
+            }
+          ]
+        },
+        {
+          "vertices": [
+            {
+              "x": 2.899918,
+              "y": -8.794432
+            },
+            {
+              "x": 2.997463,
+              "y": -8.784825
+            },
+            {
+              "x": 3.091259,
+              "y": -8.756372
+            },
+            {
+              "x": 3.177703,
+              "y": -8.710167
+            },
+            {
+              "x": 3.253471,
+              "y": -8.647986
+            },
+            {
+              "x": 3.315652,
+              "y": -8.572218
+            },
+            {
+              "x": 3.361857,
+              "y": -8.485774
+            },
+            {
+              "x": 3.39031,
+              "y": -8.391978
+            },
+            {
+              "x": 3.399917,
+              "y": -8.294433
+            },
+            {
+              "x": 3.39031,
+              "y": -8.196888
+            },
+            {
+              "x": 3.361857,
+              "y": -8.103091
+            },
+            {
+              "x": 3.315652,
+              "y": -8.016648
+            },
+            {
+              "x": 3.253471,
+              "y": -7.94088
+            },
+            {
+              "x": 3.177703,
+              "y": -7.878698
+            },
+            {
+              "x": 3.091259,
+              "y": -7.832494
+            },
+            {
+              "x": 2.997463,
+              "y": -7.804041
+            },
+            {
+              "x": 2.899918,
+              "y": -7.794433
+            },
+            {
+              "x": 2.802373,
+              "y": -7.804041
+            },
+            {
+              "x": 2.708577,
+              "y": -7.832494
+            },
+            {
+              "x": 2.622133,
+              "y": -7.878698
+            },
+            {
+              "x": 2.546365,
+              "y": -7.94088
+            },
+            {
+              "x": 2.484184,
+              "y": -8.016648
+            },
+            {
+              "x": 2.437979,
+              "y": -8.103091
+            },
+            {
+              "x": 2.409526,
+              "y": -8.196888
+            },
+            {
+              "x": 2.399919,
+              "y": -8.294433
+            },
+            {
+              "x": 2.409526,
+              "y": -8.391978
+            },
+            {
+              "x": 2.437979,
+              "y": -8.485774
+            },
+            {
+              "x": 2.484184,
+              "y": -8.572218
+            },
+            {
+              "x": 2.546365,
+              "y": -8.647986
+            },
+            {
+              "x": 2.622133,
+              "y": -8.710167
+            },
+            {
+              "x": 2.708577,
+              "y": -8.756372
+            },
+            {
+              "x": 2.802373,
               "y": -8.784825
             }
           ]

@@ -24,6 +24,12 @@ def audit(name):
   if e['type']=='pcb_via':join([pp[p]['source_port_id'] for p in e.get('pcb_port_ids',[])])
  sts={e['source_trace_id']:e for e in j if e['type']=='source_trace'}
  labels={root(e['source_net_id']):e['name'] for e in j if e['type']=='source_net'}
+ if name == 'button':
+  # The supplier drawing connects across each row of the C2930544 footprint.
+  switch = next(e for e in j if e['type']=='source_component' and e['name']=='SW1')
+  pin_nets = {e['pin_number']: labels.get(root(e['source_port_id'])) for e in j
+              if e['type']=='source_port' and e['source_component_id']==switch['source_component_id']}
+  assert pin_nets == {1:'GND', 3:'GND', 2:'CONTACT', 4:'CONTACT'}, pin_nets
  shapes=[];bridges=[];pads=[]
  def shape(p):
   if p['shape']=='polygon':return Polygon([(q['x'],q['y']) for q in p['points']])
