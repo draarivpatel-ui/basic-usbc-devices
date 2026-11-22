@@ -41,6 +41,8 @@ The six original modules and display adapter have mounting centers **(±9.5, ±1
 
 The current files preserve a complete onboard distance sensor as a reviewable **Standard-assembly candidate**. The requested Economic-only panel is not yet fulfilled. A pending choice is to accept Standard assembly, or redesign the distance board for a plug-in sensor. JLCPCB lists Waveshare [C431944](https://jlcpcb.com/partdetail/Waveshare-VL53L0X_DistanceSensor/C431944) as Economic-compatible, but its current stock and assembly arrangement have not been established. It is not silently substituted into these files. No parts have been bought or reserved.
 
+For new routing work, use the default local tscircuit autorouter. The [autorouter handoff](AUTOROUTER-HANDOFF.md) links each failing board to its standalone reproduction and pass criteria.
+
 ## Fabrication rules
 
 - Two copper layers, 1.6 mm FR-4; JLCPCB economy fabrication preset.
