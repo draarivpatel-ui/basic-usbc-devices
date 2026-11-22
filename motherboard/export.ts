@@ -1,5 +1,5 @@
 import { readFileSync,writeFileSync,mkdirSync } from "node:fs"
-import { convertCircuitJsonToGerberFiles } from "circuit-json-to-gerber"
+import { topSideGerbers } from "../top-side-gerbers"
 import { assemblyFiles,csv } from "../assembly-bom"
 
 const dir="dist/motherboard"
@@ -16,4 +16,4 @@ writeFileSync(dir+"/motherboard-manual-assembly.csv",csv([
  [stamp.name,"Solder Party",stamp.manufacturer_part_number,position.layer,position.center.x,position.center.y,position.rotation??0],
 ]))
 mkdirSync(dir+"/gerbers",{recursive:true})
-for (const [file,content] of Object.entries(convertCircuitJsonToGerberFiles(board))) writeFileSync(dir+"/gerbers/"+file,content)
+for (const [file,content] of Object.entries(topSideGerbers(board))) writeFileSync(dir+"/gerbers/"+file,content)

@@ -1,6 +1,6 @@
 # RP2350 USB Motherboard
 
-A 80 × 46 mm, four-layer controller for an enclosure. The upper edge carries four downstream USB-C sockets. The lower edge carries the computer service socket. The castellated RP2350 Stamp mounts on top. Leave room for the power harness at the underside pads. Four M2 clearance holes are on a 70 × 40 mm grid, at X = −38 and 32 mm, Y = ±20 mm from board center.
+An 80 × 46 mm, four-layer controller for an enclosure. The upper edge carries four downstream USB-C sockets. The lower edge carries the computer service socket. The castellated RP2350 Stamp mounts on top. Leave room for the power harness at the underside pads. Four M2 clearance holes are on a 70 × 40 mm grid, at X = −38 and 32 mm, Y = ±20 mm from board center.
 
 ## Integration
 
