@@ -32,7 +32,8 @@ const pinLabels = {
 } as const
 
 const pinAttributes = {
-  pin7: {requiresPower: true},
+  // VDD is the internal regulator output in the bus-powered configuration.
+  pin7: {providesPower: true, providesVoltage: 3.3},
   pin10: {requiresPower: true},
   pin19: {requiresGround: true}
 } as const

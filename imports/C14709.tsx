@@ -1,15 +1,9 @@
 import type { ResistorProps } from "@tscircuit/props"
 
-const pinLabels = {
-  pin1: ["pin1"],
-  pin2: ["pin2"]
-} as const
-
 export const BLM18PG121SN1D = (props: Omit<ResistorProps, "resistance">) => {
   return (
     // DC model uses the maximum initial DCR. RF impedance is 120 Ω at 100 MHz.
     <resistor resistance="0.05ohm"
-      pinLabels={pinLabels}
       symbol={
         <symbol>
           <port name="pin2" pinNumber={2} aliases={["2"]} direction="right" schX={0.4} schY={0} schStemLength={0.06} />

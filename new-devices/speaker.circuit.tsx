@@ -44,11 +44,6 @@ export default function Speaker() {
           pcbX={0}
           pcbY={0.55}
           noConnect={["pin2", "pin5"]}
-          pinAttributes={{
-            pin7: { providesPower: true, providesVoltage: 3.3 },
-            pin10: { requiresPower: true },
-            pin19: { requiresGround: true },
-          }}
           connections={{
             pin1: "net.XTO",
             pin3: "net.DT",
