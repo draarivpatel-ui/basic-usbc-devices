@@ -24,5 +24,6 @@ jobs:
       - run: bun run check:physical
       - run: bun run build:panel3
       - run: bun run build:panel4
+      - run: python3 verify-assembly-sides.py
       - run: bun run check
       - run: bun run test

@@ -15,6 +15,9 @@ import { USBLC6_2SC6 } from './imports/C7519'
 import { X322512MSB4SI } from './imports/C9002'
 import { boardRules, C as BaseC, R as BaseR, Wiring } from './common'
 import { hubSize, hubMounts, pcb, position, sch } from './hub-layout'
+function HubPlacement({embedded,children}:{embedded:boolean,children:React.ReactNode}){
+ return embedded?<group pcbX={-14} pcbY={0} pcbLayout={{layoutMode:"none"}}>{children}</group>:<>{children}</>
+}
 function C(props:Omit<Parameters<typeof BaseC>[0],"x"|"y">){const p=position(props.name);return <BaseC {...props} x={p.x} y={p.y} rotation={p.rotation??0} {...sch(props.name)}/>}
 function R(props:Omit<Parameters<typeof BaseR>[0],"x"|"y">){const p=position(props.name);return <BaseR {...props} x={p.x} y={p.y} rotation={p.rotation??0} {...sch(props.name)}/>}
 
@@ -44,8 +47,8 @@ function USB({i,computer=false,embedded=false}:{i:number,computer?:boolean,embed
  </>
 }
 function ESD({i,computer=false}:{i:number,computer?:boolean}) {return <USBLC6_2SC6 name={`D${i+1}`} {...pcb(`D${i+1}`)} {...sch(`D${i+1}`)} pinAttributes={{pin1:{},pin2:{requiresGround:true},pin3:{},pin4:{},pin5:{requiresPower:true},pin6:{}}} internallyConnectedPins={[["pin1","pin6"],["pin3","pin4"]]} connections={{pin1:computer?"net.PC_DP":`net.DP${i}`,pin6:computer?"net.PC_DP":`net.DP${i}`,pin3:computer?"net.PC_DM":`net.DM${i}`,pin4:computer?"net.PC_DM":`net.DM${i}`,pin2:'net.GND',pin5:`net.${computer?'PC_5V':i===0?'VBUS':`VBUS${i}`}`}}/>}
-export function HubBoard({embedded=false,routingDisabled=false,pcbX=0,pcbY=0,pcbRotation=0}:{embedded?:boolean,routingDisabled?:boolean,pcbX?:number,pcbY?:number,pcbRotation?:number}={}){return <board pcbX={pcbX} pcbY={pcbY} pcbRotation={pcbRotation} routingDisabled={routingDisabled} {...boardRules} name={embedded?"motherboard":"hub"} routeRemaining {...(embedded ? {...displayRules,width:46,height:46,autorouter:{local:true,algorithmFn:savedRouter(hostCopper)}} : {...hubSize,minTraceWidth:0.11,autorouter:{local:true,algorithmFn:createHubRouter(pcbX,pcbY,pcbRotation)}})} thickness={1.6} schMaxTraceDistance={1.2} schStyle={{defaultPassiveSize:"xs"}} schLayout={{layoutMode:"none"}}>
- <schematicsheet name="hub_sheet" displayName={embedded?"Embedded four-port USB hub":"USB-C 4-port USB 2.0 hub / bus powered"} sheetSize="A4">
+export function HubBoard({embedded=false,routingDisabled=false,pcbX=0,pcbY=0,pcbRotation=0}:{embedded?:boolean,routingDisabled?:boolean,pcbX?:number,pcbY?:number,pcbRotation?:number}={}){return <board pcbX={pcbX} pcbY={pcbY} pcbRotation={pcbRotation} routingDisabled={routingDisabled} {...boardRules} name={embedded?"motherboard":"hub"} routeRemaining {...(embedded ? {...displayRules,width:80,height:46,autorouter:{local:true,algorithmFn:savedRouter(hostCopper)}} : {...hubSize,minTraceWidth:0.11,autorouter:{local:true,algorithmFn:createHubRouter(pcbX,pcbY,pcbRotation)}})} thickness={1.6} schMaxTraceDistance={1.2} schStyle={{defaultPassiveSize:"xs"}} schLayout={{layoutMode:"none"}}>
+ <schematicsheet name="hub_sheet" displayName={embedded?"RP2350 USB Motherboard":"USB-C 4-port USB 2.0 hub / bus powered"} sheetSize="A4"><HubPlacement embedded={embedded}>
  <schematictext text={embedded?"COMPUTER / SERVICE":"HOST / USB-C INPUT"} schX={-10.5} schY={10} fontSize={0.35}/><schematictext text={embedded?"HUB / INTERNAL HOST":"CH334F / 12 MHz / BUS POWERED"} schX={-.8} schY={10} fontSize={0.35}/><schematictext text="PORT POWER ENABLE" schX={10.5} schY={10} fontSize={0.35}/>
  {[-11.4,-3.8,3.8,11.4].map((x,i)=><schematictext text={`PORT ${i+1} / USB-C / 100 mA`} schX={x} schY={2.1} fontSize={0.32}/>)}
  <net name="GND"/><net name="VBUS"/>
@@ -55,7 +58,7 @@ export function HubBoard({embedded=false,routingDisabled=false,pcbX=0,pcbY=0,pcb
  {["CC0A","CC0B","PWREN_N","OC_N"].map(n=><net name={n}/>)}
  <net name="V3V3"/>
  <copperpour name="GROUND" layer="bottom" connectsTo="net.GND" clearance={0.2} boardEdgeMargin={0.6}/>
- {embedded?<DisplayMounts spanX={40} spanY={10} layers={["top","inner1","inner2","bottom"]}/>:hubMounts.map(({x,y})=><><hole diameter={2.2} pcbX={x} pcbY={y}/><keepout shape="circle" radius={2.3} pcbX={x} pcbY={y} layers={['top','bottom']}/></>)}
+ {embedded?<DisplayMounts centerX={11} spanX={70} spanY={40} layers={["top","inner1","inner2","bottom"]}/>:hubMounts.map(({x,y})=><><hole diameter={2.2} pcbX={x} pcbY={y}/><keepout shape="circle" radius={2.3} pcbX={x} pcbY={y} layers={['top','bottom']}/></>)}
  <USB i={0} computer={embedded} embedded={embedded}/>
  <ESD i={0} computer={embedded}/>
  <R name="R1" value="5.1k" a="net.CC0A" b="net.GND"/>
@@ -97,5 +100,5 @@ export function HubBoard({embedded=false,routingDisabled=false,pcbX=0,pcbY=0,pcb
  <AT24C02D_STUM_T name="U_STATUS" pcbX={-11.5} pcbY={8.25} pcbRotation={90} schX={-9} schY={-10} connections={{pin1:'net.HUB_SCL',pin2:'net.GND',pin3:'net.HUB_LED4',pin4:'net.V3V3',pin5:'net.GND'}}/>
  <BaseC name="C_STATUS" value="100nF" x={-4} y={-10.5} a="net.V3V3" schX={-12} schY={-10}/>
  <Wiring nets={{HUB_SCL:['.U1 > .pin13'],HUB_LED4:['.U1 > .pin21'],HUB_LED2:['.U1 > .pin23']}}/>
- </schematicsheet>{embedded && <HostProcessor/>}</board>}
+ </HubPlacement></schematicsheet>{embedded && <HostProcessor/>}</board>}
 export default HubBoard
