@@ -4,6 +4,7 @@ import { runAllChecks } from "@tscircuit/checks"
 import { mkdir, writeFile } from "node:fs/promises"
 import { HubBoard } from "../hub.circuit"
 
+import { checkFrontEdge } from "./check-front-edge"
 import { checkMotherboardNetlist } from "./check-netlist"
 
 const circuit = new Circuit()
@@ -11,6 +12,7 @@ circuit.add(<HubBoard embedded routingDisabled={process.argv.includes("--placeme
 await circuit.renderUntilSettled()
 const data = circuit.getCircuitJson()
 checkMotherboardNetlist(data)
+checkFrontEdge(data)
 await mkdir("dist/motherboard",{recursive:true})
 const prefix="dist/motherboard/motherboard"
 await writeFile(prefix+".circuit.json",JSON.stringify(data))

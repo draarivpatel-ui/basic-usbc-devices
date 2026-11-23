@@ -12,9 +12,9 @@ export function DebugAndStorage() {
       {/* Product power supplies the target. A straight-through cable can safely carry either probe voltage on contact 1. */}
       <StandardJstSwdResetUpward
         name="J_SWD"
-        pcbX={15}
-        pcbY={18}
-        pcbRotation={180}
+        pcbX={33}
+        pcbY={-2}
+        pcbRotation={90}
         schX={-7}
         schY={6}
         noConnect={["VOUT"]}
@@ -28,8 +28,8 @@ export function DebugAndStorage() {
       <R
         name="R_SWD_DIO"
         value="100"
-        x={13.5}
-        y={-1.4}
+        x={18.75}
+        y={-0.75}
         a="net.PROBE_DIO"
         b="net.SWDIO"
         schX={-2}
@@ -38,8 +38,8 @@ export function DebugAndStorage() {
       <R
         name="R_SWD_CLK"
         value="100"
-        x={13.5}
-        y={-3.25}
+        x={18.75}
+        y={-2.5}
         a="net.PROBE_CLK"
         b="net.SWCLK"
         schX={-2}
@@ -48,19 +48,19 @@ export function DebugAndStorage() {
       <R
         name="R_RUN"
         value="10k"
-        x={36.5}
-        y={11.8}
+        x={34}
+        y={3.25}
         a="net.CPU_3V3"
         b="net.CPU_RUN"
         schX={-2}
         schY={3}
       />
-      <silkscreentext text="SWD" pcbX={15} pcbY={21.7} fontSize={0.8} />
+      <silkscreentext text="SWD" pcbX={33} pcbY={-7} fontSize={0.8} />
       <TF_01A
         name="J_SD"
-        pcbX={34.1}
-        pcbY={-8.95}
-        pcbRotation={90}
+        pcbX={23.4}
+        pcbY={-13.2}
+        pcbRotation={0}
         schX={4}
         schY={0}
         noConnect={["pin9"]}
@@ -79,13 +79,21 @@ export function DebugAndStorage() {
           pin13: "net.GND",
         }}
       />
-      {["SD_CS", "SD_MOSI", "SD_MISO", "SD_D1", "SD_D2"].map((net, i) => (
+      {(
+        [
+          ["SD_CS", 18.75, 1],
+          ["SD_MOSI", 34, -7.75],
+          ["SD_MISO", 33.75, -9.5],
+          ["SD_D1", 33.75, -11.25],
+          ["SD_D2", 33.75, -13],
+        ] as const
+      ).map(([net, x, y], i) => (
         <R
           key={net}
           name={"R_SD" + (i + 1)}
           value="10k"
-          x={24 + (i % 3) * 3.5}
-          y={-19.0 - Math.floor(i / 3) * 2.1}
+          x={x}
+          y={y}
           a="net.CPU_3V3"
           b={"net." + net}
           schX={-7 + i * 3}
@@ -95,8 +103,8 @@ export function DebugAndStorage() {
       <C
         name="C_SD"
         value="100nF"
-        x={26.1}
-        y={-11.6}
+        x={20}
+        y={-5.75}
         a="net.CPU_3V3"
         schX={8}
         schY={4}
@@ -104,8 +112,8 @@ export function DebugAndStorage() {
       <C
         name="C_SD_BULK"
         value="4.7uF"
-        x={26.1}
-        y={-13.65}
+        x={29}
+        y={-5.5}
         a="net.CPU_3V3"
         schX={11}
         schY={4}

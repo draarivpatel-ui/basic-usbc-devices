@@ -18,6 +18,13 @@ The 88 × 46 mm motherboard removes both USB multiplexers, adds J_SWD and J_SD a
 - [Router fixture in PR #4144](https://github.com/tscircuit/tscircuit-autorouter/pull/4144), [exact submitted routing input](https://api.tscircuit.com/autorouting/bug_reports/view?autorouting_bug_report_id=43ae842c-60a6-483a-adbc-dc77c99cb23c).
 - In the autorouter checkout, run `bun fixtures/bug-reports/bugreport133-43ae84/reproduce.ts`. In this hardware checkout, run `bun motherboard/build.tsx`, then `python3 verify-module-copper.py --directory dist/motherboard --check-shorts motherboard`. Check all four layers, including the fixed crystal traces and generated vias. Require zero shorts, disconnected nets and clearance errors before generating Gerbers.
 
+### Compact front-loading microSD revision
+
+The 76 × 46 mm board has J1, the power lever and the card slot on its front edge. Placement and package-pin checks pass. Pipeline 9 exhausts 200 rip-up attempts and the regional fallback fails at `cmn_40`. The partial board also reports contact between the bottom ground pour and the flash chip-select trace. The physical connectivity audit fails and fabrication files are withheld.
+
+- [Exact routing input](https://api.tscircuit.com/autorouting/bug_reports/view?autorouting_bug_report_id=350521c5-f57e-40dd-8a5b-33fa28ea56bf) and [motherboard reproduction PR #4144](https://github.com/tscircuit/tscircuit-autorouter/pull/4144).
+- Run `bun fixtures/bug-reports/bugreport134-350521/reproduce.ts` in the router PR. To validate a fix on this board, run `bun motherboard/build.tsx` and `python3 verify-module-copper.py --directory dist/motherboard --check-shorts motherboard`. Check the ground pour after routing, require zero disconnected nets and shorts, and retain the front-edge mechanical checks.
+
 ## Reproduce one board
 
 Choose a PR number from the table. In a checkout of `tscircuit/tscircuit-autorouter`, run:

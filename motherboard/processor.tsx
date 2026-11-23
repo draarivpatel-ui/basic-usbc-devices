@@ -19,8 +19,9 @@ export function HostProcessor() {
       >
         <CH340C
           name="U_PC"
-          pcbX={12.0}
-          pcbY={-12.5}
+          pcbRotation={90}
+          pcbX={13}
+          pcbY={-1}
           layer="top"
           schX={1}
           schY={3.8}
@@ -48,8 +49,8 @@ export function HostProcessor() {
         <C
           layer="top"
           name="C_PC"
-          x={19.0}
-          y={-14.5}
+          x={12}
+          y={-14}
           value="100nF"
           a="net.PC_5V"
           schX={5}
@@ -58,8 +59,8 @@ export function HostProcessor() {
         <C
           layer="top"
           name="C_V3"
-          x={19.0}
-          y={-16.0}
+          x={11}
+          y={-15.75}
           value="100nF"
           a="net.BRIDGE_V3"
           schX={9}
@@ -67,8 +68,8 @@ export function HostProcessor() {
         />
         <TXU0202DCUR
           name="U_UART"
-          pcbX={26}
-          pcbY={17.7}
+          pcbX={25}
+          pcbY={21}
           layer="top"
           schX={6}
           schY={0}
@@ -86,8 +87,8 @@ export function HostProcessor() {
         <C
           layer="top"
           name="C_IOA"
-          x={26}
-          y={21.2}
+          x={23.75}
+          y={18.75}
           value="100nF"
           a="net.PC_5V"
           schX={5}
@@ -96,8 +97,8 @@ export function HostProcessor() {
         <C
           layer="top"
           name="C_IOB"
-          x={26}
-          y={14.9}
+          x={22.75}
+          y={15}
           value="100nF"
           a="net.CPU_3V3"
           schX={9}

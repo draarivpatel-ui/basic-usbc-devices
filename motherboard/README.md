@@ -1,6 +1,6 @@
 # RP2350 USB Motherboard
 
-An 88 × 46 mm, four-layer controller for an enclosure. The upper edge carries four downstream USB-C sockets. The lower edge carries the computer service socket. The RP2350A is soldered directly to the board in a 7 × 7 mm QFN-60 package. Leave room for the power harness at the underside pads. Four M2 clearance holes are on a 80 × 40 mm grid, at X = ±40 mm, Y = ±20 mm from board center.
+A 76 × 46 mm, four-layer controller for an enclosure. The upper edge carries four downstream USB-C sockets. The front edge carries the computer console, power switch and microSD opening, in that order from left to right when viewed from above with the four downstream sockets at the back. The RP2350A is soldered directly to the board in a 7 × 7 mm QFN-60 package. Leave room for the power harness at the underside pads. Four M2 clearance holes are on a 70 × 40 mm grid, at X = ±35 mm, Y = ±20 mm from board center.
 
 ## Integration
 
@@ -9,7 +9,7 @@ An 88 × 46 mm, four-layer controller for an enclosure. The upper edge carries f
 - The processor hosts J2–J5 and J1 provides the 115200-baud runtime UART. Each downstream port has attachment detection, a current-limited power switch and ESD protection. The hub reports faults as a group. The optional indicator uses `firmware/hub/ch334f-status.bin`.
 - Program or debug with the [standard JST programmer](https://github.com/tscircuit/standard-jst-programmer). Supply normal product power, switch ON and plug a straight-through cable into the top-entry J_SWD (JST SH, 5 pins, 1 mm). Contacts 1–5 are unconnected programmer power, SWDIO, ground, SWCLK and active-low RUN/reset. The signal lines use 100 Ω series resistors. RUN has a 10 kΩ pull-up to 3.3 V. J1 is a runtime console.
 - The power switch is a Shou Han SK12D07VG5. Its 5 mm actuator slides parallel to the front edge and projects 4.75 mm past the PCB in the assembly model. Provide clearance for the through-hole leads, which extend 1.9 mm below the PCB.
-- The TF-01A microSD socket opens toward the right edge. Its 3.3 V SPI0 signals are GP4 MISO, GP5 CS, GP6 SCK and GP7 MOSI. Board pull-ups hold CS and the data lines high during reset. Firmware boots from the external QSPI flash with the card inserted or removed. The `sd` command mounts the card on demand and reports the filesystem. The display demo generates its three patterns in code.
+- The TF-01A microSD socket opens at the front, beside the power lever. The 3D assembly places its mouth 0.30 mm inside the PCB edge and leaves 5.0 mm between the switch and socket housings. Its 3.3 V SPI0 signals are GP4 MISO, GP5 CS, GP6 SCK and GP7 MOSI. Board pull-ups hold CS and the data lines high during reset. Firmware boots from the external QSPI flash with the card inserted or removed. The `sd` command mounts the card on demand and reports the filesystem. The display demo generates its three patterns in code.
 
 ## Standalone program
 

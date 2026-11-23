@@ -84,16 +84,16 @@ function Res({
 // Supply clusters correspond to the RP2350A Minimal R4 bypass locations.
 // Each row names the MCU pin(s) served by that capacitor.
 const bypass = [
-  [1, 17.5, 1.75, "CPU_3V3"],
-  [6, 17.5, 0.7, "CORE_1V1"],
-  [11, 17.5, -1.7, "CPU_3V3"],
-  [20, 20.6, -5.4, "CPU_3V3"],
-  [23, 23.8, -5.4, "CORE_1V1"],
-  [30, 26.7, -5.4, "CPU_3V3"],
-  [38, 28.6, 0.2, "CPU_3V3"],
-  [39, 28.6, 1.55, "CORE_1V1"],
-  [44, 28.6, 3, "CPU_3V3"],
-  [53, 19.55, 5.65, "CPU_3V3"],
+  [1, 19.25, 7.55, "CPU_3V3"],
+  [6, 19.25, 6.5, "CORE_1V1"],
+  [11, 19.25, 4.1, "CPU_3V3"],
+  [20, 22.35, 0.4, "CPU_3V3"],
+  [23, 25.55, 0.4, "CORE_1V1"],
+  [30, 28.45, 0.4, "CPU_3V3"],
+  [38, 30.35, 6, "CPU_3V3"],
+  [39, 30.35, 7.35, "CORE_1V1"],
+  [44, 30.35, 8.8, "CPU_3V3"],
+  [53, 21.3, 11.45, "CPU_3V3"],
 ] as const;
 export function ProcessorCore() {
   return (
@@ -105,8 +105,8 @@ export function ProcessorCore() {
       >
         <RP2350A
           name="U_CPU"
-          pcbX={23}
-          pcbY={0}
+          pcbX={24.75}
+          pcbY={5.8}
           schX={-7}
           schY={0}
           noConnect={[
@@ -195,8 +195,8 @@ export function ProcessorCore() {
       >
         <W25Q128JVSIQ
           name="U_FLASH"
-          pcbX={13.7}
-          pcbY={7.4}
+          pcbX={15.45}
+          pcbY={13.2}
           schX={1}
           schY={8}
           connections={{
@@ -212,8 +212,8 @@ export function ProcessorCore() {
         />
         <Cap
           name="C_FLASH"
-          x={17.7}
-          y={11.2}
+          x={19.45}
+          y={17}
           sx={7}
           sy={8}
           value="100nF"
@@ -221,8 +221,8 @@ export function ProcessorCore() {
         />
         <Res
           name="R_FLASH_CS"
-          x={9.75}
-          y={11.75}
+          x={12}
+          y={18.75}
           sx={4}
           sy={8.8}
           value="10k"
@@ -231,8 +231,8 @@ export function ProcessorCore() {
         />
         <AP2112K_3_3TRG1
           name="U_LDO"
-          pcbX={33}
-          pcbY={7.8}
+          pcbX={34.75}
+          pcbY={13.6}
           schX={1}
           schY={3}
           noConnect={["pin4"]}
@@ -245,8 +245,8 @@ export function ProcessorCore() {
         />
         <Cap
           name="C_LDO_IN"
-          x={30}
-          y={7.8}
+          x={31.75}
+          y={13.6}
           rot={90}
           sx={-2}
           sy={3}
@@ -255,8 +255,8 @@ export function ProcessorCore() {
         />
         <Cap
           name="C_LDO_OUT"
-          x={36.3}
-          y={7.8}
+          x={35.5}
+          y={7.75}
           rot={90}
           sx={5}
           sy={3}
@@ -265,8 +265,8 @@ export function ProcessorCore() {
         />
         <MWSA0402S_3R3MT
           name="L_CORE"
-          pcbX={25.2}
-          pcbY={8.9}
+          pcbX={26.95}
+          pcbY={14.7}
           pcbRotation={90}
           schX={8}
           schY={2}
@@ -274,8 +274,8 @@ export function ProcessorCore() {
         />
         <Cap
           name="C_VREG_IN"
-          x={26.5}
-          y={5.0}
+          x={28.25}
+          y={10.8}
           sx={11}
           sy={4}
           value="4.7uF"
@@ -283,8 +283,8 @@ export function ProcessorCore() {
         />
         <Cap
           name="C_VREG_OUT"
-          x={25.2}
-          y={13}
+          x={26.95}
+          y={18.8}
           sx={11}
           sy={2}
           value="4.7uF"
@@ -292,8 +292,8 @@ export function ProcessorCore() {
         />
         <Res
           name="R_AVDD"
-          x={29.7}
-          y={5.55}
+          x={31.45}
+          y={11.35}
           sx={8}
           sy={-1}
           value="33"
@@ -302,8 +302,8 @@ export function ProcessorCore() {
         />
         <Cap
           name="C_VREG_A"
-          x={32.2}
-          y={4.2}
+          x={33.95}
+          y={10}
           sx={11}
           sy={-1}
           value="4.7uF"
@@ -312,8 +312,8 @@ export function ProcessorCore() {
 
         <Res
           name="R_USB_DP"
-          x={21.65}
-          y={5.0}
+          x={23.4}
+          y={10.8}
           rot={180}
           sx={0}
           sy={-2}
@@ -323,8 +323,8 @@ export function ProcessorCore() {
         />
         <Res
           name="R_USB_DM"
-          x={21.65}
-          y={6.35}
+          x={23.4}
+          y={12.15}
           rot={180}
           sx={4}
           sy={-2}
@@ -335,8 +335,8 @@ export function ProcessorCore() {
         <ABM8_272_T3
           loadCapacitance="10pF"
           name="Y_CPU"
-          pcbX={22}
-          pcbY={-9.4}
+          pcbX={23.75}
+          pcbY={-3.6}
           schX={1}
           schY={-7}
           connections={{
@@ -348,8 +348,8 @@ export function ProcessorCore() {
         />
         <Res
           name="R_XOUT"
-          x={22.85}
-          y={-6.85}
+          x={24.6}
+          y={-1.05}
           sx={-2}
           sy={-7}
           value="1k"
@@ -358,8 +358,8 @@ export function ProcessorCore() {
         />
         <Cap
           name="C_XIN"
-          x={18.6}
-          y={-10.2}
+          x={20.35}
+          y={-4.4}
           rot={180}
           sx={0}
           sy={-9}
@@ -368,8 +368,8 @@ export function ProcessorCore() {
         />
         <Cap
           name="C_XOUT"
-          x={25.4}
-          y={-8.6}
+          x={27.15}
+          y={-2.8}
           sx={4}
           sy={-9}
           value="15pF"
@@ -377,23 +377,23 @@ export function ProcessorCore() {
         />
         <B3U_1000P
           name="SW_RESET"
-          pcbX={35.5}
-          pcbY={16}
+          pcbX={15.75}
+          pcbY={6}
           schX={9}
           schY={-7}
           connections={{ pin1: "net.CPU_RUN", pin2: "net.RESET_PRESS" }}
         />
         <Res
           name="R_RESET"
-          x={36}
-          y={13.3}
+          x={36.5}
+          y={1.75}
           sx={12}
           sy={-7}
           value="1k"
           a="RESET_PRESS"
           b="GND"
         />
-        <silkscreentext text="RESET" pcbX={35.5} pcbY={18.6} fontSize={0.85} />
+        <silkscreentext text="RESET" pcbX={15.75} pcbY={8.6} fontSize={0.85} />
         <trace
           name="FLASH_SELECT"
           from=".U_CPU > .QSPI_SS"

@@ -13,7 +13,7 @@ export function ProductPower() {
       <net name="INPUT_5V" isPowerNet nominalTraceWidth={0.5} />
       <SK12D07VG5
         name="SW_POWER"
-        pcbX={16.25}
+        pcbX={6}
         pcbY={-20.55}
         schX={-7}
         schY={1}
@@ -26,8 +26,8 @@ export function ProductPower() {
       />
       <TPS22918DBVR
         name="U_POWER"
-        pcbX={10.5}
-        pcbY={-6.25}
+        pcbX={12}
+        pcbY={-8.25}
         schX={1}
         schY={1}
         connections={{
@@ -41,8 +41,8 @@ export function ProductPower() {
       />
       <R
         name="R_POWER"
-        x={6.5}
-        y={-6.0}
+        x={8}
+        y={-7.25}
         schX={-4}
         schY={-3}
         value="10k"
@@ -51,8 +51,8 @@ export function ProductPower() {
       />
       <C
         name="C_POWER_IN"
-        x={14.5}
-        y={-7.5}
+        x={12}
+        y={-11}
         schX={-4}
         schY={3}
         value="4.7uF"
@@ -60,8 +60,8 @@ export function ProductPower() {
       />
       <C
         name="C_POWER_OUT"
-        x={6.5}
-        y={-7.5}
+        x={7.25}
+        y={-5.5}
         schX={5}
         schY={3}
         value="1uF"
@@ -69,8 +69,8 @@ export function ProductPower() {
       />
       <capacitor
         name="C_POWER_CT"
-        pcbX={14.0}
-        pcbY={-6.25}
+        pcbX={18.25}
+        pcbY={-4}
         schX={4}
         schY={-3}
         footprint="0402"
@@ -79,7 +79,7 @@ export function ProductPower() {
         supplierPartNumbers={{ jlcpcb: ["C1523"] }}
         connections={{ pin1: "net.POWER_CT", pin2: "net.GND" }}
       />
-      <silkscreentext text="OFF   ON" pcbX={15.0} pcbY={-17.55} fontSize={0.7} />
+      <silkscreentext text="OFF   ON" pcbX={6} pcbY={-17.35} fontSize={0.7} />
     </schematicsheet>
   );
 }
