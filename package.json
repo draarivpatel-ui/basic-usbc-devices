@@ -19,7 +19,7 @@
     "brand": "bun refresh-branding.ts"
   },
   "dependencies": {
-    "tscircuit": "0.0.3069",
+    "tscircuit": "0.0.3288",
     "@tscircuit/checks": "0.0.268",
     "circuit-to-svg": "0.0.455",
     "circuit-json-to-gerber": "0.0.120",
