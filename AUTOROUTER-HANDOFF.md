@@ -2,6 +2,13 @@
 
 The November 22 audit covered 18 layouts. Pipeline 9 could not complete the four-port hub. Four more boards routed with electrical or copper-clearance violations. Six others passed physical continuity and short checks but failed the project's trace-angle check. Each row below has an independent PR, the original public bug report and the pinned hardware source.
 
+## Direct-mounted RP2350A revision
+
+The RP2350A revision adds a separate 12 MHz crystal for the processor. Pipeline 9 routed CORE_XIN and XTAL_OUT through two vias each. CORE_XIN also exceeded 10 mm in the board build. The original Stamp motherboard repro below exercises the hub oscillator.
+
+- [PR #4144 with the Cosmos fixture](https://github.com/tscircuit/tscircuit-autorouter/pull/4144) and [captured routing input](https://api.tscircuit.com/autorouting/bug_reports/view?autorouting_bug_report_id=93b336d7-63fc-4422-9a98-38546708e123).
+- Check out the PR, install dependencies and run `bun fixtures/bug-reports/bugreport131-93b336/reproduce.ts`. Check how the zero-via and length limits reach the simplified connections, then verify the solver honors them. The motherboard now gives the oscillator explicit top-layer paths.
+
 ## Reproduce one board
 
 Choose a PR number from the table. In a checkout of `tscircuit/tscircuit-autorouter`, run:

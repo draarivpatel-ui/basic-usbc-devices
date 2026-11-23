@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
-set(PICO_BOARD solderparty_rp2350_stamp CACHE STRING "Embedded host module")
+list(APPEND PICO_BOARD_HEADER_DIRS ${CMAKE_CURRENT_LIST_DIR}/boards)
+set(PICO_BOARD tscircuit_motherboard CACHE STRING "RP2350 USB Motherboard")
 include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 project(motherboard C CXX ASM)
 pico_sdk_init()

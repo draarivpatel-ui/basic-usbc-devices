@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "pico/stdlib.h"
+#include "pico/bootrom.h"
 #include "pico/stdio_uart.h"
 #include "tusb.h"
 
@@ -133,7 +134,7 @@ static void console_task(void) {
     }
     cmd[used]=0;
     if (overflow) puts("ERR command too long");
-    else if (!strcmp(cmd,"id")) puts("DEVICE tscircuit motherboard 1.0.0");
+    else if (!strcmp(cmd,"id")) puts("DEVICE tscircuit motherboard 1.1.0");
     else if (!strcmp(cmd,"help")) puts("id | help | devices | status");
     else if (!strcmp(cmd,"devices")) {
         for (unsigned i=0;i<CFG_TUH_CDC;i++) if (tuh_cdc_mounted(i))
@@ -145,10 +146,24 @@ static void console_task(void) {
     used=0; overflow=false;
 }
 
+// GPIO2 reads the same hardware selector that steers the native USB pair.
+// The internal pull-down also permits running this image on the console-only board.
+#define USB_PROGRAM_SELECT 2
+
+static void enter_program_mode_if_selected(void) {
+    if (!gpio_get(USB_PROGRAM_SELECT)) return;
+    sleep_ms(20);
+    if (gpio_get(USB_PROGRAM_SELECT)) reset_usb_boot(0, 0);
+}
+
 int main(void) {
+    gpio_init(USB_PROGRAM_SELECT);
+    gpio_pull_down(USB_PROGRAM_SELECT);
+    enter_program_mode_if_selected();
     stdio_uart_init_full(uart0,115200,0,1);
     tuh_init(0);
     while (true) {
+        enter_program_mode_if_selected();
         tuh_task();
         for (uint8_t i=0;i<CFG_TUH_CDC;i++) if (tuh_cdc_mounted(i)) service_port(i);
         console_task();

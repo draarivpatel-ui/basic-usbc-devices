@@ -14,7 +14,7 @@ USB-C device boards, including a computer-powered four-port USB 2.0 hub, designe
 | USB resetter | RP2040 + TPS22918, adapted from seveibar/usb-reseter | Host switches downstream USB power, passthrough data |
 | Buzzer | USB controller + externally driven Murata piezo | Timed tones from 20 to 4000 Hz |
 | [USB-C speaker](new-devices/speaker.circuit.tsx) | USB Audio Class 1, mono bridge output on a two-pin JST-SH header | System audio, volume and mute |
-| RP2350 USB Motherboard | RP2350 Stamp + four-port hub | Runs a standalone knob-to-display program on product power |
+| RP2350 USB Motherboard | RP2350A + 16 MB flash + four-port hub | Runs a standalone knob-to-display program on product power |
 | Four-port hub | CH334F + four TUSB321AI USB-C controllers | One upstream + four downstream USB-C ports, USB 2.0, computer-powered |
 
 The 177 × 46 mm panel has side breakaway tabs, 0.5 mm mouse-bite holes, 3 mm routing slots, tooling holes, and exposed 1 mm fiducials. Each board has four 2.2 mm non-plated M2 clearance holes, 2.5 mm in from each edge, with 4.6 mm diameter copper and placement keepouts for screw heads. All assembled parts are on the top side. The boards are independent USB devices; the panel is a manufacturing panel, not a USB hub.
