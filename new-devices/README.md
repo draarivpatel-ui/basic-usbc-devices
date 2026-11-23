@@ -39,4 +39,6 @@ Build the standalone board with `bun run build:compact-resetter`. Check its two 
 
 The three adjacent emitters are on 2 mm centres. Their anodes share the regulated control supply. Individual 1 kΩ resistors connect the cathodes to GPIO23 (red), GPIO24 (green) and GPIO25 (blue). The three Lumileds LUXEON Z parts share a land pattern. JLCPCB lists each as moisture sensitivity level 1. [Red D1](https://jlcpcb.com/partdetail/C17291105) · [Green D2](https://jlcpcb.com/partdetail/C17201313) · [Blue D3](https://jlcpcb.com/partdetail/C7436942)
 
+JLCPCB showed zero available-to-order units for all three emitters on November 23, 2026. Budget for pre-sourcing or consignment before assembly. [Distributor stock by part number](https://www.digikey.com/en/products/base-product/lumileds/1416/LXZ1/668370)
+
 Use the [compact v2 firmware](https://github.com/tscircuit/devices.tscircuit.com/blob/main/firmware/releases/compact-resetter-2.0.0.uf2). The legacy single-LED board uses v1.
