@@ -9,6 +9,8 @@ The RP2350A revision adds a separate 12 MHz crystal for the processor. Pipeline 
 - [PR #4144 with the Cosmos fixture](https://github.com/tscircuit/tscircuit-autorouter/pull/4144) and [captured routing input](https://api.tscircuit.com/autorouting/bug_reports/view?autorouting_bug_report_id=93b336d7-63fc-4422-9a98-38546708e123).
 - Check out the PR, install dependencies and run `bun fixtures/bug-reports/bugreport131-93b336/reproduce.ts`. Check how the zero-via and length limits reach the simplified connections, then verify the solver honors them. The motherboard now gives the oscillator explicit top-layer paths.
 
+- The [fully placed switch revision](https://github.com/tscircuit/basic-usbc-devices/tree/1aacad3/motherboard) has a [second report](https://api.tscircuit.com/autorouting/bug_reports/view?autorouting_bug_report_id=2cbaf60a-6b88-49fe-bfe4-591b7b8fa8de) in the same PR. Run `bun fixtures/bug-reports/bugreport132-2cbaf6/reproduce.ts`. Pipeline 9 fails to connect FLASH_IO1 (U_CPU pin 59 to U_FLASH pin 2) and its fallback fails at cmn_229. Success requires a complete route, zero shorts and zero disconnected nets in the independent physical audit.
+
 ## Reproduce one board
 
 Choose a PR number from the table. In a checkout of `tscircuit/tscircuit-autorouter`, run:
