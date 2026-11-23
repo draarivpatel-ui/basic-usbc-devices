@@ -28,6 +28,10 @@ cmake --build dist/host-fw
 | `devices` | Connected serial device types and interface slots, followed by `OK` |
 | `status` | `SCENE 1` through `SCENE 3`, or `SCENE 0` while waiting for a knob |
 
+## Routing status
+
+The assembly models and the 1.1.0 firmware are available. The default router currently fails to complete FLASH_IO1 on this layout. See the [reproduction and handoff](../AUTOROUTER-HANDOFF.md#direct-mounted-rp2350a-revision) before generating fabrication files.
+
 ## Rebuild and check
 
 ```sh
