@@ -1,6 +1,6 @@
 import { CH340C } from "../imports/C84681";
 import { TXU0202DCUR } from "../imports/C5186957";
-import { ProgrammingSelector } from "./programming-selector";
+import { DebugAndStorage } from "./debug-and-storage";
 import { C } from "../common";
 
 import { ProductPower } from "./power";
@@ -10,7 +10,7 @@ export function HostProcessor() {
   return (
     <>
       <ProcessorCore />
-      <ProgrammingSelector />
+      <DebugAndStorage />
       <ProductPower />
       <schematicsheet
         name="processor_sheet"
@@ -39,8 +39,8 @@ export function HostProcessor() {
             pin2: "net.PC_TX",
             pin3: "net.PC_RX",
             pin4: "net.BRIDGE_V3",
-            pin5: "net.CONSOLE_DP",
-            pin6: "net.CONSOLE_DM",
+            pin5: "net.PC_DP",
+            pin6: "net.PC_DM",
             pin15: "net.GND",
             pin16: "net.PC_5V",
           }}
@@ -103,7 +103,7 @@ export function HostProcessor() {
           schX={9}
           schY={-4}
         />
-        {/* Soldered product harness and Cortex SWD pogo pads. */}
+        {/* Soldered product harness. */}
         {["INPUT_5V", "GND"].map((net, i) => (
           <testpoint
             key={net}
@@ -130,28 +130,6 @@ export function HostProcessor() {
           pcbY={-19.4}
           layer="bottom"
           fontSize={0.85}
-        />
-        {["CPU_3V3", "SWDIO", "SWCLK", "GND"].map((net, i) => (
-          <testpoint
-            key={net}
-            name={"TP_DBG" + (i + 1)}
-            doNotPlace
-            footprintVariant="pad"
-            padDiameter={1.2}
-            pcbX={15 + i * 1.9}
-            pcbY={-13.4}
-            layer="bottom"
-            schX={-6 + i * 4}
-            schY={-9}
-            connections={{ pin1: "net." + net }}
-          />
-        ))}
-        <silkscreentext
-          text="V   D   C   G"
-          pcbX={17.85}
-          pcbY={-15.3}
-          layer="bottom"
-          fontSize={0.65}
         />
       </schematicsheet>
     </>

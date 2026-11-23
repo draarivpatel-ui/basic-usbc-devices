@@ -11,6 +11,13 @@ The RP2350A revision adds a separate 12 MHz crystal for the processor. Pipeline 
 
 - The [fully placed switch revision](https://github.com/tscircuit/basic-usbc-devices/tree/1aacad3/motherboard) has a [second report](https://api.tscircuit.com/autorouting/bug_reports/view?autorouting_bug_report_id=2cbaf60a-6b88-49fe-bfe4-591b7b8fa8de) in the same PR. Run `bun fixtures/bug-reports/bugreport132-2cbaf6/reproduce.ts`. Pipeline 9 fails to connect FLASH_IO1 (U_CPU pin 59 to U_FLASH pin 2) and its fallback fails at cmn_229. Success requires a complete route, zero shorts and zero disconnected nets in the independent physical audit.
 
+### SWD and microSD layout
+
+The 88 × 46 mm motherboard removes both USB multiplexers, adds J_SWD and J_SD and uses a through-hole edge power switch. The default autorouter returned traces. Clearance checks failed and the independent copper audit found physical shorts, including FLASH_CS to DP0 on inner2. Keep fabrication export blocked until that audit passes.
+
+- [Router fixture in PR #4144](https://github.com/tscircuit/tscircuit-autorouter/pull/4144), [exact submitted routing input](https://api.tscircuit.com/autorouting/bug_reports/view?autorouting_bug_report_id=43ae842c-60a6-483a-adbc-dc77c99cb23c).
+- In the autorouter checkout, run `bun fixtures/bug-reports/bugreport133-43ae84/reproduce.ts`. In this hardware checkout, run `bun motherboard/build.tsx`, then `python3 verify-module-copper.py --directory dist/motherboard --check-shorts motherboard`. Check all four layers, including the fixed crystal traces and generated vias. Require zero shorts, disconnected nets and clearance errors before generating Gerbers.
+
 ## Reproduce one board
 
 Choose a PR number from the table. In a checkout of `tscircuit/tscircuit-autorouter`, run:

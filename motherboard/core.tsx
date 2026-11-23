@@ -90,8 +90,8 @@ const bypass = [
   [20, 20.6, -5.4, "CPU_3V3"],
   [23, 23.8, -5.4, "CORE_1V1"],
   [30, 26.7, -5.4, "CPU_3V3"],
-  [38, 28.6, 0, "CPU_3V3"],
-  [39, 28.6, 1.3, "CORE_1V1"],
+  [38, 28.6, 0.2, "CPU_3V3"],
+  [39, 28.6, 1.55, "CORE_1V1"],
   [44, 28.6, 3, "CPU_3V3"],
   [53, 19.55, 5.65, "CPU_3V3"],
 ] as const;
@@ -111,10 +111,7 @@ export function ProcessorCore() {
           schY={0}
           noConnect={[
             "GPIO3",
-            "GPIO4",
-            "GPIO5",
-            "GPIO6",
-            "GPIO7",
+            "GPIO2",
             "GPIO8",
             "GPIO9",
             "GPIO10",
@@ -141,7 +138,10 @@ export function ProcessorCore() {
           connections={{
             GPIO0: "net.UART_TX",
             GPIO1: "net.UART_RX",
-            GPIO2: "net.USB_MODE",
+            GPIO4: "net.SD_MISO",
+            GPIO5: "net.SD_CS",
+            GPIO6: "net.SD_SCK",
+            GPIO7: "net.SD_MOSI",
             IOVDD1: "net.CPU_3V3",
             IOVDD2: "net.CPU_3V3",
             IOVDD3: "net.CPU_3V3",
@@ -164,7 +164,7 @@ export function ProcessorCore() {
             USB_DP: "net.PHY_DP",
             XIN: "net.CORE_XIN",
             XOUT: "net.CORE_XOUT",
-            QSPI_SS: "net.BOOTSEL",
+            QSPI_SS: "net.FLASH_CS",
             QSPI_SCLK: "net.FLASH_CLK",
             QSPI_SD0: "net.FLASH_IO0",
             QSPI_SD1: "net.FLASH_IO1",
@@ -200,7 +200,7 @@ export function ProcessorCore() {
           schX={1}
           schY={8}
           connections={{
-            pin1: "net.BOOTSEL",
+            pin1: "net.FLASH_CS",
             pin2: "net.FLASH_IO1",
             pin3: "net.FLASH_IO2",
             pin4: "net.GND",
@@ -227,7 +227,7 @@ export function ProcessorCore() {
           sy={8.8}
           value="10k"
           a="CPU_3V3"
-          b="BOOTSEL"
+          b="FLASH_CS"
         />
         <AP2112K_3_3TRG1
           name="U_LDO"
@@ -319,7 +319,7 @@ export function ProcessorCore() {
           sy={-2}
           value="27"
           a="PHY_DP"
-          b="CPU_DP"
+          b="DP0"
         />
         <Res
           name="R_USB_DM"
@@ -330,7 +330,7 @@ export function ProcessorCore() {
           sy={-2}
           value="27"
           a="PHY_DM"
-          b="CPU_DM"
+          b="DM0"
         />
         <ABM8_272_T3
           loadCapacitance="10pF"
@@ -378,7 +378,7 @@ export function ProcessorCore() {
         <B3U_1000P
           name="SW_RESET"
           pcbX={35.5}
-          pcbY={-9.5}
+          pcbY={16}
           schX={9}
           schY={-7}
           connections={{ pin1: "net.CPU_RUN", pin2: "net.RESET_PRESS" }}
@@ -386,14 +386,14 @@ export function ProcessorCore() {
         <Res
           name="R_RESET"
           x={36}
-          y={-12.2}
+          y={13.3}
           sx={12}
           sy={-7}
           value="1k"
           a="RESET_PRESS"
           b="GND"
         />
-        <silkscreentext text="RESET" pcbX={35.5} pcbY={-6.8} fontSize={0.85} />
+        <silkscreentext text="RESET" pcbX={35.5} pcbY={18.6} fontSize={0.85} />
         <trace
           name="FLASH_SELECT"
           from=".U_CPU > .QSPI_SS"

@@ -46,9 +46,9 @@ function USB({i,computer=false,embedded=false}:{i:number,computer?:boolean,embed
  </>
 }
 function ESD({i,computer=false}:{i:number,computer?:boolean}) {return <USBLC6_2SC6 name={`D${i+1}`} {...pcb(`D${i+1}`)} {...sch(`D${i+1}`)} pinAttributes={{pin1:{},pin2:{requiresGround:true},pin3:{},pin4:{},pin5:{requiresPower:true},pin6:{}}} internallyConnectedPins={[["pin1","pin6"],["pin3","pin4"]]} connections={{pin1:computer?"net.PC_DP":`net.DP${i}`,pin6:computer?"net.PC_DP":`net.DP${i}`,pin3:computer?"net.PC_DM":`net.DM${i}`,pin4:computer?"net.PC_DM":`net.DM${i}`,pin2:'net.GND',pin5:`net.${computer?'PC_5V':i===0?'VBUS':`VBUS${i}`}`}}/>}
-export function HubBoard({embedded=false,routingDisabled=false,pcbX=0,pcbY=0,pcbRotation=0}:{embedded?:boolean,routingDisabled?:boolean,pcbX?:number,pcbY?:number,pcbRotation?:number}={}){return <board pcbX={pcbX} pcbY={pcbY} pcbRotation={pcbRotation} routingDisabled={routingDisabled} {...boardRules} name={embedded?"motherboard":"hub"} routeRemaining {...(embedded ? {...displayRules,width:80,height:46,autorouter:"auto-local"} : {...hubSize,minTraceWidth:0.11,autorouter:{local:true,algorithmFn:createHubRouter(pcbX,pcbY,pcbRotation)}})} thickness={1.6} schMaxTraceDistance={1.2} schStyle={{defaultPassiveSize:"xs"}} schLayout={{layoutMode:"none"}}>
+export function HubBoard({embedded=false,routingDisabled=false,pcbX=0,pcbY=0,pcbRotation=0}:{embedded?:boolean,routingDisabled?:boolean,pcbX?:number,pcbY?:number,pcbRotation?:number}={}){return <board pcbX={pcbX} pcbY={pcbY} pcbRotation={pcbRotation} routingDisabled={routingDisabled} {...boardRules} name={embedded?"motherboard":"hub"} routeRemaining {...(embedded ? {...displayRules,width:88,height:46,autorouter:"auto-local"} : {...hubSize,minTraceWidth:0.11,autorouter:{local:true,algorithmFn:createHubRouter(pcbX,pcbY,pcbRotation)}})} thickness={1.6} schMaxTraceDistance={1.2} schStyle={{defaultPassiveSize:"xs"}} schLayout={{layoutMode:"none"}}>
  <schematicsheet name="hub_sheet" displayName={embedded?"RP2350 USB Motherboard":"USB-C 4-port USB 2.0 hub / bus powered"} sheetSize="A4"><HubPlacement embedded={embedded}>
- <schematictext text={embedded?"COMPUTER / PROGRAM":"HOST / USB-C INPUT"} schX={-10.5} schY={10} fontSize={0.35}/><schematictext text={embedded?"HUB / INTERNAL HOST":"CH334F / 12 MHz / BUS POWERED"} schX={-.8} schY={10} fontSize={0.35}/><schematictext text="PORT POWER ENABLE" schX={10.5} schY={10} fontSize={0.35}/>
+ <schematictext text={embedded?"COMPUTER CONSOLE":"HOST / USB-C INPUT"} schX={-10.5} schY={10} fontSize={0.35}/><schematictext text={embedded?"HUB / INTERNAL HOST":"CH334F / 12 MHz / BUS POWERED"} schX={-.8} schY={10} fontSize={0.35}/><schematictext text="PORT POWER ENABLE" schX={10.5} schY={10} fontSize={0.35}/>
  {[-11.4,-3.8,3.8,11.4].map((x,i)=><schematictext text={`PORT ${i+1} / USB-C / 100 mA`} schX={x} schY={2.1} fontSize={0.32}/>)}
  <net name="GND"/><net name="VBUS" nominalTraceWidth={embedded ? 0.4 : undefined}/>
  {["XI","XO"].map(n=><net name={n}/>)}
@@ -57,7 +57,7 @@ export function HubBoard({embedded=false,routingDisabled=false,pcbX=0,pcbY=0,pcb
  {["CC0A","CC0B","PWREN_N","OC_N"].map(n=><net name={n}/>)}
  <net name="V3V3"/>
  <copperpour name="GROUND" layer="bottom" connectsTo="net.GND" clearance={0.2} boardEdgeMargin={0.6}/>
- {embedded?<DisplayMounts centerX={11} spanX={70} spanY={40} layers={["top","inner1","inner2","bottom"]}/>:hubMounts.map(({x,y})=><><hole diameter={2.2} pcbX={x} pcbY={y}/><keepout shape="circle" radius={2.3} pcbX={x} pcbY={y} layers={['top','bottom']}/></>)}
+ {embedded?<DisplayMounts centerX={14} spanX={80} spanY={40} layers={["top","inner1","inner2","bottom"]}/>:hubMounts.map(({x,y})=><><hole diameter={2.2} pcbX={x} pcbY={y}/><keepout shape="circle" radius={2.3} pcbX={x} pcbY={y} layers={['top','bottom']}/></>)}
  <USB i={0} computer={embedded} embedded={embedded}/>
  <ESD i={0} computer={embedded}/>
  <R name="R1" value="5.1k" a="net.CC0A" b="net.GND"/>
@@ -93,7 +93,7 @@ export function HubBoard({embedded=false,routingDisabled=false,pcbX=0,pcbY=0,pcb
  <trace width={0.2} name="CLOCK_XO" from=".U1 > .pin3" to=".Y1 > .pin1" pcbPath={[{x:-0.249936,y:-3.1},{x:-2.3,y:-3.1},{x:-2.3,y:-6.05},{x:-1.1000746,y:-6.05}]}/>
  <trace width={0.2} name="CLOCK_C5" from=".C5 > .pin1" to=".Y1 > .pin3" pcbPath={[{x:-1.15,y:-0.7},{x:-1.15,y:-2.3999254}]}/>
  <trace width={0.2} name="CLOCK_C6" from=".C6 > .pin1" to=".Y1 > .pin1" pcbPath={[{x:-0.825,y:1.2},{x:0.55,y:1.2},{x:0.55,y:2.3999254}]}/>
- <silkscreentext text={embedded?"PC / PROGRAM":"USB 2.0 HUB / CH334F / HOST POWER"} pcbX={0} pcbY={-20.2} fontSize={0.65}/>
+ <silkscreentext text={embedded?"PC CONSOLE":"USB 2.0 HUB / CH334F / HOST POWER"} pcbX={0} pcbY={-20.2} fontSize={0.65}/>
  <StatusLed x={-19} y={-8} rx={-20.8} ry={-10.5} resistance="1k" sink="net.HUB_LED4" anodeSupply="net.HUB_LED2" schX={-5.9} schY={-8.2}/>
  <AT24C02D_STUM_T name="U_STATUS" pcbX={-11.5} pcbY={8.25} pcbRotation={90} schX={-9} schY={-10} connections={{pin1:'net.HUB_SCL',pin2:'net.GND',pin3:'net.HUB_LED4',pin4:'net.V3V3',pin5:'net.GND'}}/>
  <BaseC name="C_STATUS" value="100nF" x={-4} y={-10.5} a="net.V3V3" schX={-12} schY={-10}/>

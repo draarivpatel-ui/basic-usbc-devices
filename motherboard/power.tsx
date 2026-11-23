@@ -1,4 +1,4 @@
-import { PCM12SMTR } from "../imports/C221841";
+import { SK12D07VG5 } from "../imports/C3020419";
 import { TPS22918DBVR } from "../imports/C131941";
 import { C, R } from "../common";
 
@@ -11,13 +11,13 @@ export function ProductPower() {
       sheetSize="A4"
     >
       <net name="INPUT_5V" isPowerNet nominalTraceWidth={0.5} />
-      <PCM12SMTR
+      <SK12D07VG5
         name="SW_POWER"
         pcbX={16.25}
-        pcbY={-19.25}
+        pcbY={-20.55}
         schX={-7}
         schY={1}
-        noConnect={["pin4"]}
+        noConnect={["pin4", "pin5"]}
         connections={{
           pin1: "net.GND",
           pin2: "net.POWER_EN",
@@ -79,7 +79,7 @@ export function ProductPower() {
         supplierPartNumbers={{ jlcpcb: ["C1523"] }}
         connections={{ pin1: "net.POWER_CT", pin2: "net.GND" }}
       />
-      <silkscreentext text="OFF   ON" pcbX={15.0} pcbY={-16.4} fontSize={0.7} />
+      <silkscreentext text="OFF   ON" pcbX={15.0} pcbY={-17.55} fontSize={0.7} />
     </schematicsheet>
   );
 }

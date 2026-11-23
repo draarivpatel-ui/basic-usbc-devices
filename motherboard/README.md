@@ -1,16 +1,15 @@
 # RP2350 USB Motherboard
 
-An 80 × 46 mm, four-layer controller for an enclosure. The upper edge carries four downstream USB-C sockets. The lower edge carries the computer service socket. The RP2350A is soldered directly to the board in a 7 × 7 mm QFN-60 package. Leave room for the power harness at the underside pads. Four M2 clearance holes are on a 70 × 40 mm grid, at X = −38 and 32 mm, Y = ±20 mm from board center.
+An 88 × 46 mm, four-layer controller for an enclosure. The upper edge carries four downstream USB-C sockets. The lower edge carries the computer service socket. The RP2350A is soldered directly to the board in a 7 × 7 mm QFN-60 package. Leave room for the power harness at the underside pads. Four M2 clearance holes are on a 80 × 40 mm grid, at X = ±40 mm, Y = ±20 mm from board center.
 
 ## Integration
 
 - Supply regulated 5 V and ground at the two underside power pads. The edge-facing OFF/ON slider on the J1 edge enables a TPS22918 load switch between input power and the processor, hub and four device supplies. Its contacts only carry the enable signal. Budget 1 A at the input for the controller, hub, four 100 mA peripherals and startup margin. The computer port powers its USB-to-UART interface independently. A dual-supply translator isolates the UART when either rail is off.
-- U_CPU uses the RP2350A internal core buck with an external 3.3 µH inductor, a dedicated 3.3 V regulator, a 12 MHz crystal and 16 MB of external QSPI flash. The exposed ground pad uses nine 0.25 mm plated holes. Specify filled and capped via-in-pad for assembly. [Raspberry Pi hardware design guide](https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf)
-- In RUN, the processor hosts J2–J5 and J1 provides the 115200-baud runtime UART. Each downstream port has attachment detection, a current-limited power switch and ESD protection. The hub reports faults as a group. The optional indicator uses `firmware/hub/ch334f-status.bin`.
-- In PROGRAM, two USB data switches connect the processor directly to J1. The example firmware reads the selector on GPIO2 and enters the USB boot ROM. Disconnect J1 before changing modes. With product power switched ON, select PROGRAM, reconnect J1, and copy the UF2 to the RP2350 drive. Return to RUN and press RESET.
-- For recovery, disconnect J1, select PROGRAM, hold BOOT, press and release RESET, then release BOOT and reconnect J1. BOOT grounds QSPI chip-select through 1 kΩ during reset, including with blank flash or custom firmware.
-- For SWD, connect the underside 3.3 V reference, SWDIO, SWCLK and ground pads. Apply product power. Select RUN when debugging the standalone example.
-- SW_MODE is an internal C&K PCM12SMTR service slider. Both slider models rise 1.4 mm above the PCB. The tallest components rise 5.4 mm. The enclosure only needs a user opening for SW_POWER, on the same edge as J1. Provide travel along the edge and leave the underside SWD pads accessible for assembly. [Switch mechanical drawing](https://www.littelfuse.com/assetdocs/littelfuse-ck-slide-pcm-series-datasheet?assetguid=d2f6a96c-7a9a-4c4e-a5aa-4fe3075dffe5)
+- U_CPU uses the RP2350A internal core buck with an external 3.3 µH inductor, a dedicated 3.3 V regulator, a 12 MHz crystal and 16 MiB of external QSPI flash. The exposed ground pad uses nine 0.25 mm plated holes. Specify filled and capped via-in-pad for assembly. [Raspberry Pi hardware design guide](https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf)
+- The processor hosts J2–J5 and J1 provides the 115200-baud runtime UART. Each downstream port has attachment detection, a current-limited power switch and ESD protection. The hub reports faults as a group. The optional indicator uses `firmware/hub/ch334f-status.bin`.
+- Program or debug with the [standard JST programmer](https://github.com/tscircuit/standard-jst-programmer). Supply normal product power, switch ON and plug a straight-through cable into the top-entry J_SWD (JST SH, 5 pins, 1 mm). Contacts 1–5 are unconnected programmer power, SWDIO, ground, SWCLK and active-low RUN/reset. The signal lines use 100 Ω series resistors. RUN has a 10 kΩ pull-up to 3.3 V. J1 is a runtime console.
+- The power switch is a Shou Han SK12D07VG5. Its 5 mm actuator slides parallel to the front edge and projects 4.75 mm past the PCB in the assembly model. Provide clearance for the through-hole leads, which extend 1.9 mm below the PCB.
+- The TF-01A microSD socket opens toward the right edge. Its 3.3 V SPI0 signals are GP4 MISO, GP5 CS, GP6 SCK and GP7 MOSI. Board pull-ups hold CS and the data lines high during reset. Firmware boots from the external QSPI flash with the card inserted or removed. The `sd` command mounts the card on demand and reports the filesystem. The display demo generates its three patterns in code.
 
 ## Standalone program
 
@@ -23,14 +22,15 @@ cmake --build dist/host-fw
 
 | Console command | Reply |
 | --- | --- |
-| `id` | `DEVICE tscircuit motherboard 1.1.0` |
+| `id` | `DEVICE tscircuit motherboard 1.2.0` |
 | `help` | Supported commands |
 | `devices` | Connected serial device types and interface slots, followed by `OK` |
 | `status` | `SCENE 1` through `SCENE 3`, or `SCENE 0` while waiting for a knob |
+| `sd` | `SD FAT32`, `SD exFAT` or the detected FAT variant. A mount failure returns `ERR sd <FatFs result number>`. |
 
 ## Routing status
 
-The assembly models and the 1.1.0 firmware are available. The default router currently fails to complete FLASH_IO1 on this layout. See the [reproduction and handoff](../AUTOROUTER-HANDOFF.md#direct-mounted-rp2350a-revision) before generating fabrication files.
+See the [routing handoff](../AUTOROUTER-HANDOFF.md#direct-mounted-rp2350a-revision) for the default-router reproductions. The assembly models describe component placement and enclosure clearances.
 
 ## Rebuild and check
 

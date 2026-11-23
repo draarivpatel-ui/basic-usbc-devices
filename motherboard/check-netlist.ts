@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import type { AnyCircuitElement } from "circuit-json";
 
-/** Independent package-pin checks on the rendered design, including both mux banks. */
+/** Independent package-pin checks on the rendered design, including the SD socket and five-pin programmer. */
 export function checkMotherboardNetlist(data: AnyCircuitElement[]) {
   const components = new Map(
     data
@@ -49,7 +49,10 @@ export function checkMotherboardNetlist(data: AnyCircuitElement[]) {
     1: "CPU_3V3",
     2: "UART_TX",
     3: "UART_RX",
-    4: "USB_MODE",
+    7: "SD_MISO",
+    8: "SD_CS",
+    9: "SD_SCK",
+    10: "SD_MOSI",
     6: "CORE_1V1",
     11: "CPU_3V3",
     20: "CPU_3V3",
@@ -78,11 +81,11 @@ export function checkMotherboardNetlist(data: AnyCircuitElement[]) {
     57: "FLASH_IO0",
     58: "FLASH_IO2",
     59: "FLASH_IO1",
-    60: "BOOTSEL",
+    60: "FLASH_CS",
     61: "GND",
   });
   check("U_FLASH", {
-    1: "BOOTSEL",
+    1: "FLASH_CS",
     2: "FLASH_IO1",
     3: "FLASH_IO2",
     4: "GND",
@@ -93,13 +96,28 @@ export function checkMotherboardNetlist(data: AnyCircuitElement[]) {
   });
   check("L_CORE", { 1: "CORE_1V1", 2: "CORE_LX" });
   check("U_LDO", { 1: "VBUS", 2: "GND", 3: "VBUS", 5: "CPU_3V3" });
-  check("R_BOOT", { 1: "BOOTSEL", 2: "BOOT_PRESS" });
-  check("SW_BOOT", { 1: "BOOT_PRESS", 2: "GND" });
   check("SW_RESET", { 1: "CPU_RUN", 2: "RESET_PRESS" });
-  for (const [i, net] of ["CPU_3V3", "SWDIO", "SWCLK", "GND"].entries())
-    check("TP_DBG" + (i + 1), { 1: net });
-  check("R_USB_DP", { 1: "PHY_DP", 2: "CPU_DP" });
-  check("R_USB_DM", { 1: "PHY_DM", 2: "CPU_DM" });
+  check("J_SWD", { 2: "PROBE_DIO", 3: "GND", 4: "PROBE_CLK", 5: "CPU_RUN" });
+  assert.equal(assigned.get("J_SWD.1")?.size ?? 0, 0);
+  check("R_SWD_DIO", { 1: "PROBE_DIO", 2: "SWDIO" });
+  check("R_SWD_CLK", { 1: "PROBE_CLK", 2: "SWCLK" });
+  check("R_RUN", { 1: "CPU_3V3", 2: "CPU_RUN" });
+  check("J_SD", {
+    1: "SD_D2",
+    2: "SD_CS",
+    3: "SD_MOSI",
+    4: "CPU_3V3",
+    5: "SD_SCK",
+    6: "GND",
+    7: "SD_MISO",
+    8: "SD_D1",
+    10: "GND",
+    11: "GND",
+    12: "GND",
+    13: "GND",
+  });
+  check("R_USB_DP", { 1: "PHY_DP", 2: "DP0" });
+  check("R_USB_DM", { 1: "PHY_DM", 2: "DM0" });
   check("TP_PWR1", { 1: "INPUT_5V" });
   check("SW_POWER", { 1: "GND", 2: "POWER_EN", 3: "INPUT_5V" });
   check("U_POWER", {
@@ -111,31 +129,7 @@ export function checkMotherboardNetlist(data: AnyCircuitElement[]) {
     6: "VBUS",
   });
   check("R_POWER", { 1: "POWER_EN", 2: "GND" });
-  check("SW_MODE", { 1: "GND", 2: "USB_MODE", 3: "CPU_3V3" });
-  // TS3USB221A: S=0 joins common pins 8/7 to 1/2; S=1 joins them to 3/4.
-  const select = {
-    3: "PROG_DP",
-    4: "PROG_DM",
-    5: "GND",
-    6: "GND",
-    9: "USB_MODE",
-    10: "CPU_3V3",
-  };
-  check("U_HOST_MUX", {
-    ...select,
-    1: "DP0",
-    2: "DM0",
-    7: "CPU_DM",
-    8: "CPU_DP",
-  });
-  check("U_PC_MUX", {
-    ...select,
-    1: "CONSOLE_DP",
-    2: "CONSOLE_DM",
-    7: "PC_DM",
-    8: "PC_DP",
-  });
-  check("U_PC", { 5: "CONSOLE_DP", 6: "CONSOLE_DM", 16: "PC_5V" });
+  check("U_PC", { 5: "PC_DP", 6: "PC_DM", 16: "PC_5V" });
   check("J1", {
     7: "PC_DM",
     8: "PC_DP",
