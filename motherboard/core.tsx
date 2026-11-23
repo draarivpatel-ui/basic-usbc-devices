@@ -395,6 +395,29 @@ export function ProcessorCore() {
         />
         <silkscreentext text="RESET" pcbX={35.5} pcbY={-6.8} fontSize={0.85} />
         <trace
+          name="FLASH_SELECT"
+          from=".U_CPU > .QSPI_SS"
+          to=".U_FLASH > .pin1"
+          width={0.16}
+          pcbPath={[
+            {
+              x: -2.8,
+              y: 4.52,
+              via: true,
+              fromLayer: "top",
+              toLayer: "bottom",
+            },
+            { x: -8.95, y: 4.52 },
+            {
+              x: -11.205,
+              y: 2.265,
+              via: true,
+              fromLayer: "bottom",
+              toLayer: "top",
+            },
+          ]}
+        />
+        <trace
           name="IO_SUPPLY"
           from=".U_CPU > .IOVDD6"
           to=".U_CPU > .QSPI_IOVDD"

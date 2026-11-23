@@ -18,6 +18,15 @@ if (
 const { bom, cpl } = assemblyFiles(board);
 writeFileSync(dir + "/motherboard-bom.csv", bom);
 writeFileSync(dir + "/motherboard-cpl.csv", cpl);
+if (
+  !board.some((e: any) => e.type === "pcb_trace") ||
+  board.some(
+    (e: any) => e.type.endsWith("_error") || e.type.endsWith("_warning"),
+  )
+)
+  throw Error(
+    "Fabrication export requires a fully routed motherboard with clean design checks.",
+  );
 mkdirSync(dir + "/gerbers", { recursive: true });
 for (const [file, content] of Object.entries(topSideGerbers(board)))
   writeFileSync(dir + "/gerbers/" + file, content);
