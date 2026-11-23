@@ -395,68 +395,6 @@ export function ProcessorCore() {
         />
         <silkscreentext text="RESET" pcbX={15.75} pcbY={8.6} fontSize={0.85} />
         <trace
-          name="FLASH_SELECT"
-          from=".U_CPU > .QSPI_SS"
-          to=".U_FLASH > .pin1"
-          width={0.16}
-          pcbPath={[
-            {
-              x: -2.8,
-              y: 4.52,
-              via: true,
-              fromLayer: "top",
-              toLayer: "bottom",
-            },
-            { x: -8.95, y: 4.52 },
-            {
-              x: -11.205,
-              y: 2.265,
-              via: true,
-              fromLayer: "bottom",
-              toLayer: "top",
-            },
-          ]}
-        />
-        <trace
-          name="IO_SUPPLY"
-          from=".U_CPU > .IOVDD6"
-          to=".U_CPU > .QSPI_IOVDD"
-          width={0.18}
-          pcbPath={[
-            { x: -2.6, y: 2.8 },
-            { x: -2.1, y: 2.3 },
-            { x: -1.0, y: 2.3 },
-            { x: -0.4, y: 2.9 },
-          ]}
-        />
-        <trace
-          name="IO_BYPASS_SUPPLY"
-          from=".C_CPU53 > .pin1"
-          to=".C_CPU1 > .pin1"
-          width={0.2}
-          pcbPath={[
-            { x: -0.8, y: 0 },
-            { x: -2.56, y: -1.76 },
-          ]}
-        />
-        <trace
-          name="USB_BYPASS_RETURN"
-          from=".C_CPU53 > .pin2"
-          to=".U_CPU > .VREG_PGND"
-          width={0.2}
-          pcbPath={[
-            { x: 1.0, y: 0, via: true, fromLayer: "top", toLayer: "bottom" },
-            { x: 2.65, y: 0 },
-            {
-              x: 5.85,
-              y: -3.2,
-              via: true,
-              fromLayer: "bottom",
-              toLayer: "top",
-            },
-          ]}
-        />
-        <trace
           name="VREG_GROUND"
           from=".U_CPU > .VREG_PGND"
           to=".U_CPU > .GND"

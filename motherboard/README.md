@@ -28,16 +28,19 @@ cmake --build dist/host-fw
 | `status` | `SCENE 1` through `SCENE 3`, or `SCENE 0` while waiting for a knob |
 | `sd` | `SD FAT32`, `SD exFAT` or the detected FAT variant. A mount failure returns `ERR sd <FatFs result number>`. |
 
-## Routing status
+## PCB fabrication
 
-See the [routing handoff](../AUTOROUTER-HANDOFF.md#direct-mounted-rp2350a-revision) for the default-router reproductions. The assembly models describe component placement and enclosure clearances.
+The board uses four copper layers. Inner layer 1 carries the ground plane. Top, inner layer 2 and bottom carry routed traces. All components mount on top. The tscircuit design checks pass, and the exported Gerber and drill files pass an independent check for open and shorted nets. The USB traces were routed individually. Differential impedance and USB operation still need verification on the chosen stackup and first article.
+
+[Gerbers and drills (ZIP)](https://github.com/tscircuit/basic-usbc-devices/releases/download/rp2350-usb-motherboard-compact-routed-v1/motherboard-gerbers.zip) · [BOM](https://github.com/tscircuit/basic-usbc-devices/releases/download/rp2350-usb-motherboard-compact-routed-v1/motherboard-bom.csv) · [Component placements](https://github.com/tscircuit/basic-usbc-devices/releases/download/rp2350-usb-motherboard-compact-routed-v1/motherboard-cpl.csv)
 
 ## Rebuild and check
 
 ```sh
-bun motherboard/build.tsx
+python3 -m pip install -r requirements-routing.txt
+bun run build:motherboard
 python3 verify-module-copper.py --check-shorts --directory dist/motherboard motherboard
-bun motherboard/export.ts
+python3 motherboard/verify-gerbers.py
 ```
 
 Check first-article power-up, host enumeration, hot-plug recovery, per-port fault handling and USB signal quality before embedding the board in a product. USB eye diagrams and enclosure fit require hardware.

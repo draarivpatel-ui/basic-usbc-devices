@@ -20,10 +20,10 @@ The 88 × 46 mm motherboard removes both USB multiplexers, adds J_SWD and J_SD a
 
 ### Compact front-loading microSD revision
 
-The 76 × 46 mm board has J1, the power lever and the card slot on its front edge. Placement and package-pin checks pass. Pipeline 9 exhausts 200 rip-up attempts and the regional fallback fails at `cmn_40`. The partial board also reports contact between the bottom ground pour and the flash chip-select trace. The physical connectivity audit fails and fabrication files are withheld.
+The 76 × 46 mm board has J1, the power lever and the card slot on its front edge. Placement and package-pin checks pass. Pipeline 9 exhausts 200 rip-up attempts and the regional fallback fails at `cmn_40`. The partial board also reports contact between the bottom ground pour and the flash chip-select trace. This failure is preserved in the router fixture. The released board uses the checked routes in `motherboard/copper.json` with ground on inner layer 1. Both the routed Circuit JSON and the exported Gerbers pass independent connectivity checks.
 
 - [Exact routing input](https://api.tscircuit.com/autorouting/bug_reports/view?autorouting_bug_report_id=350521c5-f57e-40dd-8a5b-33fa28ea56bf) and [motherboard reproduction PR #4144](https://github.com/tscircuit/tscircuit-autorouter/pull/4144).
-- Run `bun fixtures/bug-reports/bugreport134-350521/reproduce.ts` in the router PR. To validate a fix on this board, run `bun motherboard/build.tsx` and `python3 verify-module-copper.py --directory dist/motherboard --check-shorts motherboard`. Check the ground pour after routing, require zero disconnected nets and shorts, and retain the front-edge mechanical checks.
+- Run `bun fixtures/bug-reports/bugreport134-350521/reproduce.ts` in the router PR. To exercise a new solver on this board, replace the embedded board’s saved router with `"auto-local"`, then run `bun motherboard/build.tsx` and `python3 verify-module-copper.py --directory dist/motherboard --check-shorts motherboard`. Check the ground pour after routing, require zero disconnected nets and shorts, and retain the front-edge mechanical checks.
 
 ## Reproduce one board
 
