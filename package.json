@@ -33,7 +33,7 @@
     "polygon-clipping": "0.15.7",
     "poppygl": "0.0.37",
     "react": "19.2.6",
-    "tscircuit": "0.0.3271"
+    "tscircuit": "0.0.3288"
   },
   "devDependencies": {
     "@tscircuit/alphabet": "0.0.25",
